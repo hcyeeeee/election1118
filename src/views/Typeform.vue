@@ -3,7 +3,7 @@
 
     <Share />
     <Typeform />
-    <Footer />
+
   </div>
 </template>
 
@@ -11,14 +11,14 @@
 
 import Typeform from '@/components/Typeform.vue'
 import Share from '../components/share.vue'
-import Footer from '../components/Footer.vue'
+
 
 
 export default {
   name: 'App',
   components: {
     Typeform,
-    Footer,
+
     Share,
   },
   // mounted() {
@@ -30,4 +30,8 @@ export default {
   // }
 }
 </script>
+
+<style scoped>
+
+</style>
 

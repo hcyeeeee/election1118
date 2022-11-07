@@ -9,28 +9,8 @@ export default new Vuex.Store({
     //宜蘭縣6位
     Yilan: [
       {
-        name: "江聰淵",
-        no: "1",
-        party: "民進黨",
-        photo: require("../assets/江聰淵.jpg"),
-        party_photo: require("../assets/民進黨.jpg"),
-        experience: {
-          edu: [
-            // "佛光大學公共事務學系碩士",
-            "淡江大學國際企業學系商學碩士",
-          ],
-          exp: [
-            // "2006年第16屆宜蘭縣議會議員",
-            // "2010年第17屆宜蘭縣議會議員",
-            // "2014年宜蘭市第17屆市長",
-            "2018年宜蘭市第18屆市長",
-            "2020蔡英文總統陳歐珀立法委員宜蘭縣競選總部總幹事",
-          ],
-        },
-      },
-      {
         name: "林姿妙",
-        no: "2",
+        no: "1",
         party: "國民黨",
         photo: require("../assets/林姿妙.jpg"),
         party_photo: require("../assets/國民黨.jpg"),
@@ -49,18 +29,25 @@ export default new Vuex.Store({
         },
       },
       {
-        name: "陳琬惠",
-        no: "3",
-        party: "民眾黨",
-        photo: require("../assets/陳琬惠.jpg"),
-        party_photo: require("../assets/民眾黨.jpg"),
+        name: "朱振東",
+        no: "2",
+        party: "天一黨",
+        photo: require("../assets/朱振東.jpg"),
+        party_photo: require("../assets/天一黨.jpg"),
         experience: {
-          edu: ["國立政治大學經營管理碩士"],
-          exp: [
-            "台灣公益團體自律聯盟秘書長",
-            "2020年民眾黨第10屆不分區立委候選人",
-            "2022年立法院台灣民眾黨黨團主任",
-          ],
+          edu: [""],
+          exp: [""],
+        },
+      },
+      {
+        name: "許鋐哲",
+        no: "3",
+        party: "無黨",
+        photo: require("../assets/許鋐哲.jpg"),
+        party_photo: require("../assets/無黨.jpg"),
+        experience: {
+          edu: [""],
+          exp: [""],
         },
       },
       {
@@ -81,53 +68,46 @@ export default new Vuex.Store({
         },
       },
       {
-        name: "朱振東",
+        name: "江聰淵",
         no: "5",
-        party: "天一黨",
-        photo: require("../assets/朱振東.jpg"),
-        party_photo: require("../assets/天一黨.jpg"),
+        party: "民進黨",
+        photo: require("../assets/江聰淵.jpg"),
+        party_photo: require("../assets/民進黨.jpg"),
         experience: {
-          edu: [""],
-          exp: [""],
+          edu: [
+            // "佛光大學公共事務學系碩士",
+            "淡江大學國際企業學系商學碩士",
+          ],
+          exp: [
+            // "2006年第16屆宜蘭縣議會議員",
+            // "2010年第17屆宜蘭縣議會議員",
+            // "2014年宜蘭市第17屆市長",
+            "2018年宜蘭市第18屆市長",
+            "2020蔡英文總統陳歐珀立法委員宜蘭縣競選總部總幹事",
+          ],
         },
       },
       {
-        name: "許鋐哲",
+        name: "陳琬惠",
         no: "6",
-        party: "無黨",
-        photo: require("../assets/許鋐哲.jpg"),
-        party_photo: require("../assets/無黨.jpg"),
+        party: "民眾黨",
+        photo: require("../assets/陳琬惠.jpg"),
+        party_photo: require("../assets/民眾黨.jpg"),
         experience: {
-          edu: [""],
-          exp: [""],
+          edu: ["國立政治大學經營管理碩士"],
+          exp: [
+            "台灣公益團體自律聯盟秘書長",
+            "2020年民眾黨第10屆不分區立委候選人",
+            "2022年立法院台灣民眾黨黨團主任",
+          ],
         },
       },
     ],
     //基隆完成
     Keelung: [
       {
-        //5位
-        name: "蔡適應",
-        no: "1",
-        party: "民進黨",
-        photo: require("../assets/蔡適應.jpg"),
-        party_photo: require("../assets/民進黨.jpg"),
-        experience: {
-          edu: [
-            // "東海大學政治系國際關係組學士",
-            // "淡江大學國際事務與戰略研究所碩士",
-            "國立臺北大學都市計劃研究所博士",
-          ],
-          exp: [
-            "2005年基隆市議會（第16-18屆）議員",
-            "2016年第9屆立法委員",
-            "2020年第10屆立法委員",
-          ],
-        },
-      },
-      {
         name: "謝國樑",
-        no: "2",
+        no: "1",
         party: "國民黨",
         photo: require("../assets/謝國樑.jpg"),
         party_photo: require("../assets/國民黨.jpg"),
@@ -147,7 +127,7 @@ export default new Vuex.Store({
       },
       {
         name: "陳薇仲",
-        no: "3",
+        no: "2",
         party: "時代力量",
         photo: require("../assets/陳薇仲.jpg"),
         party_photo: require("../assets/時代力量.jpg"),
@@ -163,8 +143,39 @@ export default new Vuex.Store({
         },
       },
       {
-        name: "黃希賢",
+        //5位
+        name: "蔡適應",
+        no: "3",
+        party: "民進黨",
+        photo: require("../assets/蔡適應.jpg"),
+        party_photo: require("../assets/民進黨.jpg"),
+        experience: {
+          edu: [
+            // "東海大學政治系國際關係組學士",
+            // "淡江大學國際事務與戰略研究所碩士",
+            "國立臺北大學都市計劃研究所博士",
+          ],
+          exp: [
+            "2005年基隆市議會（第16-18屆）議員",
+            "2016年第9屆立法委員",
+            "2020年第10屆立法委員",
+          ],
+        },
+      },
+      {
+        name: "曾國民",
         no: "4",
+        party: "無黨",
+        photo: require("../assets/曾國民.jpg"),
+        party_photo: require("../assets/無黨.jpg"),
+        experience: {
+          edu: [""],
+          exp: [""],
+        },
+      },
+      {
+        name: "黃希賢",
+        no: "5",
         party: "無黨",
         photo: require("../assets/黃希賢.jpg"),
         party_photo: require("../assets/無黨.jpg"),
@@ -180,106 +191,12 @@ export default new Vuex.Store({
           ],
         },
       },
-      {
-        name: "曾國民",
-        no: "5",
-        party: "無黨",
-        photo: require("../assets/曾國民.jpg"),
-        party_photo: require("../assets/無黨.jpg"),
-        experience: {
-          edu: [""],
-          exp: [""],
-        },
-      },
     ],
     //台北市12位
     Taipei: [
       {
-        name: "陳時中",
-        no: "1",
-        party: "民進黨",
-        photo: require("../assets/陳時中.jpg"),
-        party_photo: require("../assets/民進黨.jpg"),
-        experience: {
-          edu: ["臺北醫學院牙醫學系"],
-          exp: [
-            // "2004年財團法人臺北醫學大學董事",
-            // "2005年行政院衛生署「全民健康保險監理委員會」委員",
-            "2005年行政院衛生署副署長",
-            "2016年總統府國策顧問",
-            "2017年衛生福利部部長",
-          ],
-        },
-      },
-      {
-        name: "蔣萬安",
-        no: "2",
-        party: "國民黨",
-        photo: require("../assets/蔣萬安.jpg"),
-        party_photo: require("../assets/國民黨.jpg"),
-        experience: {
-          edu: [
-            // "國立政治大學外交學系國際關係學學士",
-            // "國立政治大學法律學系法律學學士",
-            // "賓夕法尼亞大學法學碩士",
-            "賓夕法尼亞大學法律博士",
-          ],
-          exp: [
-            // "2016年第9屆立法委員",
-            // "2016年財團法人青年和平團董事",
-            "2017年中國國民黨中央委員會中央常務委員",
-            // "台灣土地正義行動聯盟常務理事",
-            "2020年第10屆立法委員",
-            "中國國民黨立法院黨團書記長",
-          ],
-        },
-      },
-      {
-        name: "黃珊珊",
-        no: "3 ",
-        party: "無黨",
-        photo: require("../assets/黃珊珊.jpg"),
-        party_photo: require("../assets/無黨籍.jpg"),
-        experience: {
-          edu: [
-            "國立臺灣大學大氣科學系轉法律系",
-            // "國立陽明交通大學科技法律研究所（肄業）",
-          ],
-          exp: [
-            // "1998年台北市議會第8屆議員",
-            // "2002年台北市議會第9屆議員",
-            // "2006年台北市議會第10屆議員",
-            // "2010年台北市議會第11屆議員",
-            "2014年台北市議會第12屆議員",
-            "2018年台北市議會第13屆議員",
-            "2019年台北市副市長",
-          ],
-        },
-      },
-      {
-        name: "蘇煥智",
-        no: "4",
-        party: "維新黨",
-        photo: require("../assets/蘇煥智.jpg"),
-        party_photo: require("../assets/維新黨.jpg"),
-        experience: {
-          edu: [
-            // "國立臺灣大學物理系肄業",
-            "國立臺灣大學法律系畢業 ",
-            "輔仁大學法律研究所碩士",
-          ],
-          exp: [
-            // "2001年臺南縣第14屆縣長",
-            "2005年臺南縣第15屆縣長",
-            // "2012年新境界文教基金會地方自治組召集人",
-            "2019年臺灣維新創黨人兼第一屆召集人",
-          ],
-        },
-      },
-
-      {
         name: "張家豪",
-        no: "5",
+        no: "1",
         party: "台灣動保黨",
         photo: require("../assets/張家豪.jpg"),
         party_photo: require("../assets/台灣動保黨.jpg"),
@@ -292,8 +209,36 @@ export default new Vuex.Store({
         },
       },
       {
+        name: "王文娟",
+        no: "2",
+        party: "無黨",
+        photo: require("../assets/王文娟.jpg"),
+        party_photo: require("../assets/無黨.jpg"),
+        experience: {
+          edu: [""],
+          exp: [""],
+        },
+      },
+      {
+        name: "鄭匡宇",
+        no: "3",
+        party: "無黨",
+        photo: require("../assets/鄭匡宇.jpg"),
+        party_photo: require("../assets/無黨.jpg"),
+        experience: {
+          edu: [
+            // "國立政治大學哲學系畢業",
+            "美國加州大學河濱分校舞蹈史舞蹈理論博士",
+          ],
+          exp: [
+            "2015年東吳大學華語教學副主任",
+            "2016年創立寰宇軒行股份有限公司",
+          ],
+        },
+      },
+      {
         name: "黃聖峰",
-        no: "6",
+        no: " 4",
         party: "台澎黨",
         photo: require("../assets/黃聖峰.jpg"),
         party_photo: require("../assets/台澎黨.jpg"),
@@ -313,7 +258,7 @@ export default new Vuex.Store({
       },
       {
         name: "童文薰",
-        no: "7",
+        no: "5",
         party: "無黨",
         photo: require("../assets/童文薰.jpg"),
         party_photo: require("../assets/無黨籍.jpg"),
@@ -328,19 +273,67 @@ export default new Vuex.Store({
         },
       },
       {
-        name: "鄭匡宇",
-        no: "8",
-        party: "無黨",
-        photo: require("../assets/鄭匡宇.jpg"),
-        party_photo: require("../assets/無黨.jpg"),
+        name: "蔣萬安",
+        no: "6",
+        party: "國民黨",
+        photo: require("../assets/蔣萬安.jpg"),
+        party_photo: require("../assets/國民黨.jpg"),
         experience: {
           edu: [
-            // "國立政治大學哲學系畢業",
-            "美國加州大學河濱分校舞蹈史舞蹈理論博士",
+            "國立政治大學外交系國際關係學學士",
+            "國立政治大學法律系法律學學士",
+            // "賓夕法尼亞大學法學碩士",
+            "賓夕法尼亞大學法律碩士、博士",
           ],
           exp: [
-            "2015年東吳大學華語教學副主任",
-            "2016年創立寰宇軒行股份有限公司",
+            // "2016年第9屆立法委員",
+            // "2016年財團法人青年和平團董事",
+            // "2017年中國國民黨中央委員會中央常務委員",
+            // "台灣土地正義行動聯盟常務理事",
+            "2020年第10屆立法委員",
+            "中國國民黨立法院黨團書記長",
+          ],
+        },
+      },
+      {
+        name: "蘇煥智",
+        no: "7",
+        party: "維新黨",
+        photo: require("../assets/蘇煥智.jpg"),
+        party_photo: require("../assets/維新黨.jpg"),
+        experience: {
+          edu: [
+            // "國立臺灣大學物理系肄業",
+            "國立臺灣大學法律系畢業 ",
+            "輔仁大學法律研究所碩士",
+          ],
+          exp: [
+            // "2001年臺南縣第14屆縣長",
+            "2005年臺南縣第15屆縣長",
+            // "2012年新境界文教基金會地方自治組召集人",
+            "2019年臺灣維新創黨人兼第一屆召集人",
+          ],
+        },
+      },
+      {
+        name: "黃珊珊",
+        no: "8",
+        party: "無黨",
+        photo: require("../assets/黃珊珊.jpg"),
+        party_photo: require("../assets/無黨籍.jpg"),
+        experience: {
+          edu: [
+            "國立臺灣大學大氣科學系轉法律系",
+            // "國立陽明交通大學科技法律研究所（肄業）",
+          ],
+          exp: [
+            // "1998年台北市議會第8屆議員",
+            // "2002年台北市議會第9屆議員",
+            // "2006年台北市議會第10屆議員",
+            "2010年台北市議會第11屆議員",
+            "2014年台北市議會第12屆議員",
+            "2018年台北市議會第13屆議員",
+            "2019年台北市副市長",
           ],
         },
       },
@@ -367,10 +360,10 @@ export default new Vuex.Store({
         },
       },
       {
-        name: "王文娟",
-        no: "9",
+        name: "謝立康",
+        no: "11",
         party: "無黨",
-        photo: require("../assets/王文娟.jpg"),
+        photo: require("../assets/謝立康.jpg"),
         party_photo: require("../assets/無黨.jpg"),
         experience: {
           edu: [""],
@@ -378,14 +371,20 @@ export default new Vuex.Store({
         },
       },
       {
-        name: "謝立康",
-        no: "10",
-        party: "無黨",
-        photo: require("../assets/謝立康.jpg"),
-        party_photo: require("../assets/無黨.jpg"),
+        name: "陳時中",
+        no: "12",
+        party: "民進黨",
+        photo: require("../assets/陳時中.jpg"),
+        party_photo: require("../assets/民進黨.jpg"),
         experience: {
-          edu: [""],
-          exp: [""],
+          edu: ["臺北醫學院牙醫學系"],
+          exp: [
+            // "2004年財團法人臺北醫學大學董事",
+            // "2005年行政院衛生署「全民健康保險監理委員會」委員",
+            "2005年行政院衛生署副署長",
+            "2016年總統府國策顧問",
+            "2017年衛生福利部部長",
+          ],
         },
       },
     ],
@@ -439,26 +438,8 @@ export default new Vuex.Store({
     //桃園市4位
     Taoyuan: [
       {
-        name: "鄭運鵬",
-        no: "1",
-        party: "民進黨",
-        photo: require("../assets/鄭運鵬.jpg"),
-        party_photo: require("../assets/民進黨.jpg"),
-        experience: {
-          edu: ["國立臺灣大學土木工程學系畢業"],
-          exp: [
-            // "2004年當選台北市北區立委",
-            // "2012年任民進黨網路部主任",
-            // "2013年任民進黨組織部主任",
-            "2014年任民進黨文宣部主任",
-            "2016年第9屆立法委員",
-            "2020年第10屆立法委員",
-          ],
-        },
-      },
-      {
         name: "張善政",
-        no: "2",
+        no: "1",
         party: "國民黨",
         photo: require("../assets/張善政.jpg"),
         party_photo: require("../assets/國民黨.jpg"),
@@ -481,7 +462,7 @@ export default new Vuex.Store({
       },
       {
         name: "賴香伶",
-        no: "3",
+        no: "2",
         party: "民眾黨",
         photo: require("../assets/賴香伶.jpg"),
         party_photo: require("../assets/民眾黨.jpg"),
@@ -491,6 +472,24 @@ export default new Vuex.Store({
             "2014年台北市政府勞動局局長",
             "2020年第10屆立法委員",
             "2020年立法院民眾黨黨團總召",
+          ],
+        },
+      },
+      {
+        name: "鄭運鵬",
+        no: "3",
+        party: "民進黨",
+        photo: require("../assets/鄭運鵬.jpg"),
+        party_photo: require("../assets/民進黨.jpg"),
+        experience: {
+          edu: ["國立臺灣大學土木工程學系畢業"],
+          exp: [
+            // "2004年當選台北市北區立委",
+            // "2012年任民進黨網路部主任",
+            // "2013年任民進黨組織部主任",
+            "2014年任民進黨文宣部主任",
+            "2016年第9屆立法委員",
+            "2020年第10屆立法委員",
           ],
         },
       },
@@ -518,68 +517,8 @@ export default new Vuex.Store({
     //新竹市6位
     HsinchuCity: [
       {
-        name: "沈慧虹",
-        no: "1",
-        party: "民進黨",
-        photo: require("../assets/沈慧虹.jpg"),
-        party_photo: require("../assets/民進黨.jpg"),
-        experience: {
-          edu: ["淡江大學交通管理系學士", "國立交通大學交通運輸研究所碩士"],
-          exp: [
-            "台北市政府發言人室",
-            "台北捷運公司籌備處工程員",
-            "新竹市副市長",
-          ],
-        },
-      },
-      {
-        name: "林耕仁",
-        no: "2",
-        party: "國民黨",
-        photo: require("../assets/林耕仁.jpg"),
-        party_photo: require("../assets/國民黨.jpg"),
-        experience: {
-          edu: ["國立交通大學高階管理學碩士畢", "中華大學科技管理研究所碩士畢"],
-          exp: ["新竹市第五、六、七、八、九屆市議員"],
-        },
-      },
-      {
-        name: "高虹安",
-        no: "3",
-        party: "民眾黨",
-        photo: require("../assets/高虹安.jpg"),
-        party_photo: require("../assets/民眾黨.jpg"),
-        experience: {
-          edu: [
-            // "國立臺灣師範大學資訊教育學士",
-            "國立臺灣大學資訊工程系碩士",
-            "美國辛辛那提大學機械工程博士",
-          ],
-          exp: [
-            "2020年第10屆立法委員、第10屆立法院數位國力促進會副會長",
-            "2022年第10屆立法院資通安全與科技發展策進會會長",
-          ],
-        },
-      },
-      {
-        name: "龔偉綸",
-        no: "4",
-        party: "無黨",
-        photo: require("../assets/龔偉綸.jpg"),
-        party_photo: require("../assets/無黨.jpg"),
-        experience: {
-          edu: ["國立臺北教育大學法律教育學系"],
-          exp: [
-            // "偉綸開發投資(偉綸代書事務所) ",
-            "台灣菁英協會第六期副會長 ",
-            "青商會理事 ",
-            "大台灣隊會友",
-          ],
-        },
-      },
-      {
         name: "黃源甫",
-        no: "5",
+        no: "1",
         party: "無黨",
         photo: require("../assets/黃源甫.jpg"),
         party_photo: require("../assets/無黨.jpg"),
@@ -595,22 +534,93 @@ export default new Vuex.Store({
         },
       },
       {
-        name: "李驥羣",
-        no: "6",
+        name: "龔偉綸",
+        no: "2",
         party: "無黨",
-        photo: require("../assets/李驥羣.png"),
+        photo: require("../assets/龔偉綸.jpg"),
         party_photo: require("../assets/無黨.jpg"),
         experience: {
-          edu: ["竹東高中(肄)", "磐石夜補校"],
-          exp: ["教育廳高中自修鑑定通過", "2018年新竹市市長參選人"],
+          edu: ["國立臺北教育大學法律教育學系"],
+          exp: [
+            // "偉綸開發投資(偉綸代書事務所) ",
+            "台灣菁英協會第六期副會長 ",
+            "青商會理事 ",
+            "大台灣隊會友",
+          ],
+        },
+      },
+      {
+        name: "林耕仁",
+        no: "3",
+        party: "國民黨",
+        photo: require("../assets/林耕仁.jpg"),
+        party_photo: require("../assets/國民黨.jpg"),
+        experience: {
+          edu: ["國立交通大學高階管理學碩士畢", "中華大學科技管理研究所碩士畢"],
+          exp: ["新竹市第五、六、七、八、九屆市議員"],
+        },
+      },
+      {
+        name: "沈慧虹",
+        no: "5",
+        party: "民進黨",
+        photo: require("../assets/沈慧虹.jpg"),
+        party_photo: require("../assets/民進黨.jpg"),
+        experience: {
+          edu: ["淡江大學交通管理系學士", "國立交通大學交通運輸研究所碩士"],
+          exp: [
+            "台北市政府發言人室",
+            "台北捷運公司籌備處工程員",
+            "新竹市副市長",
+          ],
+        },
+      },
+      {
+        name: "高虹安",
+        no: "6",
+        party: "民眾黨",
+        photo: require("../assets/高虹安.jpg"),
+        party_photo: require("../assets/民眾黨.jpg"),
+        experience: {
+          edu: [
+            // "國立臺灣師範大學資訊教育學士",
+            "國立臺灣大學資訊工程系碩士",
+            "美國辛辛那提大學機械工程博士",
+          ],
+          exp: [
+            "2020年第10屆立法委員、第10屆立法院數位國力促進會副會長",
+            "2022年第10屆立法院資通安全與科技發展策進會會長",
+          ],
         },
       },
     ],
     //新竹縣5位
     HsinchuCountry: [
       {
-        name: "周江杰",
+        name: "黃秀龍",
         no: "1",
+        party: "無黨籍",
+        photo: require("../assets/楊文科.jpg"),
+        party_photo: require("../assets/無黨籍.jpg"),
+        experience: {
+          edu: ["竹東高中"],
+          exp: ["欣榮企業社", "兄弟企業社", "國際企業社", "神誠有限公司董事"],
+        },
+      },
+      {
+        name: "范振揆",
+        no: "2",
+        party: "無黨籍",
+        photo: require("../assets/范振揆.jpg"),
+        party_photo: require("../assets/無黨籍.jpg"),
+        experience: {
+          edu: ["玄奘大學法律學系"],
+          exp: ["國民大會代表范揚恭辦公室主任"],
+        },
+      },
+      {
+        name: "周江杰",
+        no: "3",
         party: "民進黨",
         photo: require("../assets/周江杰.jpg"),
         party_photo: require("../assets/民進黨.jpg"),
@@ -624,7 +634,7 @@ export default new Vuex.Store({
       },
       {
         name: "楊文科",
-        no: "2",
+        no: "4",
         party: "國民黨",
         photo: require("../assets/楊文科.jpg"),
         party_photo: require("../assets/國民黨.jpg"),
@@ -644,28 +654,6 @@ export default new Vuex.Store({
         },
       },
       {
-        name: "范振揆",
-        no: "3",
-        party: "無黨籍",
-        photo: require("../assets/范振揆.jpg"),
-        party_photo: require("../assets/無黨籍.jpg"),
-        experience: {
-          edu: ["玄奘大學法律學系"],
-          exp: ["國民大會代表范揚恭辦公室主任"],
-        },
-      },
-      {
-        name: "黃秀龍",
-        no: "4",
-        party: "無黨籍",
-        photo: require("../assets/楊文科.jpg"),
-        party_photo: require("../assets/無黨籍.jpg"),
-        experience: {
-          edu: ["竹東高中"],
-          exp: ["欣榮企業社", "兄弟企業社", "國際企業社", "神誠有限公司董事"],
-        },
-      },
-      {
         name: "劉復嵐",
         no: "5",
         party: "無黨籍",
@@ -681,14 +669,18 @@ export default new Vuex.Store({
     //苗栗縣5位
     Miaoli: [
       {
-        name: "徐定禎",
+        name: "鍾東錦",
         no: "1",
-        party: "民進黨",
-        photo: require("../assets/徐定禎.jpg"),
-        party_photo: require("../assets/民進黨.jpg"),
+        party: "無黨",
+        photo: require("../assets/鍾東錦.jpg"),
+        party_photo: require("../assets/無黨.jpg"),
         experience: {
-          edu: ["東吳大學企業管理學系學士"],
-          exp: ["頭份鎮第16－17屆鎮長", "頭份市第1屆市長"],
+          edu: ["中華大學企業管理學系"],
+          exp: [
+            "2014年第18屆苗栗縣議會議員",
+            "2018年第18屆苗栗縣議會副議長",
+            "2018年第19屆苗栗縣議會議長",
+          ],
         },
       },
       {
@@ -708,34 +700,8 @@ export default new Vuex.Store({
         },
       },
       {
-        name: "宋國鼎",
-        no: "3",
-        party: "時代力量",
-        photo: require("../assets/宋國鼎.jpg"),
-        party_photo: require("../assets/時代力量.jpg"),
-        experience: {
-          edu: ["國立中正大學法律、勞工關係雙學士", "國立中正大學法學碩士"],
-          exp: ["2018年苗栗縣議會第19屆縣議員"],
-        },
-      },
-      {
-        name: "鍾東錦",
-        no: "4",
-        party: "無黨",
-        photo: require("../assets/鍾東錦.jpg"),
-        party_photo: require("../assets/無黨.jpg"),
-        experience: {
-          edu: ["中華大學企業管理學系"],
-          exp: [
-            "2014年第18屆苗栗縣議會議員",
-            "2018年第18屆苗栗縣議會副議長",
-            "2018年第19屆苗栗縣議會議長",
-          ],
-        },
-      },
-      {
         name: "吳盛聖",
-        no: "5",
+        no: "3",
         party: "無黨",
         photo: require("../assets/吳盛聖.jpg"),
         party_photo: require("../assets/無黨.jpg"),
@@ -747,18 +713,51 @@ export default new Vuex.Store({
           ],
         },
       },
+      {
+        name: "徐定禎",
+        no: "4",
+        party: "民進黨",
+        photo: require("../assets/徐定禎.jpg"),
+        party_photo: require("../assets/民進黨.jpg"),
+        experience: {
+          edu: ["東吳大學企業管理學系學士"],
+          exp: ["頭份鎮第16－17屆鎮長", "頭份市第1屆市長"],
+        },
+      },
+      {
+        name: "宋國鼎",
+        no: "5",
+        party: "時代力量",
+        photo: require("../assets/宋國鼎.jpg"),
+        party_photo: require("../assets/時代力量.jpg"),
+        experience: {
+          edu: ["國立中正大學法律、勞工關係雙學士", "國立中正大學法學碩士"],
+          exp: ["2018年苗栗縣議會第19屆縣議員"],
+        },
+      },
     ],
     //台中市3位
     Taichung: [
       {
-        name: "蔡其昌",
+        name: "陳美妃",
         no: "1",
+        party: "無黨",
+        photo: require("../assets/陳美妃.jpg"),
+        party_photo: require("../assets/無黨.jpg"),
+        experience: {
+          edu: [""],
+          exp: [""],
+        },
+      },
+      {
+        name: "蔡其昌",
+        no: "2",
         party: "民進黨",
         photo: require("../assets/蔡其昌.jpg"),
         party_photo: require("../assets/民進黨.jpg"),
         experience: {
           edu: [
-            "東海大學歷史學系",
+            // "東海大學歷史學系",
             "東海大學歷史學碩士",
             "國立中興大學EMBA財金組",
             "泰國湄州大學觀光發展榮譽博士",
@@ -768,15 +767,15 @@ export default new Vuex.Store({
             // "2008年第7屆立法委員  ",
             // "2012年第8屆立法委員",
             // "2014年任民進黨文宣部主任",
-            "2016年第9屆立法委員、立法院副院長",
-            "2020年第10屆立法委員、連任立法院副院長",
-            "2021年中華職棒會長",
+            "第9屆立法委員、立法院副院長",
+            "第10屆立法委員、連任立法院副院長",
+            // "2021年中華職棒會長",
           ],
         },
       },
       {
         name: "盧秀燕",
-        no: "2",
+        no: "3",
         party: "國民黨",
         photo: require("../assets/盧秀燕.jpg"),
         party_photo: require("../assets/國民黨.jpg"),
@@ -797,40 +796,12 @@ export default new Vuex.Store({
           ],
         },
       },
-      {
-        name: "陳美妃",
-        no: "3",
-        party: "無黨",
-        photo: require("../assets/陳美妃.jpg"),
-        party_photo: require("../assets/無黨.jpg"),
-        experience: {
-          edu: [""],
-          exp: [""],
-        },
-      },
     ],
     //彰化縣3位
     Changhua: [
       {
-        name: "黃秀芳",
-        no: "1",
-        party: "民進黨",
-        photo: require("../assets/黃秀芳.jpg"),
-        party_photo: require("../assets/民進黨.jpg"),
-        experience: {
-          edu: ["靜宜大學外文系", "東海大學人力資源管理班結業"],
-          exp: [
-            // "2006年彰化縣議會第16屆議員",
-            // "2010年彰化縣議會第17屆議員",
-            "2014年彰化縣議會第18屆議員",
-            "2016年第9屆立法委員",
-            "2020年第10屆立法委員",
-          ],
-        },
-      },
-      {
         name: "王惠美",
-        no: "2",
+        no: "1",
         party: "國民黨",
         photo: require("../assets/王惠美.jpg"),
         party_photo: require("../assets/國民黨.jpg"),
@@ -850,13 +821,30 @@ export default new Vuex.Store({
       },
       {
         name: "蕭仁正",
-        no: "3",
+        no: "2",
         party: "無黨",
         photo: require("../assets/選舉章icon.png"),
         party_photo: require("../assets/無黨.jpg"),
         experience: {
           edu: [""],
           exp: [""],
+        },
+      },
+      {
+        name: "黃秀芳",
+        no: "3",
+        party: "民進黨",
+        photo: require("../assets/黃秀芳.jpg"),
+        party_photo: require("../assets/民進黨.jpg"),
+        experience: {
+          edu: ["靜宜大學外文系", "東海大學人力資源管理班結業"],
+          exp: [
+            // "2006年彰化縣議會第16屆議員",
+            // "2010年彰化縣議會第17屆議員",
+            "2014年彰化縣議會第18屆議員",
+            "2016年第9屆立法委員",
+            "2020年第10屆立法委員",
+          ],
         },
       },
     ],
@@ -910,27 +898,8 @@ export default new Vuex.Store({
     //雲林縣3位
     Yunlin: [
       {
-        name: "劉建國",
-        no: "1",
-        party: "民進黨",
-        photo: require("../assets/劉建國.jpg"),
-        party_photo: require("../assets/民進黨.jpg"),
-        experience: {
-          edu: ["南華大學旅遊管理學系暨旅遊管理碩士"],
-          exp: [
-            // "2002年第15屆雲林縣議會議員",
-            // "2006年第16屆雲林縣議會議員、雲林縣議會民進黨團召集人",
-            // "2009年第7屆立法委員",
-            // "2012年第8屆立法委員",
-            "2015年立法院厚生會會長",
-            "2016年第9屆立法委員",
-            "2020年第10屆立法委員",
-          ],
-        },
-      },
-      {
         name: "張麗善",
-        no: "2",
+        no: "1",
         party: "國民黨",
         photo: require("../assets/張麗善.jpg"),
         party_photo: require("../assets/國民黨.jpg"),
@@ -950,6 +919,25 @@ export default new Vuex.Store({
         },
       },
       {
+        name: "劉建國",
+        no: "2",
+        party: "民進黨",
+        photo: require("../assets/劉建國.jpg"),
+        party_photo: require("../assets/民進黨.jpg"),
+        experience: {
+          edu: ["南華大學旅遊管理學系暨旅遊管理碩士"],
+          exp: [
+            // "2002年第15屆雲林縣議會議員",
+            // "2006年第16屆雲林縣議會議員、雲林縣議會民進黨團召集人",
+            // "2009年第7屆立法委員",
+            // "2012年第8屆立法委員",
+            "2015年立法院厚生會會長",
+            "2016年第9屆立法委員",
+            "2020年第10屆立法委員",
+          ],
+        },
+      },
+      {
         name: "林佳瑜",
         no: "3",
         party: "無黨",
@@ -965,27 +953,8 @@ export default new Vuex.Store({
     //嘉義市6位
     ChiayiCity: [
       {
-        name: "李俊俋",
-        no: "1",
-        party: "民進黨",
-        photo: require("../assets/李俊俋.jpg"),
-        party_photo: require("../assets/民進黨.jpg"),
-        experience: {
-          edu: [
-            "波士頓學院政治研究所碩士",
-            "喬治華盛頓大學政治研究所博士班結業",
-          ],
-          exp: [
-            // "總統府國策顧問兼憲改辦公室主任",
-            // "2012年第8屆立法委員",
-            "2016年第9屆立法委員",
-            "2020年中華民國總統府副秘書長",
-          ],
-        },
-      },
-      {
         name: "黃敏惠",
-        no: "2",
+        no: "1",
         party: "國民黨",
         photo: require("../assets/黃敏惠.jpg"),
         party_photo: require("../assets/國民黨.jpg"),
@@ -1005,23 +974,8 @@ export default new Vuex.Store({
         },
       },
       {
-        name: "黃宏成台灣阿成世界偉人財神總統",
-        no: "3",
-        party: "無黨",
-        photo: require("../assets/黃宏成台灣阿成世界偉人財神總統.jpg"),
-        party_photo: require("../assets/無黨.jpg"),
-        experience: {
-          edu: ["東吳法律系"],
-          exp: [
-            "2016年第9屆立法委員參選人",
-            "2018年嘉義市長參選人",
-            "2020年第10屆立法委員參選人",
-          ],
-        },
-      },
-      {
         name: "蔡松益",
-        no: "4",
+        no: "2",
         party: "無黨",
         photo: require("../assets/蔡松益.jpg"),
         party_photo: require("../assets/無黨.jpg"),
@@ -1032,7 +986,7 @@ export default new Vuex.Store({
       },
       {
         name: "黃紹聰",
-        no: "5",
+        no: "3",
         party: "無黨",
         photo: require("../assets/黃紹聰.jpg"),
         party_photo: require("../assets/無黨.jpg"),
@@ -1043,7 +997,7 @@ export default new Vuex.Store({
       },
       {
         name: "陳泰山",
-        no: "6",
+        no: "4",
         party: "無黨",
         photo: require("../assets/陳泰山.jpg"),
         party_photo: require("../assets/無黨.jpg"),
@@ -1058,28 +1012,46 @@ export default new Vuex.Store({
           ],
         },
       },
-    ],
-    //嘉義縣2位
-    ChiayiCountry: [
       {
-        name: "翁章梁",
-        no: "1",
-        party: "民進黨",
-        photo: require("../assets/翁章梁.jpg"),
-        party_photo: require("../assets/民進黨.jpg"),
+        name: "黃宏成台灣阿成世界偉人財神總統",
+        no: "5",
+        party: "無黨",
+        photo: require("../assets/黃宏成台灣阿成世界偉人財神總統.jpg"),
+        party_photo: require("../assets/無黨.jpg"),
         experience: {
-          edu: ["中原大學資訊工程學系", "南華大學非營利事業管理研究所碩士"],
+          edu: ["東吳法律系"],
           exp: [
-            // "嘉義縣政府秘書兼人力發展所所長",
-            // "嘉義縣政府社會局局長",
-            "行政院農業委員會副主任委員",
-            "嘉義縣第18屆縣長",
+            "2016年第9屆立法委員參選人",
+            "2018年嘉義市長參選人",
+            "2020年第10屆立法委員參選人",
           ],
         },
       },
       {
+        name: "李俊俋",
+        no: "6",
+        party: "民進黨",
+        photo: require("../assets/李俊俋.jpg"),
+        party_photo: require("../assets/民進黨.jpg"),
+        experience: {
+          edu: [
+            "波士頓學院政治研究所碩士",
+            "喬治華盛頓大學政治研究所博士班結業",
+          ],
+          exp: [
+            // "總統府國策顧問兼憲改辦公室主任",
+            // "2012年第8屆立法委員",
+            "2016年第9屆立法委員",
+            "2020年中華民國總統府副秘書長",
+          ],
+        },
+      },
+    ],
+    //嘉義縣2位
+    ChiayiCountry: [
+      {
         name: "王育敏",
-        no: "2",
+        no: "1",
         party: "國民黨",
         photo: require("../assets/王育敏.jpg"),
         party_photo: require("../assets/國民黨.jpg"),
@@ -1099,12 +1071,91 @@ export default new Vuex.Store({
           ],
         },
       },
+      {
+        name: "翁章梁",
+        no: "2",
+        party: "民進黨",
+        photo: require("../assets/翁章梁.jpg"),
+        party_photo: require("../assets/民進黨.jpg"),
+        experience: {
+          edu: ["中原大學資訊工程學系", "南華大學非營利事業管理研究所碩士"],
+          exp: [
+            // "嘉義縣政府秘書兼人力發展所所長",
+            // "嘉義縣政府社會局局長",
+            "行政院農業委員會副主任委員",
+            "嘉義縣第18屆縣長",
+          ],
+        },
+      },
     ],
     //台南市5位
     Tainan: [
       {
-        name: "黃偉哲",
+        name: "許忠信",
         no: "1",
+        party: "無黨",
+        photo: require("../assets/許忠信.jpg"),
+        party_photo: require("../assets/無黨.jpg"),
+        experience: {
+          edu: [
+            "國立臺灣大學國際關係組學士",
+            "國立政治大學法律研究所碩士",
+            "英國劍橋大學國際經貿法學博士",
+          ],
+          exp: [
+            // "行政院新聞局無線電視台審議委員",
+            "經濟部貿易調查委員會義務法律顧問",
+            "行政院新聞局法規會委員",
+          ],
+        },
+      },
+      {
+        name: "林義豐",
+        no: "2",
+        party: "無黨",
+        photo: require("../assets/林義豐.jpg"),
+        party_photo: require("../assets/無黨.jpg"),
+        experience: {
+          edu: ["台南市立協進國小", "美國維吉尼亞州科技管理大學企業管理碩士"],
+          exp: [
+            // "1968年伍彩集團創辦人兼總裁",
+            // "2018年台南市長參選人",
+            "2020年台南市第五選區立委候選人",
+            "2022年台南市長參選人",
+          ],
+        },
+      },
+      {
+        name: "謝龍介",
+        no: "3",
+        party: "國民黨",
+        photo: require("../assets/謝龍介.jpg"),
+        party_photo: require("../assets/國民黨.jpg"),
+        experience: {
+          edu: ["遠東技術學院企業管理系", "國立成功大學高階管理碩士（EMBA）"],
+          exp: [
+            // "2002年省轄市第15屆臺南市議會議員",
+            // "2006年省轄市第16屆臺南市議會議員",
+            // "2010年直轄市第1屆臺南市議會議員",
+            "2014年直轄市第2屆臺南市議會議員",
+            "2018年直轄市第3屆臺南市議會議員",
+          ],
+        },
+      },
+      {
+        name: "吳炳輝",
+        no: "4",
+        party: "無黨",
+        photo: require("../assets/吳炳輝.jpg"),
+        party_photo: require("../assets/無黨.jpg"),
+        experience: {
+          edu: ["東吳大學法律系", "加拿大大學企業管理碩士及博士"],
+          exp: ["1990年執行律師業務", "2020年台南市第五選區立委參選人"],
+        },
+      },
+      {
+        name: "黃偉哲",
+        no: "5",
         party: "民進黨",
         photo: require("../assets/黃偉哲.jpg"),
         party_photo: require("../assets/民進黨.jpg"),
@@ -1124,103 +1175,35 @@ export default new Vuex.Store({
           ],
         },
       },
-      {
-        name: "謝龍介",
-        no: "2",
-        party: "國民黨",
-        photo: require("../assets/謝龍介.jpg"),
-        party_photo: require("../assets/國民黨.jpg"),
-        experience: {
-          edu: ["遠東技術學院企業管理系", "國立成功大學高階管理碩士（EMBA）"],
-          exp: [
-            // "2002年省轄市第15屆臺南市議會議員",
-            // "2006年省轄市第16屆臺南市議會議員",
-            // "2010年直轄市第1屆臺南市議會議員",
-            "2014年直轄市第2屆臺南市議會議員",
-            "2018年直轄市第3屆臺南市議會議員",
-          ],
-        },
-      },
-      {
-        name: "許忠信",
-        no: "3",
-        party: "無黨",
-        photo: require("../assets/許忠信.jpg"),
-        party_photo: require("../assets/無黨.jpg"),
-        experience: {
-          edu: [
-            "國立臺灣大學國際關係組學士",
-            "國立政治大學法律研究所碩士",
-            "英國劍橋大學國際經貿法學博士",
-          ],
-          exp: [
-            // "行政院新聞局無線電視台審議委員",
-            "經濟部貿易調查委員會義務法律顧問",
-            "行政院新聞局法規會委員",
-          ],
-        },
-      },
-      {
-        name: "林義豐",
-        no: "4",
-        party: "無黨",
-        photo: require("../assets/林義豐.jpg"),
-        party_photo: require("../assets/無黨.jpg"),
-        experience: {
-          edu: ["台南市立協進國小", "美國維吉尼亞州科技管理大學企業管理碩士"],
-          exp: [
-            // "1968年伍彩集團創辦人兼總裁",
-            // "2018年台南市長參選人",
-            "2020年台南市第五選區立委候選人",
-            "2022年台南市長參選人",
-          ],
-        },
-      },
-      {
-        name: "吳炳輝",
-        no: "3",
-        party: "無黨",
-        photo: require("../assets/吳炳輝.jpg"),
-        party_photo: require("../assets/無黨.jpg"),
-        experience: {
-          edu: ["東吳大學法律系", "加拿大大學企業管理碩士及博士"],
-          exp: ["1990年執行律師業務", "2020年台南市第五選區立委參選人"],
-        },
-      },
     ],
 
     //高雄市4位
     Kaohsiung: [
       {
-        name: "陳其邁",
+        name: "鄭宇翔",
         no: "1",
-        party: "民進黨",
-        photo: require("../assets/陳其邁.jpg"),
-        party_photo: require("../assets/民進黨.jpg"),
+        party: "無黨",
+        photo: require("../assets/鄭宇翔.jpg"),
+        party_photo: require("../assets/無黨.jpg"),
         experience: {
-          edu: ["中山醫學院醫學系畢業", "國立臺灣大學公衛研究所預防醫學碩士"],
-          exp: [
-            // "2000年民主進步黨主流聯盟發言人",
-            // "2002年第5屆立法委員",
-            // "立法院民主進步黨黨團副幹事長",
-            // "2003年立法院程序委員會召集委員",
-            // "2004年行政院政務委員、行政院發言人",
-            // "2005年高雄市（合併前直轄市）代理市長",
-            // "2006年高雄市市長候選人陳菊競選總部總幹事",
-            // "2007年中華民國總統府特任副秘書長",
-            // "2008年民主進步黨副祕書長",
-            // "2009年民主進步黨社會發展委員會主委",
-            // "民主進步黨發言人",
-            // "2012年第8屆立法委員",
-            // "2016年第9屆立法院委員",
-            "2019年第42任行政院副院長",
-            "2020年高雄市第3屆市長（補選）",
-          ],
+          edu: [""],
+          exp: [""],
+        },
+      },
+      {
+        name: "曾尹儷",
+        no: "2",
+        party: "無黨",
+        photo: require("../assets/曾尹儷.jpg"),
+        party_photo: require("../assets/無黨.jpg"),
+        experience: {
+          edu: ["美國巴爾的摩大學公共管理博士"],
+          exp: ["國民黨市長候選人黃俊英及楊秋興競選團隊發言人"],
         },
       },
       {
         name: "柯志恩",
-        no: "2",
+        no: "3",
         party: "國民黨",
         photo: require("../assets/柯志恩.jpg"),
         party_photo: require("../assets/國民黨.jpg"),
@@ -1239,39 +1222,53 @@ export default new Vuex.Store({
         },
       },
       {
-        name: "鄭宇翔",
-        no: "3",
-        party: "無黨",
-        photo: require("../assets/鄭宇翔.jpg"),
-        party_photo: require("../assets/無黨.jpg"),
-        experience: {
-          edu: [""],
-          exp: [""],
-        },
-      },
-      {
-        name: "曾尹儷",
+        name: "陳其邁",
         no: "4",
-        party: "無黨",
-        photo: require("../assets/曾尹儷.jpg"),
-        party_photo: require("../assets/無黨.jpg"),
+        party: "民進黨",
+        photo: require("../assets/陳其邁.jpg"),
+        party_photo: require("../assets/民進黨.jpg"),
         experience: {
-          edu: ["美國巴爾的摩大學公共管理博士"],
-          exp: ["國民黨市長候選人黃俊英及楊秋興競選團隊發言人"],
+          edu: ["中山醫學院醫學系畢業", "國立臺灣大學公衛研究所預防醫學碩士"],
+          exp: [
+            // "2000年民主進步黨主流聯盟發言人",
+            // "2002年第5屆立法委員",
+            // "立法院民主進步黨黨團副幹事長",
+            // "2003年立法院程序委員會召集委員",
+            // "2004年行政院政務委員、行政院發言人",
+            // "2005年高雄市（合併前直轄市）代理市長",
+            // "2006年高雄市市長候選人陳菊競選總部總幹事",
+            // "2007年中華民國總統府特任副秘書長",
+            // "2008年民主進步黨副祕書長",
+            // "2009年民主進步黨社會發展委員會主委",
+            // "民主進步黨發言人",
+            // "2012年第8屆立法委員",
+            "2016年第9屆立法院委員",
+            "2019年第42任行政院副院長",
+            "2020年高雄市第3屆市長（補選）",
+          ],
         },
       },
     ],
     //屏東縣3位
     Pingtung: [
       {
-        name: "周春米",
+        name: "詹智鈞",
         no: "1",
-        party: "民進黨",
-        photo: require("../assets/周春米.jpg"),
-        party_photo: require("../assets/民進黨.jpg"),
+        party: "時代力量",
+        photo: require("../assets/詹智鈞.jpg"),
+        party_photo: require("../assets/時代力量.jpg"),
         experience: {
-          edu: ["國立臺灣大學法律學系法學組畢業"],
-          exp: ["2016年第9屆立法委員", "2020年第10屆立法委員"],
+          edu: [
+            "國立中興大學食品科學系",
+            "高雄醫學大學學士後醫學系",
+            "國立屏東大學社會發展學碩士班",
+          ],
+          exp: [
+            // "屏東縣就業歧視暨性平評議委員會委員",
+            // "屏東縣勞動調解委員",
+            "屏東地檢署榮譽法醫師",
+            "屏基工會創會理事長",
+          ],
         },
       },
       {
@@ -1290,23 +1287,14 @@ export default new Vuex.Store({
         },
       },
       {
-        name: "詹智鈞",
+        name: "周春米",
         no: "3",
-        party: "時代力量",
-        photo: require("../assets/詹智鈞.jpg"),
-        party_photo: require("../assets/時代力量.jpg"),
+        party: "民進黨",
+        photo: require("../assets/周春米.jpg"),
+        party_photo: require("../assets/民進黨.jpg"),
         experience: {
-          edu: [
-            "國立中興大學食品科學系",
-            "高雄醫學大學學士後醫學系",
-            "國立屏東大學社會發展學碩士班",
-          ],
-          exp: [
-            // "屏東縣就業歧視暨性平評議委員會委員",
-            // "屏東縣勞動調解委員",
-            "屏東地檢署榮譽法醫師",
-            "屏基工會創會理事長",
-          ],
+          edu: ["國立臺灣大學法律學系法學組畢業"],
+          exp: ["2016年第9屆立法委員", "2020年第10屆立法委員"],
         },
       },
     ],
@@ -1314,25 +1302,8 @@ export default new Vuex.Store({
     //花蓮縣3位
     Hualien: [
       {
-        name: "KolasYotaka",
-        no: "1",
-        party: "民進黨",
-        photo: require("../assets/Kolas.png"),
-        party_photo: require("../assets/民進黨.jpg"),
-        experience: {
-          edu: ["東海大學社會學系學士", "東海大學社會學研究所碩士"],
-          exp: [
-            // "2014年桃園市政府原住民族行政局局長",
-            // "2016年第9屆全國不分區及僑居國外國民立法委員",
-            "2017年美國國務院「國際領袖計畫」訪問者",
-            "2018年行政院發言人",
-            "2020年總統府發言人",
-          ],
-        },
-      },
-      {
         name: "徐榛蔚",
-        no: "2",
+        no: "1",
         party: "國民黨",
         photo: require("../assets/徐榛蔚.jpg"),
         party_photo: require("../assets/國民黨.jpg"),
@@ -1349,7 +1320,7 @@ export default new Vuex.Store({
       },
       {
         name: "黃師鵬",
-        no: "3",
+        no: "2",
         party: "無黨",
         photo: require("../assets/黃師鵬.jpg"),
         party_photo: require("../assets/無黨.jpg"),
@@ -1362,24 +1333,41 @@ export default new Vuex.Store({
           ],
         },
       },
+      {
+        name: "Kolas Yotaka",
+        no: "3",
+        party: "民進黨",
+        photo: require("../assets/Kolas.png"),
+        party_photo: require("../assets/民進黨.jpg"),
+        experience: {
+          edu: ["東海大學社會學系學士", "東海大學社會學研究所碩士"],
+          exp: [
+            // "2014年桃園市政府原住民族行政局局長",
+            // "2016年第9屆全國不分區及僑居國外國民立法委員",
+            "2017年美國國務院「國際領袖計畫」訪問者",
+            "2018年行政院發言人",
+            "2020年總統府發言人",
+          ],
+        },
+      },
     ],
     //台東縣3位
     Taitung: [
       {
-        name: "劉櫂豪",
+        name: "陳長宏",
         no: "1",
-        party: "民進黨",
-        photo: require("../assets/選舉章icon.png"),
-        party_photo: require("../assets/民進黨.jpg"),
+        party: "無黨",
+        photo: require("../assets/陳長宏.jpg"),
+        party_photo: require("../assets/無黨.jpg"),
         experience: {
-          edu: ["國立政治大學法律系"],
+          edu: [""],
           exp: [
-            // "2001年臺東縣副縣長",
-            // "2019年民主進步黨政策會執行長",
-            "2020年民進黨台東縣黨部主委",
-            "2012年第8屆立法委員",
-            "2016年第9屆立法委員",
-            "2020年第10屆立法委員",
+            // "新北市永光彩色印刷廠負責人",
+            // "工業局審查委員顧問",
+            // "交通部IP及通訊協定委員",
+            "台灣網際網路創會會長及法制委員會總召",
+            "族群聯盟執行長",
+            "全球華人牧師大會總召",
           ],
         },
       },
@@ -1405,20 +1393,20 @@ export default new Vuex.Store({
         },
       },
       {
-        name: "陳長宏",
+        name: "劉櫂豪",
         no: "3",
-        party: "無黨",
-        photo: require("../assets/陳長宏.jpg"),
-        party_photo: require("../assets/無黨.jpg"),
+        party: "民進黨",
+        photo: require("../assets/選舉章icon.png"),
+        party_photo: require("../assets/民進黨.jpg"),
         experience: {
-          edu: [""],
+          edu: ["國立政治大學法律系"],
           exp: [
-            // "新北市永光彩色印刷廠負責人",
-            // "工業局審查委員顧問",
-            // "交通部IP及通訊協定委員",
-            "台灣網際網路創會會長及法制委員會總召",
-            "族群聯盟執行長",
-            "全球華人牧師大會總召",
+            // "2001年臺東縣副縣長",
+            // "2019年民主進步黨政策會執行長",
+            "2020年民進黨台東縣黨部主委",
+            "2012年第8屆立法委員",
+            "2016年第9屆立法委員",
+            "2020年第10屆立法委員",
           ],
         },
       },
@@ -1497,42 +1485,36 @@ export default new Vuex.Store({
         },
       },
       {
-        name: "楊鎮浯",
-        no: "2",
-        party: "國民黨",
-        photo: require("../assets/楊鎮浯.jpg"),
-        party_photo: require("../assets/國民黨.jpg"),
-        experience: {
-          edu: ["中國文化大學經濟學系", "西敏大學企業管理碩士"],
-          exp: ["2016年第9屆立法委員", "2018年金門縣第7屆縣長"],
-        },
-      },
-      {
-        name: "洪志恒",
-        no: "3",
-        party: "無黨",
-        photo: require("../assets/洪志恒.jpg"),
-        party_photo: require("../assets/無黨.jpg"),
-        experience: {
-          edu: ["東吳大學法律系畢業"],
-          exp: [
-            // "法律實務經驗20多年",
-            // "2014年金門縣長參選人",
-            // "2016年立法委員參選人",
-            "2018年金門縣長參選人",
-            "2020年立法委員參選人",
-          ],
-        },
-      },
-      {
         name: "朱紀瑋",
-        no: "4",
+        no: "2",
         party: "無黨",
         photo: require("../assets/朱紀瑋.jpg"),
         party_photo: require("../assets/無黨.jpg"),
         experience: {
           edu: [""],
           exp: [""],
+        },
+      },
+      {
+        name: "林志錦",
+        no: "3",
+        party: "無黨",
+        photo: require("../assets/林志錦.jpg"),
+        party_photo: require("../assets/無黨.jpg"),
+        experience: {
+          edu: [""],
+          exp: ["2020年立法委員參選人"],
+        },
+      },
+      {
+        name: "楊鎮浯",
+        no: "4",
+        party: "國民黨",
+        photo: require("../assets/楊鎮浯.jpg"),
+        party_photo: require("../assets/國民黨.jpg"),
+        experience: {
+          edu: ["中國文化大學經濟學系", "西敏大學企業管理碩士"],
+          exp: ["2016年第9屆立法委員", "2018年金門縣第7屆縣長"],
         },
       },
       {
@@ -1547,14 +1529,20 @@ export default new Vuex.Store({
         },
       },
       {
-        name: "林志錦",
+        name: "洪志恒",
         no: "6",
         party: "無黨",
-        photo: require("../assets/林志錦.jpg"),
+        photo: require("../assets/洪志恒.jpg"),
         party_photo: require("../assets/無黨.jpg"),
         experience: {
-          edu: [""],
-          exp: ["2020年立法委員參選人"],
+          edu: ["東吳大學法律系畢業"],
+          exp: [
+            // "法律實務經驗20多年",
+            // "2014年金門縣長參選人",
+            // "2016年立法委員參選人",
+            "2018年金門縣長參選人",
+            "2020年立法委員參選人",
+          ],
         },
       },
     ],
@@ -1598,11 +1586,11 @@ export default new Vuex.Store({
         experience: {
           edu: ["淡江大學教育政策與領導研究所"],
           exp: [
-            // "連江縣副縣長",
-            // "連江縣政府秘書長",
+            "連江縣副縣長",
+            "連江縣政府秘書長",
             "連江縣政府局長",
-            "連江縣政府參議",
-            "連江縣政府主任",
+            // "連江縣政府參議",
+            // "連江縣政府主任",
           ],
         },
       },

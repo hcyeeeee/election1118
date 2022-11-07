@@ -16,20 +16,21 @@
                                             loading="lazy">
                                         <!-- person -->
                                         <div class="text">
-                                            <h4>{{item.name}}</h4>
+                                            <h4 class="num">{{ item.no }}</h4>
+                                            <h4>{{ item.name }}</h4>
                                             <!-- party -->
-                                            <h4>{{item.party}}</h4>
+                                            <h4>{{ item.party }}</h4>
                                             <!-- edu -->
                                             <p class="edu_title">最高學歷</p>
                                             <p class="edu_content"
                                                 v-for="(item, index) of getProfile1[index].experience.edu" :key="index">
-                                                {{item}}
+                                                {{ item }}
                                             </p>
                                             <!-- exp -->
                                             <p class="exp_title">經歷</p>
                                             <p class="exp_content"
                                                 v-for="(item, index) of getProfile1[index].experience.exp" :key="index">
-                                                {{item}}</p>
+                                                {{ item }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -43,20 +44,21 @@
                                             loading="lazy">
                                         <!-- person -->
                                         <div class="text">
-                                            <h4>{{item.name}}</h4>
+                                            <h4 class="num">{{ item.no }}</h4>
+                                            <h4>{{ item.name }}</h4>
                                             <!-- party -->
-                                            <h4>{{item.party}}</h4>
+                                            <h4>{{ item.party }}</h4>
                                             <!-- edu -->
                                             <p class="edu_title">最高學歷</p>
                                             <p class="edu_content"
                                                 v-for="(item, index) of getProfile2[index].experience.edu" :key="index">
-                                                {{item}}
+                                                {{ item }}
                                             </p>
                                             <!-- exp -->
                                             <p class="exp_title">經歷</p>
                                             <p class="exp_content"
                                                 v-for="(item, index) of getProfile2[index].experience.exp" :key="index">
-                                                {{item}}</p>
+                                                {{ item }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -70,20 +72,21 @@
                                             loading="lazy">
                                         <!-- person -->
                                         <div class="text">
-                                            <h4>{{item.name}}</h4>
+                                            <h4 class="num">{{ item.no }}</h4>
+                                            <h4>{{ item.name }}</h4>
                                             <!-- party -->
-                                            <h4>{{item.party}}</h4>
+                                            <h4>{{ item.party }}</h4>
                                             <!-- edu -->
                                             <p class="edu_title">最高學歷</p>
                                             <p class="edu_content"
                                                 v-for="(item, index) of getProfile3[index].experience.edu" :key="index">
-                                                {{item}}
+                                                {{ item }}
                                             </p>
                                             <!-- exp -->
                                             <p class="exp_title">經歷</p>
                                             <p class="exp_content"
                                                 v-for="(item, index) of getProfile3[index].experience.exp" :key="index">
-                                                {{item}}</p>
+                                                {{ item }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -97,25 +100,24 @@
                                             loading="lazy">
                                         <!-- person -->
                                         <div class="text">
-                                            <h4>{{item.name}}</h4>
+                                            <h4 class="num">{{ item.no }}</h4>
+                                            <h4>{{ item.name }}</h4>
                                             <!-- party -->
-                                            <h4>{{item.party}}</h4>
+                                            <h4>{{ item.party }}</h4>
                                             <!-- edu -->
-
-
                                             <p class="edu_title">最高學歷</p>
                                             <div class="emil">
                                                 <p class="edu_content ellipsis2"
                                                     v-for="(item, index) of getProfile4[index].experience.edu"
                                                     :key="index">
-                                                    {{item}}
+                                                    {{ item }}
                                                 </p>
                                             </div>
                                             <!-- exp -->
                                             <p class="exp_title">經歷</p>
                                             <p class="exp_content"
                                                 v-for="(item, index) of getProfile4[index].experience.exp" :key="index">
-                                                {{item}}</p>
+                                                {{ item }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -129,20 +131,21 @@
                                             loading="lazy">
                                         <!-- person -->
                                         <div class="text">
-                                            <h4>{{item.name}}</h4>
+                                            <h4 class="num">{{ item.no }}</h4>
+                                            <h4>{{ item.name }}</h4>
                                             <!-- party -->
-                                            <h4>{{item.party}}</h4>
+                                            <h4>{{ item.party }}</h4>
                                             <!-- edu -->
                                             <p class="edu_title">最高學歷</p>
                                             <p class="edu_content"
                                                 v-for="(item, index) of getProfile6[index].experience.edu" :key="index">
-                                                {{item}}
+                                                {{ item }}
                                             </p>
                                             <!-- exp -->
                                             <p class="exp_title">經歷</p>
                                             <p class="exp_content"
                                                 v-for="(item, index) of getProfile6[index].experience.exp" :key="index">
-                                                {{item}}</p>
+                                                {{ item }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -156,20 +159,21 @@
                                             loading="lazy">
                                         <!-- person -->
                                         <div class="text">
-                                            <h4>{{item.name}}</h4>
+                                            <h4 class="num">{{ item.no }}</h4>
+                                            <h4>{{ item.name }}</h4>
                                             <!-- party -->
-                                            <h4>{{item.party}}</h4>
+                                            <h4>{{ item.party }}</h4>
                                             <!-- edu -->
                                             <p class="edu_title">最高學歷</p>
                                             <p class="edu_content"
                                                 v-for="(item, index) of getProfile5[index].experience.edu" :key="index">
-                                                {{item}}
+                                                {{ item }}
                                             </p>
                                             <!-- exp -->
                                             <p class="exp_title">經歷</p>
                                             <p class="exp_content"
                                                 v-for="(item, index) of getProfile5[index].experience.exp" :key="index">
-                                                {{item}}</p>
+                                                {{ item }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -183,20 +187,21 @@
                                             loading="lazy">
                                         <!-- person -->
                                         <div class="text">
-                                            <h4>{{item.name}}</h4>
+                                            <h4 class="num">{{ item.no }}</h4>
+                                            <h4>{{ item.name }}</h4>
                                             <!-- party -->
-                                            <h4>{{item.party}}</h4>
+                                            <h4>{{ item.party }}</h4>
                                             <!-- edu -->
                                             <p class="edu_title">最高學歷</p>
                                             <p class="edu_content"
                                                 v-for="(item, index) of getProfile[index].experience.edu" :key="index">
-                                                {{item}}
+                                                {{ item }}
                                             </p>
                                             <!-- exp -->
                                             <p class="exp_title">經歷</p>
                                             <p class="exp_content"
                                                 v-for="(item, index) of getProfile[index].experience.exp" :key="index">
-                                                {{item}}</p>
+                                                {{ item }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -214,20 +219,21 @@
                                             loading="lazy">
                                         <!-- person -->
                                         <div class="text">
-                                            <h4>{{item.name}}</h4>
+                                            <h4 class="num">{{ item.no }}</h4>
+                                            <h4>{{ item.name }}</h4>
                                             <!-- party -->
-                                            <h4>{{item.party}}</h4>
+                                            <h4>{{ item.party }}</h4>
                                             <!-- edu -->
                                             <p class="edu_title">最高學歷</p>
                                             <p class="edu_content"
                                                 v-for="(item, index) of getProfile7[index].experience.edu" :key="index">
-                                                {{item}}
+                                                {{ item }}
                                             </p>
                                             <!-- exp -->
                                             <p class="exp_title">經歷</p>
                                             <p class="exp_content"
                                                 v-for="(item, index) of getProfile7[index].experience.exp" :key="index">
-                                                {{item}}</p>
+                                                {{ item }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -241,20 +247,21 @@
                                             loading="lazy">
                                         <!-- person -->
                                         <div class="text">
-                                            <h4>{{item.name}}</h4>
+                                            <h4 class="num">{{ item.no }}</h4>
+                                            <h4>{{ item.name }}</h4>
                                             <!-- party -->
-                                            <h4>{{item.party}}</h4>
+                                            <h4>{{ item.party }}</h4>
                                             <!-- edu -->
                                             <p class="edu_title">最高學歷</p>
                                             <p class="edu_content"
                                                 v-for="(item, index) of getProfile8[index].experience.edu" :key="index">
-                                                {{item}}
+                                                {{ item }}
                                             </p>
                                             <!-- exp -->
                                             <p class="exp_title">經歷</p>
                                             <p class="exp_content"
                                                 v-for="(item, index) of getProfile8[index].experience.exp" :key="index">
-                                                {{item}}</p>
+                                                {{ item }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -268,20 +275,21 @@
                                             loading="lazy">
                                         <!-- person -->
                                         <div class="text">
-                                            <h4>{{item.name}}</h4>
+                                            <h4 class="num">{{ item.no }}</h4>
+                                            <h4>{{ item.name }}</h4>
                                             <!-- party -->
-                                            <h4>{{item.party}}</h4>
+                                            <h4>{{ item.party }}</h4>
                                             <!-- edu -->
                                             <p class="edu_title">最高學歷</p>
                                             <p class="edu_content"
                                                 v-for="(item, index) of getProfile9[index].experience.edu" :key="index">
-                                                {{item}}
+                                                {{ item }}
                                             </p>
                                             <!-- exp -->
                                             <p class="exp_title">經歷</p>
                                             <p class="exp_content"
                                                 v-for="(item, index) of getProfile9[index].experience.exp" :key="index">
-                                                {{item}}</p>
+                                                {{ item }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -295,22 +303,23 @@
                                             loading="lazy">
                                         <!-- person -->
                                         <div class="text">
-                                            <h4>{{item.name}}</h4>
+                                            <h4 class="num">{{ item.no }}</h4>
+                                            <h4>{{ item.name }}</h4>
                                             <!-- party -->
-                                            <h4>{{item.party}}</h4>
+                                            <h4>{{ item.party }}</h4>
                                             <!-- edu -->
                                             <p class="edu_title">最高學歷</p>
                                             <p class="edu_content"
                                                 v-for="(item, index) of getProfile10[index].experience.edu"
                                                 :key="index">
-                                                {{item}}
+                                                {{ item }}
                                             </p>
                                             <!-- exp -->
                                             <p class="exp_title">經歷</p>
                                             <p class="exp_content"
                                                 v-for="(item, index) of getProfile10[index].experience.exp"
                                                 :key="index">
-                                                {{item}}</p>
+                                                {{ item }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -324,22 +333,23 @@
                                             loading="lazy">
                                         <!-- person -->
                                         <div class="text">
-                                            <h4>{{item.name}}</h4>
+                                            <h4 class="num">{{ item.no }}</h4>
+                                            <h4>{{ item.name }}</h4>
                                             <!-- party -->
-                                            <h4>{{item.party}}</h4>
+                                            <h4>{{ item.party }}</h4>
                                             <!-- edu -->
                                             <p class="edu_title">最高學歷</p>
                                             <p class="edu_content"
                                                 v-for="(item, index) of getProfile11[index].experience.edu"
                                                 :key="index">
-                                                {{item}}
+                                                {{ item }}
                                             </p>
                                             <!-- exp -->
                                             <p class="exp_title">經歷</p>
                                             <p class="exp_content"
                                                 v-for="(item, index) of getProfile11[index].experience.exp"
                                                 :key="index">
-                                                {{item}}</p>
+                                                {{ item }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -350,7 +360,14 @@
                     <b-tab title="南部">
                         <b-tabs content-class="mt-3" fill>
                             <b-tab title="嘉義市">
-                                <div class="layout" v-for="(item, index) of getProfile12" :key="index">
+                                <!-- <div class="layout">
+                                    <div class="layout_card" style="background-color:#fff">
+                                        <p class="layout_notice">
+                                            由於無黨籍嘉義市長候選人黃紹聰驟逝，中選會已依《選罷法》暫停選舉，11月3日開會最新決定，嘉義市長選舉將單獨舉行，改成12月18日投票，而詳細配套措施，還得等中選會進一步說明。
+                                        </p>
+                                    </div>
+                                </div> -->
+                                <div class=" layout" v-for="(item, index) of getProfile12" :key="index">
                                     <div class="layout_card">
                                         <img class="person_img" :src="getProfile12[index].photo" alt="personal"
                                             loading="lazy">
@@ -358,22 +375,23 @@
                                             loading="lazy">
                                         <!-- person -->
                                         <div class="text">
-                                            <h4>{{item.name}}</h4>
+                                            <h4 class="num">{{ item.no }}</h4>
+                                            <h4>{{ item.name }}</h4>
                                             <!-- party -->
-                                            <h4>{{item.party}}</h4>
+                                            <h4>{{ item.party }}</h4>
                                             <!-- edu -->
                                             <p class="edu_title">最高學歷</p>
                                             <p class="edu_content"
                                                 v-for="(item, index) of getProfile12[index].experience.edu"
                                                 :key="index">
-                                                {{item}}
+                                                {{ item }}
                                             </p>
                                             <!-- exp -->
                                             <p class="exp_title">經歷</p>
                                             <p class="exp_content"
                                                 v-for="(item, index) of getProfile12[index].experience.exp"
                                                 :key="index">
-                                                {{item}}</p>
+                                                {{ item }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -387,22 +405,23 @@
                                             loading="lazy">
                                         <!-- person -->
                                         <div class="text">
-                                            <h4>{{item.name}}</h4>
+                                            <h4 class="num">{{ item.no }}</h4>
+                                            <h4>{{ item.name }}</h4>
                                             <!-- party -->
-                                            <h4>{{item.party}}</h4>
+                                            <h4>{{ item.party }}</h4>
                                             <!-- edu -->
                                             <p class="edu_title">最高學歷</p>
                                             <p class="edu_content"
                                                 v-for="(item, index) of getProfile13[index].experience.edu"
                                                 :key="index">
-                                                {{item}}
+                                                {{ item }}
                                             </p>
                                             <!-- exp -->
                                             <p class="exp_title">經歷</p>
                                             <p class="exp_content"
                                                 v-for="(item, index) of getProfile13[index].experience.exp"
                                                 :key="index">
-                                                {{item}}</p>
+                                                {{ item }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -416,22 +435,23 @@
                                             loading="lazy">
                                         <!-- person -->
                                         <div class="text">
-                                            <h4>{{item.name}}</h4>
+                                            <h4 class="num">{{ item.no }}</h4>
+                                            <h4>{{ item.name }}</h4>
                                             <!-- party -->
-                                            <h4>{{item.party}}</h4>
+                                            <h4>{{ item.party }}</h4>
                                             <!-- edu -->
                                             <p class="edu_title">最高學歷</p>
                                             <p class="edu_content"
                                                 v-for="(item, index) of getProfile14[index].experience.edu"
                                                 :key="index">
-                                                {{item}}
+                                                {{ item }}
                                             </p>
                                             <!-- exp -->
                                             <p class="exp_title">經歷</p>
                                             <p class="exp_content"
                                                 v-for="(item, index) of getProfile14[index].experience.exp"
                                                 :key="index">
-                                                {{item}}</p>
+                                                {{ item }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -445,22 +465,23 @@
                                             loading="lazy">
                                         <!-- person -->
                                         <div class="text">
-                                            <h4>{{item.name}}</h4>
+                                            <h4 class="num">{{ item.no }}</h4>
+                                            <h4>{{ item.name }}</h4>
                                             <!-- party -->
-                                            <h4>{{item.party}}</h4>
+                                            <h4>{{ item.party }}</h4>
                                             <!-- edu -->
                                             <p class="edu_title">最高學歷</p>
                                             <p class="edu_content"
                                                 v-for="(item, index) of getProfile15[index].experience.edu"
                                                 :key="index">
-                                                {{item}}
+                                                {{ item }}
                                             </p>
                                             <!-- exp -->
                                             <p class="exp_title">經歷</p>
                                             <p class="exp_content"
                                                 v-for="(item, index) of getProfile15[index].experience.exp"
                                                 :key="index">
-                                                {{item}}</p>
+                                                {{ item }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -474,22 +495,23 @@
                                             loading="lazy">
                                         <!-- person -->
                                         <div class="text">
-                                            <h4>{{item.name}}</h4>
+                                            <h4 class="num">{{ item.no }}</h4>
+                                            <h4>{{ item.name }}</h4>
                                             <!-- party -->
-                                            <h4>{{item.party}}</h4>
+                                            <h4>{{ item.party }}</h4>
                                             <!-- edu -->
                                             <p class="edu_title">最高學歷</p>
                                             <p class="edu_content"
                                                 v-for="(item, index) of getProfile16[index].experience.edu"
                                                 :key="index">
-                                                {{item}}
+                                                {{ item }}
                                             </p>
                                             <!-- exp -->
                                             <p class="exp_title">經歷</p>
                                             <p class="exp_content"
                                                 v-for="(item, index) of getProfile16[index].experience.exp"
                                                 :key="index">
-                                                {{item}}</p>
+                                                {{ item }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -508,22 +530,23 @@
                                             loading="lazy">
                                         <!-- person -->
                                         <div class="text">
-                                            <h4>{{item.name}}</h4>
+                                            <h4 class="num">{{ item.no }}</h4>
+                                            <h4>{{ item.name }}</h4>
                                             <!-- party -->
-                                            <h4>{{item.party}}</h4>
+                                            <h4>{{ item.party }}</h4>
                                             <!-- edu -->
                                             <p class="edu_title">最高學歷</p>
                                             <p class="edu_content"
                                                 v-for="(item, index) of getProfile17[index].experience.edu"
                                                 :key="index">
-                                                {{item}}
+                                                {{ item }}
                                             </p>
                                             <!-- exp -->
                                             <p class="exp_title">經歷</p>
                                             <p class="exp_content"
                                                 v-for="(item, index) of getProfile17[index].experience.exp"
                                                 :key="index">
-                                                {{item}}</p>
+                                                {{ item }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -537,22 +560,23 @@
                                             loading="lazy">
                                         <!-- person -->
                                         <div class="text">
-                                            <h4>{{item.name}}</h4>
+                                            <h4 class="num">{{ item.no }}</h4>
+                                            <h4>{{ item.name }}</h4>
                                             <!-- party -->
-                                            <h4>{{item.party}}</h4>
+                                            <h4>{{ item.party }}</h4>
                                             <!-- edu -->
                                             <p class="edu_title">最高學歷</p>
                                             <p class="edu_content"
                                                 v-for="(item, index) of getProfile18[index].experience.edu"
                                                 :key="index">
-                                                {{item}}
+                                                {{ item }}
                                             </p>
                                             <!-- exp -->
                                             <p class="exp_title">經歷</p>
                                             <p class="exp_content"
                                                 v-for="(item, index) of getProfile18[index].experience.exp"
                                                 :key="index">
-                                                {{item}}</p>
+                                                {{ item }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -570,22 +594,23 @@
                                             loading="lazy">
                                         <!-- person -->
                                         <div class="text">
-                                            <h4>{{item.name}}</h4>
+                                            <h4 class="num">{{ item.no }}</h4>
+                                            <h4>{{ item.name }}</h4>
                                             <!-- party -->
-                                            <h4>{{item.party}}</h4>
+                                            <h4>{{ item.party }}</h4>
                                             <!-- edu -->
                                             <p class="edu_title">最高學歷</p>
                                             <p class="edu_content"
                                                 v-for="(item, index) of getProfile19[index].experience.edu"
                                                 :key="index">
-                                                {{item}}
+                                                {{ item }}
                                             </p>
                                             <!-- exp -->
                                             <p class="exp_title">經歷</p>
                                             <p class="exp_content"
                                                 v-for="(item, index) of getProfile19[index].experience.exp"
                                                 :key="index">
-                                                {{item}}</p>
+                                                {{ item }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -599,22 +624,23 @@
                                             loading="lazy">
                                         <!-- person -->
                                         <div class="text">
-                                            <h4>{{item.name}}</h4>
+                                            <h4 class="num">{{ item.no }}</h4>
+                                            <h4>{{ item.name }}</h4>
                                             <!-- party -->
-                                            <h4>{{item.party}}</h4>
+                                            <h4>{{ item.party }}</h4>
                                             <!-- edu -->
                                             <p class="edu_title">最高學歷</p>
                                             <p class="edu_content"
                                                 v-for="(item, index) of getProfile20[index].experience.edu"
                                                 :key="index">
-                                                {{item}}
+                                                {{ item }}
                                             </p>
                                             <!-- exp -->
                                             <p class="exp_title">經歷</p>
                                             <p class="exp_content"
                                                 v-for="(item, index) of getProfile20[index].experience.exp"
                                                 :key="index">
-                                                {{item}}</p>
+                                                {{ item }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -628,22 +654,23 @@
                                             loading="lazy">
                                         <!-- person -->
                                         <div class="text">
-                                            <h4>{{item.name}}</h4>
+                                            <h4 class="num">{{ item.no }}</h4>
+                                            <h4>{{ item.name }}</h4>
                                             <!-- party -->
-                                            <h4>{{item.party}}</h4>
+                                            <h4>{{ item.party }}</h4>
                                             <!-- edu -->
                                             <p class="edu_title">最高學歷</p>
                                             <p class="edu_content"
                                                 v-for="(item, index) of getProfile21[index].experience.edu"
                                                 :key="index">
-                                                {{item}}
+                                                {{ item }}
                                             </p>
                                             <!-- exp -->
                                             <p class="exp_title">經歷</p>
                                             <p class="exp_content"
                                                 v-for="(item, index) of getProfile21[index].experience.exp"
                                                 :key="index">
-                                                {{item}}</p>
+                                                {{ item }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -739,6 +766,18 @@ export default {
 </script>
 
 <style scoped>
+.num {
+    background-color: #313131;
+    width: fit-content;
+    margin: auto;
+    color: white;
+    border-radius: 500px;
+    height: 2rem;
+    width: 2rem;
+    font-size: 1.2rem;
+    margin: 0rem auto 0.5rem;
+}
+
 h4 {
     width: 100%;
     display: flex;
@@ -775,7 +814,7 @@ p {
 
 ul li {
     font-size: 1.2rem;
-    margin: 1rem 0 1rem 2rem;
+    /* margin: 1rem 0 1rem 2rem; */
 }
 
 @media screen and (max-width: 768px) {
@@ -798,18 +837,18 @@ ul li {
 }
 
 .person_img {
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    margin-top: 1rem;
+    margin-top: 2rem;
     border-radius: 100%;
     object-fit: cover;
 }
 
 .party_img {
     position: relative;
-    top: -4.5rem;
-    right: -3.5rem;
+    top: -4rem;
+    right: -4rem;
     width: 50px;
     border-radius: 100%;
 }
@@ -820,10 +859,10 @@ ul li {
     border-radius: 1.5rem;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     padding: .5rem 1rem;
-    margin: .5rem;
-    width: 300px;
+    margin: .8rem;
+    width: 280px;
     overflow-y: hidden;
-    height: 600px;
+    height: 620px;
 
 }
 
@@ -885,18 +924,13 @@ p {
     margin-top: -2rem;
 }
 
-.tab-content>.active {
-    display: inline-flex;
-    flex-wrap: wrap;
-    overflow-x: scroll;
-    margin: auto;
-}
 
 .tab-content>.active {
-    display: inline-flex;
+    display: flex;
     flex-wrap: wrap;
     overflow-x: scroll;
     margin: auto;
+    justify-content: center;
 }
 
 
@@ -944,9 +978,9 @@ a {
         box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
         padding: .5rem .8rem;
         margin: .5rem;
-        width: 280px;
+        width: 250px;
         overflow-y: hidden;
-        height: 600px;
+        height: 580px;
     }
 
 }
@@ -959,7 +993,7 @@ a {
         box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
         padding: .5rem .7rem;
         margin: .5rem;
-        width: 280px;
+        width: 240px;
         overflow-y: hidden;
         height: fit-content;
     }
@@ -969,6 +1003,7 @@ a {
         flex-wrap: nowrap;
         overflow-x: scroll;
         margin: auto;
+
     }
 
 
@@ -981,6 +1016,44 @@ a {
     .tab-content {
         overflow-x: scroll;
     }
+
+    .person_img {
+        width: 110px;
+        height: 110px;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        margin-top: 1rem;
+        border-radius: 100%;
+        object-fit: cover;
+    }
+
+    .party_img {
+        position: relative;
+        top: -3rem;
+        right: -3rem;
+        width: 40px;
+        border-radius: 100%;
+    }
+
+    p {
+
+        margin: 0.5rem 0 .5rem 0;
+        padding: 0rem .5rem;
+        line-height: 1.4rem;
+        font-size: 1rem;
+
+    }
+
+    h4 {
+        font-size: 1.2rem;
+
+    }
+
+    .section-box {
+        font-family: 'Noto Sans TC';
+        margin: 1rem auto;
+        padding: 0rem 1rem;
+    }
+
 
 
 }

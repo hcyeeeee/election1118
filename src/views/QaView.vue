@@ -1,6 +1,7 @@
 <template>
   <div>
-    <COntentBanner />
+    <ContentBanner />
+    <Marquee />
     <QA />
     <Share />
     <Footer />
@@ -9,14 +10,16 @@
 
 
 <script>
-import COntentBanner from '@/components/Content_banner.vue'
+import ContentBanner from '@/components/Content_banner.vue'
+import Marquee from '@/components/marquee.vue'
 import QA from '@/components/aq.vue'
 import Footer from '@/components/Footer.vue'
 import Share from '../components/share.vue'
 export default {
   name: 'App',
   components: {
-    COntentBanner,
+    ContentBanner,
+    Marquee,
     QA,
     Footer,
     Share,

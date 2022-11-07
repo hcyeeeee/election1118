@@ -11,11 +11,12 @@
             更多選舉資訊
             <div class="dropup-content " id="myDIV">
                 <a href="https://bit.ly/3CFJQFt">歷年版圖</a>
-                <a href="https://bit.ly/3erX5R7">熱門議題</a>
+                <a href="https://bit.ly/3erX5R7">議題懶人包</a>
                 <router-link to="/qa">
                     修憲公投
                 </router-link>
                 <a href="https://bit.ly/3T1xwFt"> 政治術語大考驗</a>
+                <a href="https://bit.ly/3zwDKp2">公投模擬考</a>
             </div>
         </a>
 

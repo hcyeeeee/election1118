@@ -98,7 +98,7 @@ export default {
             document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
             axios
-                .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=政治&Page=1&sp=6')
+                .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=政治&Page=1&sp=9')
                 .then((response) => {
                     // console.log(response)
                     let data = response.data.ITEM
@@ -116,7 +116,7 @@ export default {
             document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
             axios
-                .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=18歲公民權&Page=1&sp=6')
+                .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=18歲公民權&Page=1&sp=9')
                 .then((response) => {
                     // console.log(response)
                     let data = response.data.ITEM

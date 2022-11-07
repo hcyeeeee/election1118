@@ -21,6 +21,19 @@
                 </div>
             </div>
         </div>
+        <!-- <div class="marqu"></div>
+
+        <div id="pSlider">
+            <ol id="slider-container" dir="ltr">
+                <li id="slide_1" class="li_slide" v-for="(item, index) of newsInfo" :key="index">
+                    <div class="slide-snapper">
+                        <a> {{ item.Title }}</a>
+                    </div>
+
+                </li>
+
+            </ol>
+        </div> -->
 
     </div>
 </template>
@@ -30,11 +43,13 @@ export default {
     data() {
         return {
             title: '九合一選舉',
+            newsInfo: [],
         }
     },
 
-    mounted() { 
- 
+    mounted() {
+        // timer
+
         var timer = null;
         var show = document.getElementById("show");
         function show_date_time() {
@@ -64,8 +79,13 @@ export default {
 
             }
         }
+
         timer = setInterval(show_date_time, 10);
     },
+
+
+
+
 }
 </script>
 
@@ -283,5 +303,204 @@ img.banner {
 
 
 
+}
+
+/* caresol */
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+/* Example images */
+
+
+.li_slide {
+    background-size: cover;
+    background-position: center;
+}
+
+/* Animations */
+@keyframes tonext {
+    75% {
+        margin-left: 0;
+    }
+
+    95% {
+        margin-left: 0;
+    }
+
+    98% {
+        margin-left: calc(100% + 200px);
+    }
+
+    99% {
+        margin-left: 0;
+    }
+}
+
+@keyframes snap {
+    96% {
+        scroll-snap-align: start;
+    }
+
+    97% {
+        scroll-snap-align: none;
+    }
+
+    99% {
+        scroll-snap-align: none;
+    }
+
+    100% {
+        scroll-snap-align: start;
+    }
+}
+
+@keyframes tostart {
+    0% {
+        margin-left: 0;
+    }
+
+    99% {
+        margin-left: 0;
+    }
+}
+
+/* Reset */
+ol,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#pSlider {
+    width: 100%;
+    height: 2rem;
+    position: relative;
+    margin: 0 auto;
+    /* Left, Right Navigation Arrows */
+}
+
+#pSlider #slider-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+#pSlider #slider-container .li_slide {
+    position: relative;
+    width: 100%;
+    border-radius: 0px;
+    background-color: khaki;
+    flex: none;
+    margin-right: 150px;
+}
+
+#pSlider #slider-container .li_slide:nth-child(even) {}
+
+#pSlider #slider-container .li_slide:last-child {
+    margin-right: 0;
+}
+
+#pSlider #slider-container .li_slide .slide-snapper {
+    /* Auto play */
+    scroll-snap-align: start;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: tonext 4s infinite ease, snap 4s infinite ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #pSlider #slider-container .li_slide .slide-snapper {
+        animation-name: none;
+    }
+}
+
+#pSlider #slider-container .li_slide:last-child .slide-snapper {
+    animation-name: tostart, snap;
+}
+
+#pSlider #slider-container:hover .li_slide .slide-snapper,
+#pSlider #slider-container:focus-within .li_slide .slide-snapper {
+    animation-name: none;
+}
+
+#pSlider:before,
+#pSlider:after,
+#pSlider .prev_slide,
+#pSlider .next_slide {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    width: 30px;
+    height: 100%;
+    z-index: 2;
+    cursor: pointer;
+}
+
+#pSlider:before,
+#pSlider:after {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
+}
+
+#pSlider .next_slide {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 20px;
+}
+
+#pSlider .prev_slide {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 20px;
+}
+
+
+
+#pSlider:after {
+    z-index: 1;
+    /* set underneath .next_slide (z: 2)*/
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='60' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3Cpolyline points='10 10 30 30 10 50' stroke='rgba(255,255,255,0.9)' stroke-width='4' stroke-linecap='butt' fill='none' stroke-linejoin='round'%3E&lt;%3C/polyline%3E%3C/svg%3E");
+}
+
+#pSlider:before {
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='60' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3Cpolyline points='30 10 10 30 30 50' stroke='rgba(255,255,255,0.9)' stroke-width='4' stroke-linecap='butt' fill='none' stroke-linejoin='round'%3E&gt;%3C/polyline%3E%3C/svg%3E");
+}
+
+/* Scrollbar */
+#pSlider #slider-container::-webkit-scrollbar {
+    display: none;
+    height: 5px;
+}
+
+#pSlider #slider-container::-webkit-scrollbar-thumb {
+    background-color: #000;
+    border-radius: 50px;
+}
+
+#pSlider #slider-container::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+/* Input */
+
+#sliderSettings {
+    text-align: center;
+}
+
+#slider-width,
+#slider-height {
+    text-align: center;
+    margin-bottom: 20px;
 }
 </style>

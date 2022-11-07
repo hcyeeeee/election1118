@@ -1,7 +1,102 @@
 <template>
 
     <div class="section" id="issue">
-        <h2>熱門議題</h2>
+        <h2>議題懶人包</h2>
+
+
+        <div id="splide4" class="splide map">
+            <div class="orange">
+                <h3>長照問題誰來顧？</h3>
+            </div>
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <img src="../assets/長照/old.jpg" alt="長照" loading="lazy">
+                        <p class="desktop">2022年九合一選舉，台北市的三位市長候選人不約而同地端出了有關長照問題的政見牛肉。
+                            <br>
+                            <br>
+                            台北市雖為六都之首，但長照覆蓋率卻為六都墊底，究竟台北的長照面臨了怎麼樣的問題，讓三位市長候選人同時將目光投向了台北的長照政策呢？
+                            <br>
+                        </p>
+                        <!-- mobile -->
+                        <p class="mobile">
+                            2022年九合一選舉，台北市的三位市長候選人不約而同地端出了有關長照問題的政見牛肉。
+
+                            <br>
+                            台北市雖為六都之首，但長照覆蓋率卻為六都墊底，究竟台北的長照面臨了怎麼樣的問題，讓三位市長候選人同時將目光投向了台北的長照政策呢？
+                            <br>
+                        </p>
+                    </li>
+                    <li class="splide__slide">
+                        <img src="../assets/長照/old2.jpg" alt="長照" loading="lazy">
+                        <p class="desktop">2025年老年人口推估成長至468萬佔現人口20%，每5人有1位65歲以上老人，正式晉升超高齡國家。
+                            <br> <br> 面對越來越高的長照需求，應該提出怎麼樣的政見，才能切中市民的需求呢?
+                        </p>
+                        <!-- mobile -->
+                        <p class="mobile">
+                            2025年老年人口推估成長至468萬佔現人口20%，每5人有1位65歲以上老人，正式晉升超高齡國家。
+                            <br>面對越來越高的長照需求，應該提出怎麼樣的政見，才能切中市民的需求呢?
+                        </p>
+
+
+                    </li>
+                    <li class="splide__slide">
+                        <img src="../assets/長照/old3.jpg" alt="長照" loading="lazy">
+                        <p class="desktop">【陳時中】「樂齡台北」
+                            增加日照中心據點、發展社區關懷圈、樂齡運動延緩老化、銀髮樂活放心唱、銀髮心理健康促進、活力長青。
+                            <br> <br>
+                            【黃珊珊】長照政見「福、照、全」
+                            擴大現敬老卡適用項目、成人紙尿布、呼吸器等需求品；閒置校舍、校舍重建等，建置長照機構及日照中心，實現在地老化；促進銀髮就業，並提供65歲以上市民長者每年3000元樂齡學習券。
+                            <br> <br>
+                            【蔣萬安】「長照三箭」
+                            提出6個月內增加台北市500張長期照護床、補助參與計畫的私人機構每床補助每月2萬元、提供有遠距通報救援設備需求的長者每人每月1200元設備補助。
+
+                        </p>
+                        <!-- mobile -->
+                        <p class="mobile">
+                            【陳時中】「樂齡台北」
+                            增加日照中心據點、發展社區關懷圈
+                            <br>
+                            【黃珊珊】「福、照、全」
+                            擴大現敬老卡適用項目，建置長照機構及日照中心，65歲以上長者每年3000元樂齡學習券。
+                            <br>
+                            【蔣萬安】「長照三箭」
+                            6個月增加500張長期照護床、有遠距通報救援設備需求的長者每月1200元補助。
+                        </p>
+                    </li>
+                    <li class="splide__slide">
+                        <img src="../assets/長照/old4.jpg" alt="長照" loading="lazy">
+                        <p class="desktop">
+                            9/7【陳時中】
+                            根據蔣萬安的長照三箭政見，指出蔣萬安不了解目前現行法規與補助相關內容。
+                            <br> <br>
+                            9/8【蔣萬安】
+                            現行法規可以有適度的鬆綁及彈性的空間，來應對愈來愈高的長照需求，從陳時中的說法，顯示他是不懂長照的「外行部長」。
+                            <br> <br>
+                            9/9【陳時中】
+                            蔣委員說要「突破法律限制」，但身為現任立委，若有好的做法早該提出修法，不必拖到選舉。
+                            <br> <br>
+                            9/25【黃珊珊】
+                            表示長照最大問題是缺人才，需提高工作機會與誘因，呼籲大家一起來辯論
+                        </p>
+                        <!-- mobile -->
+                        <p class="mobile">
+                            9/7【陳時中】
+                            指出蔣萬安不了解目前現行法規與補助相關內容。
+                            <br>
+                            9/8【蔣萬安】
+                            現行法規可以有彈性的空間應對長照需求，根據陳時中的說法，顯示他不懂長照。
+                            <br>
+                            9/9【陳時中】
+                            蔣萬安提出「突破法律限制」，但身為現任立委，若有好的做法早該提出修法。
+                            <br>
+                            9/25【黃珊珊】
+                            表示長照最大問題是缺人才，需提高工作機會與誘因，呼籲大家一起來辯論。
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
         <div id="splide1" class="splide map">
             <div class="orange">
                 <h3>大巨蛋蓋好沒？</h3>
@@ -279,6 +374,7 @@
                 </ul>
             </div>
         </div>
+
         <br>
     </div>
 </template>
@@ -306,6 +402,19 @@ export default {
             var splide3 = new Splide('#splide3');
             splide3.mount();
         });
+        document.addEventListener('DOMContentLoaded', function () {
+            var splide4 = new Splide('#splide4');
+            splide4.mount();
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            var splide5 = new Splide('#splide5');
+            splide5.mount();
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            var splide6 = new Splide('#splide6');
+            splide6.mount();
+        });
+
     },
 }
 
@@ -317,12 +426,13 @@ export default {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 1.5rem;
+
 }
 
 li img {
 
     width: 100%;
-    padding: 1rem;
+    padding: 1rem 0rem;
 
 }
 
@@ -365,17 +475,6 @@ p {
 }
 
 
-/* li::before {
-
-    content: "  ";
-    width: 20px;
-    height: 20px;
-    border-radius: 100%;
-    background-color: #FFA255;
-    display: inline-block;
-    margin: -0.2rem 0.5rem;
-
-} */
 
 li {
     padding: 0rem;
@@ -406,14 +505,15 @@ p.mobile {
 
     .splide__slide {
         display: block;
-        max-height: 700px;
+        height: fit-content;
         padding: 0rem;
+        margin: auto;
+        width: 100%;
     }
 
 
 
     li img {
-
         width: 100%;
         padding: 0rem;
         margin: auto;
@@ -431,6 +531,12 @@ p.mobile {
         padding: .2rem;
         font-size: 1.2rem;
         line-height: 4rem;
+    }
+
+    .splide__slide {
+        display: block;
+
+
     }
 
     .time {

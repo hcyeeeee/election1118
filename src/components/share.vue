@@ -136,9 +136,9 @@ export default {
 @media screen and (max-width: 768px) {
     .layout_addition {
         position: absolute;
-        right: 4rem !important;
-        width: 70px;
-        top: .9rem;
+        right: -2.6rem;
+        width: 90px;
+        top: 5rem;
         align-items: center;
         z-index: 999;
 
@@ -159,9 +159,7 @@ export default {
         display: none;
     }
 
-    .icon {
-        display: flex
-    }
+    .icon {}
 
 }
 

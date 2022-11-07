@@ -1,8 +1,9 @@
 <template>
   <div>
 
-    <COntentBanner />
-    <!-- <ContentProcess/> -->
+    <ContentBanner />
+    <!-- <Marquee /> -->
+    <ContentProcess />
     <ContentTime />
     <ContentNews />
     <ContentDistrict />
@@ -13,11 +14,14 @@
 
   </div>
 </template>
+  <!-- swiper -->
+
 
 <script>
 
-import COntentBanner from '@/components/Content_banner.vue'
-// import ContentProcess from '@/components/Content_process.vue'
+import ContentBanner from '@/components/Content_banner.vue'
+// import Marquee from '@/components/marquee.vue'
+import ContentProcess from '@/components/Content_process.vue'
 import ContentTime from '@/components/Content_time.vue'
 import ContentVideo from '@/components/Content_video.vue'
 import ContentNews from '@/components/Content_news.vue'
@@ -25,12 +29,12 @@ import ContentDistrict from '@/components/Content_district.vue'
 import Footer from '@/components/Footer.vue'
 import Share from '../components/share.vue'
 
-
 export default {
   name: 'App',
   components: {
-    COntentBanner,
-    // ContentProcess,
+    ContentBanner,
+    // Marquee,
+    ContentProcess,
     ContentTime,
     ContentNews,
     ContentDistrict,
@@ -39,13 +43,12 @@ export default {
     Share,
   },
 }
+
 </script>
 
 <style>
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:wght@100;300&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700&display=swap');
-
-
 
 html,
 body {
@@ -205,7 +208,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #888888;
+  color: #595757;
   transition: 0.3s;
   width: 100%;
   overflow-x: hidden;
@@ -221,8 +224,7 @@ h3 {
   font-family: 'Noto Sans TC';
   text-align: center;
   font-size: 1.6rem;
-  font-weight: bolder;
-  padding: 0.6rem 0;
+  padding: 0.1rem 0;
   margin: 2rem 0 0.1rem 0;
   color: rgb(59, 59, 59);
 
@@ -244,7 +246,7 @@ ul li {
 p {
   font-family: 'Noto Sans TC';
   text-align: left;
-  margin: 0.5rem 0 2rem 0;
+  /* margin: 0.5rem 0 2rem 0; */
   line-height: 1.4rem;
   font-size: 1.3rem;
 }
@@ -321,23 +323,6 @@ figure {
 
 
 
-/* Tabs style */
-/* .nav-tabs .nav-link.active {
-  background-color: #A5D35E !important;
-  color: rgb(45, 44, 44);
-} */
-
-.nav-item {
-  color: rgb(32, 32, 32);
-  border-bottom: 3px solid #A5D35E;
-  margin: .2rem;
-
-}
-
-.nav-tabs .nav-link {
-  width: 78px;
-
-}
 
 
 hr {

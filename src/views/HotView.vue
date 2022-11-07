@@ -2,22 +2,19 @@
 
 <template>
   <div>
-
-    <COntentBanner />
+    <ContentBanner />
+    <!-- <Marquee/> -->
     <Issue />
-
     <Share />
     <Footer />
-
-
   </div>
 </template>
 
 <script>
 
-import COntentBanner from '@/components/Content_banner.vue'
+import ContentBanner from '@/components/Content_banner.vue'
+// import Marquee from '@/components/marquee.vue'
 import Issue from '@/components/Hot_isssue.vue'
-
 import Footer from '@/components/Footer.vue'
 import Share from '../components/share.vue'
 
@@ -25,7 +22,8 @@ import Share from '../components/share.vue'
 export default {
   name: 'App',
   components: {
-    COntentBanner,
+    ContentBanner,
+    // Marquee,
     Issue,
     Footer,
     Share,

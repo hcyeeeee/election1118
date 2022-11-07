@@ -1,87 +1,97 @@
 <template>
-    <div class="section">
+    <div class="section" id="pm">
         <h3>{{ title }}</h3>
         <!-- 電腦版導覽列 -->
         <b-tabs class="desktop" content-class="mt-3" fill>
-            <ul class="desktop">
-                <b-tab title="北部">
-                    <li @click="getData_ftvNews">宜蘭市</li>
-                    <li @click="getData_ftvNews1">基隆市</li>
-                    <li @click="getData_ftvNews2">台北市</li>
-                    <li @click="getData_ftvNews3">新北市</li>
-                    <li @click="getData_ftvNews4">桃園市</li>
-                    <li @click="getData_ftvNews5">新竹市</li>
-                    <li @click="getData_ftvNews6">新竹縣</li>
-                </b-tab>
-                <b-tab title="中部">
-                    <!-- 中部 -->
-                    <li @click="getData_ftvNews7">苗栗縣</li>
-                    <li @click="getData_ftvNews8">台中市</li>
-                    <li @click="getData_ftvNews9">彰化縣</li>
-                    <li @click="getData_ftvNews10">南投縣</li>
-                    <li @click="getData_ftvNews11">雲林縣</li>
-                </b-tab>
-                <b-tab title="南部">
-                    <!-- 南部 -->
-                    <li @click="getData_ftvNews12">嘉義市</li>
-                    <li @click="getData_ftvNews13">嘉義縣</li>
-                    <li @click="getData_ftvNews14">台南市</li>
-                    <li @click="getData_ftvNews15">高雄市</li>
-                    <li @click="getData_ftvNews16">屏東縣</li>
-                </b-tab>
-                <b-tab title="東部">
-                    <!-- 東部 -->
-                    <li @click="getData_ftvNews17">花蓮縣</li>
-                    <li @click="getData_ftvNews18">台東縣</li>
-                </b-tab>
-                <b-tab title="離島">
-                    <!-- 離島 -->
-                    <li @click="getData_ftvNews19">澎湖縣</li>
-                    <li @click="getData_ftvNews20">金門縣</li>
-                    <li @click="getData_ftvNews21">連江縣</li>
-                </b-tab>
-            </ul>
+            <b-tab title="北部" class="tabsize">
+                <b-tabs content-class="mt-3" fill>
+                    <b-tab class="tabsize" fill title=宜蘭市 @click="getData_ftvNews" active></b-tab>
+                    <b-tab class="tabsize" fill title=基隆市 @click="getData_ftvNews1"></b-tab>
+                    <b-tab class="tabsize" fill title=台北市 @click="getData_ftvNews2"></b-tab>
+                    <b-tab class="tabsize" fill title=新北市 @click="getData_ftvNews3"></b-tab>
+                    <b-tab class="tabsize" title=桃園市 @click="getData_ftvNews4"></b-tab>
+                    <b-tab class="tabsize" title=新竹市 @click="getData_ftvNews5"></b-tab>
+                    <b-tab class="tabsize" title=新竹縣 @click="getData_ftvNews6"></b-tab>
+                </b-tabs>
+            </b-tab>
+            <b-tab title="中部" class="tabsize" fill>
+                <b-tabs content-class="mt-3" fill>
+                    <b-tab title=苗栗縣 @click="getData_ftvNews7" active></b-tab>
+                    <b-tab title=台中市 @click="getData_ftvNews8"></b-tab>
+                    <b-tab title=彰化縣 @click="getData_ftvNews9"></b-tab>
+                    <b-tab title=南投縣 @click="getData_ftvNews10"></b-tab>
+                    <b-tab title=雲林縣 @click="getData_ftvNews11"></b-tab>
+                </b-tabs>
+            </b-tab>
+            <b-tab title="南部" class="tabsize" fill>
+                <b-tabs content-class="mt-3" fill>
+                    <b-tab title=嘉義市 @click="getData_ftvNews12" active></b-tab>
+                    <b-tab title=嘉義縣 @click="getData_ftvNews13"></b-tab>
+                    <b-tab title=台南市 @click="getData_ftvNews14"></b-tab>
+                    <b-tab title=高雄市 @click="getData_ftvNews15"></b-tab>
+                    <b-tab title=屏東縣 @click="getData_ftvNews16"></b-tab>
+                </b-tabs>
+            </b-tab>
+            <b-tab title="東部" class="lesscity tabsize" fill>
+                <b-tabs content-class="mt-3" fill>
+                    <b-tab title=花蓮縣 @click="getData_ftvNews17" active></b-tab>
+                    <b-tab title=台東縣 @click="getData_ftvNews18"></b-tab>
+                </b-tabs>
+            </b-tab>
+            <b-tab title="離島" class="lesscity tabsize" fill>
+                <!-- 離島 -->
+                <b-tabs content-class="mt-3" fill>
+                    <b-tab title=澎湖縣 @click="getData_ftvNews19" active></b-tab>
+                    <b-tab title=金門縣 @click="getData_ftvNews20"></b-tab>
+                    <b-tab title=連江縣 @click="getData_ftvNews21"></b-tab>
+                </b-tabs>
+            </b-tab>
         </b-tabs>
         <!-- 手機版導覽列 -->
         <b-tabs class="mobile" content-class="mt-3" fill>
-            <ul class="mobile">
-                <b-tab title="北部">
-                    <li @click="getData_ftvNews">宜蘭市</li>
-                    <li @click="getData_ftvNews1">基隆市</li>
-                    <li @click="getData_ftvNews2">台北市</li>
-                    <li @click="getData_ftvNews3">新北市</li>
-                    <li @click="getData_ftvNews4">桃園市</li>
-                    <li @click="getData_ftvNews5">新竹市</li>
-                    <li @click="getData_ftvNews6">新竹縣</li>
-                </b-tab>
-                <b-tab title="中部">
-                    <!-- 中部 -->
-                    <li @click="getData_ftvNews7">苗栗縣</li>
-                    <li @click="getData_ftvNews8">台中市</li>
-                    <li @click="getData_ftvNews9">彰化縣</li>
-                    <li @click="getData_ftvNews10">南投縣</li>
-                    <li @click="getData_ftvNews11">雲林縣</li>
-                </b-tab>
-                <b-tab title="南部">
-                    <!-- 南部 -->
-                    <li @click="getData_ftvNews12">嘉義市</li>
-                    <li @click="getData_ftvNews13">嘉義縣</li>
-                    <li @click="getData_ftvNews14">台南市</li>
-                    <li @click="getData_ftvNews15">高雄市</li>
-                    <li @click="getData_ftvNews16">屏東縣</li>
-                </b-tab>
-                <b-tab title="東部" class="lesscity">
-                    <!-- 東部 -->
-                    <li @click="getData_ftvNews17">花蓮縣</li>
-                    <li @click="getData_ftvNews18">台東縣</li>
-                </b-tab>
-                <b-tab title="離島" class="lesscity">
-                    <!-- 離島 -->
-                    <li @click="getData_ftvNews19">澎湖縣</li>
-                    <li @click="getData_ftvNews20">金門縣</li>
-                    <li @click="getData_ftvNews21">連江縣</li>
-                </b-tab>
-            </ul>
+            <b-tab title="北部">
+                <b-tabs content-class="mt-3" fill>
+                    <b-tab title=宜蘭市 @click="getData_ftvNews" active></b-tab>
+                    <b-tab title=基隆市 @click="getData_ftvNews1"></b-tab>
+                    <b-tab title=台北市 @click="getData_ftvNews2"></b-tab>
+                    <b-tab title=新北市 @click="getData_ftvNews3"></b-tab>
+                    <b-tab title=桃園市 @click="getData_ftvNews4"></b-tab>
+                    <b-tab title=新竹市 @click="getData_ftvNews5"></b-tab>
+                    <b-tab title=新竹縣 @click="getData_ftvNews6"></b-tab>
+                </b-tabs>
+            </b-tab>
+            <b-tab title="中部">
+                <b-tabs content-class="mt-3" fill>
+                    <b-tab title=苗栗縣 @click="getData_ftvNews7" active></b-tab>
+                    <b-tab title=台中市 @click="getData_ftvNews8"></b-tab>
+                    <b-tab title=彰化縣 @click="getData_ftvNews9"></b-tab>
+                    <b-tab title=南投縣 @click="getData_ftvNews10"></b-tab>
+                    <b-tab title=雲林縣 @click="getData_ftvNews11"></b-tab>
+                </b-tabs>
+            </b-tab>
+            <b-tab title="南部">
+                <b-tabs content-class="mt-3" fill>
+                    <b-tab title=嘉義市 @click="getData_ftvNews12" active></b-tab>
+                    <b-tab title=嘉義縣 @click="getData_ftvNews13"></b-tab>
+                    <b-tab title=台南市 @click="getData_ftvNews14"></b-tab>
+                    <b-tab title=高雄市 @click="getData_ftvNews15"></b-tab>
+                    <b-tab title=屏東縣 @click="getData_ftvNews16"></b-tab>
+                </b-tabs>
+            </b-tab>
+            <b-tab title="東部" class="lesscity" fill>
+                <b-tabs content-class="mt-3" fill>
+                    <b-tab title=花蓮縣 @click="getData_ftvNews17" active></b-tab>
+                    <b-tab title=台東縣 @click="getData_ftvNews18"></b-tab>
+                </b-tabs>
+            </b-tab>
+            <b-tab title="離島" class="lesscity" fill>
+                <!-- 離島 -->
+                <b-tabs content-class="mt-3" fill>
+                    <b-tab title=澎湖縣 @click="getData_ftvNews19" active></b-tab>
+                    <b-tab title=金門縣 @click="getData_ftvNews20"></b-tab>
+                    <b-tab title=連江縣 @click="getData_ftvNews21"></b-tab>
+                </b-tabs>
+            </b-tab>
         </b-tabs>
 
 
@@ -89,12 +99,13 @@
 
         <div class="section-box">
             <!-- 電腦版內容 -->
-            <div class="news-layout desktop">
+            <div class="news-layout desktop ">
                 <div class="news" v-for="(item, index) of newsInfo" :key="index">
                     <div class="content-layout">
-                        <img :src="' https://www.ftvnews.com.tw/topics/test/image/'+ item.party +'.jpg'" alt="新聞封面照" />
+                        <img :src="' https://www.ftvnews.com.tw/topics/test/image/' + item.party + '.jpg'"
+                            alt="新聞封面照" />
                         <div class="porfile ">
-                            <h2 class="name">{{ item.name }}</h2>
+                            <h3 class="name">{{ item.name }}</h3>
                             <p class="party">{{ item.party }}</p>
                             <p class="party">{{ item.zone }}</p>
                         </div>
@@ -105,7 +116,8 @@
             <div class="news-layout mobile1">
                 <div class="news" v-for="(item, index) of newsInfo" :key="index">
                     <div class="content-layout">
-                        <img :src="' https://www.ftvnews.com.tw/topics/test/image/'+ item.party +'.jpg'" alt="新聞封面照" />
+                        <img :src="' https://www.ftvnews.com.tw/topics/test/image/' + item.party + '.jpg'"
+                            alt="新聞封面照" />
                         <div class="porfile">
                             <h2 class="name">{{ item.name }}</h2>
                             <p class="party">{{ item.party }}</p>
@@ -135,7 +147,7 @@ export default {
             axios
                 .get('https://www.ftvnews.com.tw/topics/test/Yilan.json')
                 .then((response) => {
-                    // console.log(response)
+                    console.log(response)
                     let data = response.data.ITEM
                     data.forEach((item) => {
                         this.newsInfo.push(item)
@@ -607,18 +619,24 @@ hr {
     word-break: break-all;
 }
 
+p {
+    font-family: 'Noto Sans TC';
+    text-align: left;
+    margin: 0.5rem 0 0.5rem 0;
+    line-height: 1.4rem;
+    font-size: 1.3rem;
+}
+
 .news img {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     border-radius: 500px;
     margin: auto;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 
 }
 
-ul {
-    margin: 2rem;
-}
+
 
 .title {
     display: -webkit-box;
@@ -643,44 +661,6 @@ ul {
     display: none;
 }
 
-
-
-ul {
-    display: flex;
-    margin: auto;
-    justify-content: center;
-    flex-wrap: no-wrap;
-
-
-}
-
-ul li {
-    text-align: center;
-    margin: 1.2rem;
-    padding: 1rem;
-    opacity: .9;
-    cursor: pointer;
-    color: #2e2e2e;
-    border-bottom: 3px solid #71b2e4;
-    width: 100px;
-
-}
-
-ul li:before {
-    content: '';
-}
-
-
-ul li:hover {
-    background-color: rgb(217, 246, 201);
-    color: #000000;
-    opacity: 1;
-}
-
-ul li:active {
-    background-color: rgb(217, 246, 201);
-    color: #000000;
-}
 
 .news a div:nth-child(1) {
     overflow-y: hidden;
@@ -728,30 +708,6 @@ a {
 }
 
 
-/* 
-.content-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-} */
-
-
-/* .porfile {
-    display: grid;
-    padding: .2rem;
-    grid-template-rows: 1fr 1fr;
-
-} */
-
-/* .name {
-    font-size: 1.4rem;
-    text-align: left;
-}
-
-.party {
-    font-size: 1.2rem;
-    text-align: left;
-
-} */
 
 .tab-pane {
     display: flex;
@@ -778,13 +734,13 @@ p {
 }
 
 
-ul li:active {
-    background-color: rgb(217, 246, 201);
-    color: #000000;
-}
-
 
 @media screen and (max-width: 500px) {
+
+    .tab-pane {
+        display: flex;
+    }
+
     .title {
         font-size: 1.2rem;
     }
@@ -812,29 +768,18 @@ ul li:active {
 
     }
 
-    ul li {
-        text-align: center;
-        margin: .5rem;
-        padding: .5rem 1rem;
-        width: fit-content;
-        opacity: .9;
-        cursor: pointer;
-        color: #2e2e2e;
-        font-size: 16px;
-        width: 100px;
-        border-bottom: 3px solid #80c1d3;
-    }
+
 
     .news img {
-        width: 80px;
-        height: 80px;
+        width: 70px;
+        height: 70px;
         border-radius: 500px;
         box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 
     }
 
     .section-box {
-
+        margin: 0rem auto 0rem;
         overflow-y: scroll;
         overflow-x: hidden;
 
@@ -848,10 +793,7 @@ ul li:active {
 
     }
 
-    /* .content-layout {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    } */
+
 
     .name {
         font-size: 1.4rem;
@@ -867,6 +809,7 @@ ul li:active {
     .news p {
         text-align: center;
         padding: 0.5rem;
+        font-size: 1rem;
 
     }
 
@@ -876,9 +819,37 @@ ul li:active {
 
     .news h2 {
         padding: 0rem;
-
+        padding: 1rem 0rem 0rem 0rem;
         word-break: break-all;
+        font-size: 1.2rem;
 
+    }
+
+    .section {
+        margin: 0rem auto;
+        padding: 0 1rem;
+        width: 100%;
+        max-width: 1000px;
+        padding: 0rem .8rem 0rem;
+    }
+
+    h3 {
+
+        text-align: center;
+        font-size: 1.6rem;
+        font-weight: bolder;
+        padding: 0.6rem 0;
+        margin: 1rem 0 1rem 0;
+        color: rgb(59, 59, 59);
+
+    }
+
+    p {
+        font-family: 'Noto Sans TC';
+        text-align: left;
+        margin: 0.5rem 0 0.5rem 0;
+        line-height: 1.4rem;
+        font-size: 1.3rem;
     }
 
 }
