@@ -3,53 +3,49 @@
         <h3>{{ title }}</h3>
         <div class="section">
             <!-- 區域 -->
-            <b-tabs content-class="mt-3" fill>
-                <div class>
-                    <b-tab title="北部">
-                        <b-tabs content-class="mt-3" class="tabsize" fill>
-                            <b-tab title="台北市" class="tabsize">
-                                <!-- big -->
-                                <div class="layout_up">
-                                    <div class="" v-for="(item, index) of this.taipei" :key="index">
-                                        <div class="layout_card">
-                                            <div>
-                                                <!-- <img class="person_img" :src="getProfile1[index].photo" alt="personal"
+            <div class>
+                <select v-model="selected">
+                    <option :value="city.cityNo" v-for="city, idx in citys" :key="idx">{{ city.cityName }}
+                    </option>
+                </select>
+                <!-- big -->
+                <div class="layout_up">
+                    <div class="" v-for="(item, index) in citys[selected].tickets" :key="index">
+                        <div class="layout_card">
+                            <div>
+                                <!-- <img class="person_img" :src="getProfile1[index].photo" alt="personal"
                                                 loading="lazy"> -->
-                                                <img class="person_img"
-                                                    :src="' https://www.ftvnews.com.tw/topics/test/image/' + item.candName + '.jpg'"
-                                                    alt="新聞封面照" />
-                                            </div>
-                                            <div class="content">
-                                                <h4>{{ item.candName }}</h4>
-                                                <p class="party_up">{{ item.party }}</p>
-                                            </div>
+                                <img class="person_img"
+                                    :src="' https://www.ftvnews.com.tw/topics/test/image/' + item.candName + '.jpg'"
+                                    alt="新聞封面照" />
+                            </div>
+                            <div class="content">
+                                <h4>{{ item.candName }}</h4>
+                                <p class="party_up">{{ item.party }}</p>
+                            </div>
 
-                                            <div class="ticket">
-                                                <p class="ticket_up"> {{ item.ticket }}</p>
-                                            </div>
-                                        </div>
-                                        <progress class="progress_class" max="100" value="80" />
-                                    </div>
-                                </div>
-                                <!-- small -->
-                                <div class="test">
-                                    <div class="layout_down" v-for="(item, index) of this.taipei" :key="index">
-                                        <div class="layout">
-                                            <img class="person_img"
-                                                :src="' https://www.ftvnews.com.tw/topics/test/image/' + item.candName + '.jpg'"
-                                                alt="新聞封面照" />
-                                            <p>{{ item.candName }}</p>
-                                            <p>{{ item.party }}</p>
-                                            <p> {{ item.ticket }} </p>
-                                            <progress class="progress_small" max="100" value="80" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </b-tab>
-                        </b-tabs>
-                    </b-tab>
+                            <div class="ticket">
+                                <p class="ticket_up"> {{ item.ticket }}</p>
+                            </div>
+                        </div>
+                        <progress class="progress_class" max="100" value="80" />
+                    </div>
                 </div>
-            </b-tabs>
+                <!-- small -->
+                <div class="test">
+                    <div class="layout_down" v-for="(item, index) in citys[selected].tickets" :key="index">
+                        <div class="layout">
+                            <img class="person_img"
+                                :src="' https://www.ftvnews.com.tw/topics/test/image/' + item.candName + '.jpg'"
+                                alt="新聞封面照" />
+                            <p>{{ item.candName }}</p>
+                            <p>{{ item.party }}</p>
+                            <p> {{ item.ticket }} </p>
+                            <progress class="progress_small" max="100" value="80" />
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- zone end-->
     </div>
@@ -58,102 +54,65 @@
 <script>
 
 export default {
+
     data() {
+        // let citys={};
         return {
             title: "縣市長候選人",
             taipei: [],
+            citys: null,
+            selected: 'A01',
+            selCity: null,
+            counter: null
+
         }
     },
     methods: {
+        preOrderData(data) {
+            let t1 = data.T1.detail
+            let citys = {}
+            t1.forEach(function (city) {
+                // console.log('source', citys)
+                if (city !== null) {
+                    city.tickets.sort(function (a, b) {
+                        return b.ticket - a.ticket
+                    })
+                    citys[city.cityNo] = city
+                }
+            })
+            this.citys = citys
+            console.log('order', this.citys)
+        },
         getData_vote() {
             document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
             axios
-                .get('https://melect-api.ftvnews.com.tw/Tickets/ftvelect.json')
+                .get('https://www.ftvnews.com.tw/topics/test/election.json')
                 .then((response) => {
                     console.log(response)
-                    let data = response.data.T1.detail[1].tickets
-                    console.log('rraaaa', data)
-                    data.forEach((item) => {
-                        this.taipei.push(item)
-                    })
+                    // let data = response.data.T1.detail[1].tickets
+                    // let data = response.data
+                    this.preOrderData(response.data)
+                    // console.log('rraaaa', data)
+                    // data.forEach((item) => {
+                    //     this.taipei.push(item)
+                    // })
                 })
                 .catch((error) => {
                     console.log('error' + error)
                 })
         },
-    },
-    computed: {
-        getProfile() {
-            return this.$store.state.Yilan
-        },
-        getProfile1() {
-            return this.$store.state.Keelung
-        },
-        getProfile2() {
-            return this.$store.state.Taipei
-        },
-        getProfile3() {
-            return this.$store.state.Newtaipei
-        },
-        getProfile4() {
-            return this.$store.state.Taoyuan
-        },
-        getProfile6() {
-            return this.$store.state.HsinchuCountry
-        },
-        getProfile5() {
-            return this.$store.state.HsinchuCity
-        },
-        getProfile7() {
-            return this.$store.state.Miaoli
-        },
-        getProfile8() {
-            return this.$store.state.Taichung
-        },
-        getProfile9() {
-            return this.$store.state.Changhua
-        },
-        getProfile10() {
-            return this.$store.state.Nantou
-        },
-        getProfile11() {
-            return this.$store.state.Yunlin
-        },
-        getProfile12() {
-            return this.$store.state.ChiayiCity
-        },
-        getProfile13() {
-            return this.$store.state.ChiayiCountry
-        },
-        getProfile14() {
-            return this.$store.state.Tainan
-        },
-        getProfile15() {
-            return this.$store.state.Kaohsiung
-        },
-        getProfile16() {
-            return this.$store.state.Pingtung
-        },
-        getProfile17() {
-            return this.$store.state.Hualien
-        },
-        getProfile18() {
-            return this.$store.state.Taitung
-        },
-        getProfile19() {
-            return this.$store.state.Penghu
-        },
-        getProfile20() {
-            return this.$store.state.Kinmen
-        },
-        getProfile21() {
-            return this.$store.state.Lienchiang
-        },
 
     },
-    mounted() {
+    created() {
         this.getData_vote()
+    },
+    mounted() {
+        let selCity = document.location.href.split("?")[1].split("=")[1]
+        this.selected = selCity
+        this.counter = setInterval(() => {
+            this.getData_vote()
+        }, 10000);
     },
 }
 </script>

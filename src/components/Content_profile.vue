@@ -360,13 +360,12 @@
                     <b-tab title="南部">
                         <b-tabs content-class="mt-3" fill>
                             <b-tab title="嘉義市">
-                                <!-- <div class="layout">
-                                    <div class="layout_card" style="background-color:#fff">
-                                        <p class="layout_notice">
-                                            由於無黨籍嘉義市長候選人黃紹聰驟逝，中選會已依《選罷法》暫停選舉，11月3日開會最新決定，嘉義市長選舉將單獨舉行，改成12月18日投票，而詳細配套措施，還得等中選會進一步說明。
-                                        </p>
-                                    </div>
-                                </div> -->
+
+                                <p class="layout_notice">
+                                    由於無黨籍嘉義市長候選人黃紹聰驟逝，中選會已依《選罷法》暫停選舉，11月3日開會最新決定，嘉義市長選舉將單獨舉行，改成12月18日投票，而詳細配套措施，還得等中選會進一步說明。
+                                </p>
+
+
                                 <div class=" layout" v-for="(item, index) of getProfile12" :key="index">
                                     <div class="layout_card">
                                         <img class="person_img" :src="getProfile12[index].photo" alt="personal"
@@ -397,6 +396,7 @@
                                 </div>
                             </b-tab>
                             <b-tab title="嘉義縣">
+
                                 <div class="layout" v-for="(item, index) of getProfile13" :key="index">
                                     <div class="layout_card">
                                         <img class="person_img" :src="getProfile13[index].photo" alt="personal"
@@ -970,6 +970,17 @@ a {
     max-height: 100%;
 }
 
+.layout_notice {
+
+    background-color: #ffc439;
+    color: black;
+    border-radius: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    padding: 1rem;
+    margin: .5rem 2rem;
+
+}
+
 @media screen and (max-width: 900px) {
     .layout_card {
         height: fit-content;
@@ -996,6 +1007,20 @@ a {
         width: 240px;
         overflow-y: hidden;
         height: fit-content;
+    }
+
+    .layout_notice {
+        height: fit-content;
+        background-color: #fcd16d;
+        border-radius: 1.5rem;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        padding: 1rem;
+        margin: .5rem;
+        width: 220px;
+        line-height: 1.5rem;
+        overflow-y: hidden;
+        color: black;
+
     }
 
     .tab-content>.active {

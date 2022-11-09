@@ -3,8 +3,9 @@
 
     <ContentBanner />
     <ContentProcess />
+    <Marquee />
     <City />
-    <Board />
+    <!-- <Board /> -->
     <!-- <ContentTime />
     <ContentNews />
     <ContentNews />
@@ -20,8 +21,9 @@
 <script>
 import ContentBanner from '@/components/Content_banner.vue'
 import ContentProcess from '@/components/Content_process.vue'
+import Marquee from '@/components/marquee.vue'
 // import ContentTime from '@/components/Content_time.vue'
-import Board from '@/components/board.vue'
+// import Board from '@/components/board.vue'
 import City from '@/components/city.vue'
 // import ContentVideo from '@/components/Content_video.vue'
 // import ContentNews from '@/components/Content_news.vue'
@@ -35,8 +37,9 @@ export default {
   components: {
     ContentBanner,
     ContentProcess,
+    Marquee,
     City,
-    Board,
+    // Board,
     // ContentTime,
     // ContentNews,
     // ContentDistrict,

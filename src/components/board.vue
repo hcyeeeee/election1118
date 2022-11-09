@@ -2,10 +2,11 @@
     <div>
         <div class="section" id="board">
             <h3>選情儀表板</h3>
+
             <div class="board">
-                <div class="box" v-for="(item, index) of this.taipei" :key="index">
+                <div class="box" :class="item.partyColor" v-for="(item, idx) in all" :key="idx" @click="goCand(item)">
                     <div class="ct">
-                        <P> 台北市</P>
+                        <P> {{ item.cityName }}</P>
                     </div>
                     <div>
                         <p> {{ item.candName }}</p>
@@ -52,22 +53,73 @@ export default {
         return {
             title: '縣市議員候選人',
             taipei: [],
-            all: [],
+            all: null,
+            counter: null
         }
     },
     methods: {
+        preOrderData(data) {
+            let t1 = data.T1.detail
+            let all = {}
+            t1.forEach(function (city) {
+                // console.log('source', citys)
+
+                if (city !== null) {
+                    city.tickets.sort(function (a, b) {
+                        return b.ticket - a.ticket
+                    })
+
+                    let partyColor = null;
+                    switch (city.tickets[0].party) {
+                        case "國民":
+                            partyColor = 'party-blue';
+                            break;
+                        case "民進":
+                            partyColor = 'party-green';
+                            break;
+                        case "無":
+                            partyColor = 'party-gray';
+                            break;
+                        default:
+                            partyColor = 'party-white';
+                    }
+                    all[city.cityName] = {
+                        cityName: city.cityName,
+                        candName: city.tickets[0].candName,
+                        cityNo: city.cityNo,
+                        ticket: city.tickets[0].ticket,
+                        partyColor: partyColor
+
+                    }
+                }
+            })
+
+
+            this.all = all
+            //  console.log('all', this.all)
+
+            // console.log('order',this.citys)
+        },
+        goCand(city) {
+
+            //  console.log(city)
+            location.href = `/#/ing?city=${city.cityNo}`
+        }
+        ,
+
         getData_vote() {
             document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
             axios
-                .get('https://melect-api.ftvnews.com.tw/Tickets/ftvelect.json')
+                .get('https://www.ftvnews.com.tw/topics/test/election.json')
                 .then((response) => {
-                    console.log(response)
-                    let data = response.data.T1.detail[1].tickets
-                    console.log('dataaaaa', data)
-                    data.forEach((item) => {
-                        this.taipei.push(item)
-                    })
+                    // console.log(response)
+                    // let data = response.data.T1.detail[1].tickets
+                    // console.log('dataaaaa', data)
+                    // data.forEach((item) => {
+                    //     this.taipei.push(item)
+                    // })
+                    this.preOrderData(response.data)
                 })
                 .catch((error) => {
                     console.log('error' + error)
@@ -76,7 +128,9 @@ export default {
         getData_vote1() {
             // eslint-disable-next-line no-undef
             axios
-                .get('https://melect-api.ftvnews.com.tw/Tickets/ftvelect.json')
+                // .get('https://melect-api.ftvnews.com.tw/Tickets/ftvelect.json')
+                .get('https://www.ftvnews.com.tw/topics/test/election.json')
+
                 .then((response) => {
                     console.log(response)
                     let data = response.data.T1.detail
@@ -93,6 +147,9 @@ export default {
     mounted() {
         this.getData_vote(),
             this.getData_vote1()
+        this.counter = setInterval(() => {
+            this.getData_vote()
+        }, 10000);
     },
     computed: {
         getProfile() {
@@ -169,6 +226,10 @@ export default {
 
 
 <style scoped>
+.party-blue {
+    background: lightblue;
+}
+
 .section {
     max-width: 1000px;
     padding: .5rem 1rem;
@@ -190,6 +251,7 @@ export default {
     border: 3px solid rgb(224, 242, 222);
     border-radius: 1rem;
     margin: .4rem;
+    cursor: pointer;
 
 }
 

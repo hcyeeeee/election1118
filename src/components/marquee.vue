@@ -1,7 +1,7 @@
 <template>
     <div class="main">
 
-        <div id="pSlider" class="sss">
+        <!-- <div id="pSlider" class="sss">
             <div class="pop"><img src="../assets/pop.png" alt="">
             </div>
             <ol id="slider-container" dir="ltr">
@@ -12,16 +12,30 @@
                     </div>
                 </li>
             </ol>
-        </div>
+        </div> -->
+        <b-carousel id="carousel-1" v-model="slide" :interval="4000" controls indicators background="#ababab"
+            img-width="1024" img-height="480" style="text-shadow: 1px 1px 2px #333;">
+
+            <!-- Slide with blank fluid image to maintain slide aspect ratio -->
+            <b-carousel-slide caption="Blank Image" img-blank img-alt="Blank image">
+                <a :href="'https://www.ftvnews.com.tw/news/detail/' + item.ID" target="blank">
+                    {{ item.Title }}</a>
+            </b-carousel-slide>
+        </b-carousel>
+
     </div>
 </template>
 
+
 <script>
+
 export default {
     data() {
         return {
             title: '九合一選舉',
             newsInfo: [],
+            slide: 0,
+            sliding: null
         }
     },
     methods: {
@@ -29,7 +43,7 @@ export default {
             document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
             axios
-                .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=九合一選舉')
+                .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=九合一選舉&page=1')
                 .then((response) => {
                     // console.log(response)
                     let data = response.data.ITEM
@@ -62,14 +76,16 @@ export default {
     }
 
     95% {
-        margin-left: 0;
+        margin-left: calc(100% + 150px);
     }
 
     98% {
-        margin-left: calc(100% + 200px);
+        margin-left: calc(100% + 150px);
     }
 
-
+    99% {
+        margin-left: 0;
+    }
 }
 
 @keyframes snap {
@@ -91,8 +107,16 @@ export default {
 }
 
 @keyframes tostart {
-    0% {
+    75% {
         margin-left: 0;
+    }
+
+    95% {
+        margin-left: calc(-300% - 450px);
+    }
+
+    98% {
+        margin-left: calc(-300% - 450px);
     }
 
     99% {
@@ -199,7 +223,7 @@ li {
     left: 0;
     width: 100%;
     height: 100%;
-    animation: tonext 5s ease, snap 5s ease;
+    -webkit-animation: snap 4s infinite ease, tonext 4s infinite ease;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -212,14 +236,10 @@ li {
     animation-name: tostart, snap;
 }
 
-#pSlider #slider-container:hover .li_slide .slide-snapper,
 #pSlider #slider-container:focus-within .li_slide .slide-snapper {
     animation-name: none;
 }
 
-#pSlider:before,
-#pSlider:after,
-#pSlider .prev_slide,
 #pSlider .next_slide {
     display: inline-block;
     position: absolute;
@@ -291,5 +311,12 @@ li {
 .sss {
     display: grid;
     grid-template-columns: 1fr 7fr;
+}
+
+@media screen and (max-width: 768px) {
+    .sss {
+        display: none;
+
+    }
 }
 </style>

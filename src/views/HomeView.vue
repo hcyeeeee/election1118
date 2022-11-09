@@ -3,6 +3,7 @@
 
     <ContentBanner />
     <!-- <Marquee /> -->
+    <Board />
     <ContentProcess />
     <ContentTime />
     <ContentNews />
@@ -20,6 +21,7 @@
 <script>
 
 import ContentBanner from '@/components/Content_banner.vue'
+import Board from '@/components/board.vue'
 // import Marquee from '@/components/marquee.vue'
 import ContentProcess from '@/components/Content_process.vue'
 import ContentTime from '@/components/Content_time.vue'
@@ -34,6 +36,7 @@ export default {
   components: {
     ContentBanner,
     // Marquee,
+    Board,
     ContentProcess,
     ContentTime,
     ContentNews,
