@@ -1,8 +1,8 @@
 <template>
     <div class="main">
 
-        <!-- <div id="pSlider" class="sss">
-            <div class="pop"><img src="../assets/pop.png" alt="">
+        <div id="pSlider" class="sss">
+            <div class="pop">快訊<img src="../assets/pop.png" alt="">
             </div>
             <ol id="slider-container" dir="ltr">
                 <li id="slide_1" class="li_slide" v-for="(item, index) of newsInfo" :key="index">
@@ -12,17 +12,7 @@
                     </div>
                 </li>
             </ol>
-        </div> -->
-        <b-carousel id="carousel-1" v-model="slide" :interval="4000" controls indicators background="#ababab"
-            img-width="1024" img-height="480" style="text-shadow: 1px 1px 2px #333;">
-
-            <!-- Slide with blank fluid image to maintain slide aspect ratio -->
-            <b-carousel-slide caption="Blank Image" img-blank img-alt="Blank image">
-                <a :href="'https://www.ftvnews.com.tw/news/detail/' + item.ID" target="blank">
-                    {{ item.Title }}</a>
-            </b-carousel-slide>
-        </b-carousel>
-
+        </div>
     </div>
 </template>
 
@@ -43,7 +33,7 @@ export default {
             document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
             axios
-                .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=九合一選舉&page=1')
+                .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=九合一選舉')
                 .then((response) => {
                     // console.log(response)
                     let data = response.data.ITEM
@@ -119,7 +109,7 @@ export default {
         margin-left: calc(-300% - 450px);
     }
 
-    99% {
+    100% {
         margin-left: 0;
     }
 }
@@ -141,12 +131,16 @@ li {
 }
 
 .pop {
+    color: white;
+    font-size: 1.3rem;
     height: 2.5rem;
     background: orange;
+    text-shadow: rgb(0 0 0 / 50%) 0px 2px 10px;
 }
 
 .pop img {
     height: 2.5rem;
+    padding: .3rem;
 }
 
 .slide-snapper {
@@ -206,9 +200,10 @@ li {
     position: relative;
     width: 100%;
     border-radius: 0px;
-    background-color: #FFF8EE;
+    background-color: #f9f0e3;
     flex: none;
     margin-right: 150px;
+
 }
 
 #pSlider #slider-container .li_slide:last-child {
@@ -223,7 +218,7 @@ li {
     left: 0;
     width: 100%;
     height: 100%;
-    -webkit-animation: snap 4s infinite ease, tonext 4s infinite ease;
+    animation: snap 5s infinite ease, tonext 4s infinite ease;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -263,23 +258,8 @@ li {
     padding: 20px;
 }
 
-#pSlider .prev_slide {
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    padding: 20px;
-}
 
 
-
-#pSlider:after {
-    z-index: 1;
-    /* set underneath .next_slide (z: 2)*/
-    background-image: url("data:image/svg+xml,%3Csvg width='40' height='60' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3Cpolyline points='10 10 30 30 10 50' stroke='rgba(255,255,255,0.9)' stroke-width='4' stroke-linecap='butt' fill='none' stroke-linejoin='round'%3E&lt;%3C/polyline%3E%3C/svg%3E");
-}
-
-#pSlider:before {
-    background-image: url("data:image/svg+xml,%3Csvg width='40' height='60' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3Cpolyline points='30 10 10 30 30 50' stroke='rgba(255,255,255,0.9)' stroke-width='4' stroke-linecap='butt' fill='none' stroke-linejoin='round'%3E&gt;%3C/polyline%3E%3C/svg%3E");
-}
 
 /* Scrollbar */
 #pSlider #slider-container::-webkit-scrollbar {
@@ -293,7 +273,7 @@ li {
 }
 
 #pSlider #slider-container::-webkit-scrollbar-track {
-    background-color: transparent;
+    background-color: #f9f0e3;
 }
 
 /* Input */
@@ -313,7 +293,7 @@ li {
     grid-template-columns: 1fr 7fr;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
     .sss {
         display: none;
 

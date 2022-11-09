@@ -63,12 +63,10 @@ export default {
             let all = {}
             t1.forEach(function (city) {
                 // console.log('source', citys)
-
                 if (city !== null) {
                     city.tickets.sort(function (a, b) {
                         return b.ticket - a.ticket
                     })
-
                     let partyColor = null;
                     switch (city.tickets[0].party) {
                         case "國民":
@@ -89,19 +87,14 @@ export default {
                         cityNo: city.cityNo,
                         ticket: city.tickets[0].ticket,
                         partyColor: partyColor
-
                     }
                 }
             })
-
-
             this.all = all
             //  console.log('all', this.all)
-
             // console.log('order',this.citys)
         },
         goCand(city) {
-
             //  console.log(city)
             location.href = `/#/ing?city=${city.cityNo}`
         }
@@ -151,75 +144,7 @@ export default {
             this.getData_vote()
         }, 10000);
     },
-    computed: {
-        getProfile() {
-            return this.$store.state.Yilan
-        },
-        getProfile1() {
-            return this.$store.state.Keelung
-        },
-        getProfile2() {
-            return this.$store.state.Taipei
-        },
-        getProfile3() {
-            return this.$store.state.Newtaipei
-        },
-        getProfile4() {
-            return this.$store.state.Taoyuan
-        },
-        getProfile6() {
-            return this.$store.state.HsinchuCountry
-        },
-        getProfile5() {
-            return this.$store.state.HsinchuCity
-        },
-        getProfile7() {
-            return this.$store.state.Miaoli
-        },
-        getProfile8() {
-            return this.$store.state.Taichung
-        },
-        getProfile9() {
-            return this.$store.state.Changhua
-        },
-        getProfile10() {
-            return this.$store.state.Nantou
-        },
-        getProfile11() {
-            return this.$store.state.Yunlin
-        },
-        getProfile12() {
-            return this.$store.state.ChiayiCity
-        },
-        getProfile13() {
-            return this.$store.state.ChiayiCountry
-        },
-        getProfile14() {
-            return this.$store.state.Tainan
-        },
-        getProfile15() {
-            return this.$store.state.Kaohsiung
-        },
-        getProfile16() {
-            return this.$store.state.Pingtung
-        },
-        getProfile17() {
-            return this.$store.state.Hualien
-        },
-        getProfile18() {
-            return this.$store.state.Taitung
-        },
-        getProfile19() {
-            return this.$store.state.Penghu
-        },
-        getProfile20() {
-            return this.$store.state.Kinmen
-        },
-        getProfile21() {
-            return this.$store.state.Lienchiang
-        },
 
-    },
 }
 </script>
 

@@ -6,6 +6,7 @@ import VoteView from "../views/VoteView.vue";
 import QaView from "../views/QaView.vue";
 import Typeform from "../views/Typeform.vue";
 import Typeform2 from "../views/Typeform2.vue";
+import Typeform3 from "../views/Typeform3.vue";
 import HotView from "../views/HotView.vue";
 import ING from "../views/ING.vue";
 Vue.use(VueRouter);
@@ -71,6 +72,15 @@ const routes = [
     // component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
   },
   {
+    path: "/quiz2",
+    name: "quiz2",
+    component: Typeform3,
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    // component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+  },
+  {
     path: "/ing",
     name: "ing",
     component: ING,
@@ -82,7 +92,7 @@ const routes = [
 ];
 
 const router = new VueRouter({
-  // mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
   routes,
 });

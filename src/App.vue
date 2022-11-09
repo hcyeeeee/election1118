@@ -62,7 +62,7 @@ export default {
   --bs-dropdown-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   --bs-dropdown-link-color: #212529;
   --bs-dropdown-link-hover-color: #0e1010;
-  --bs-dropdown-link-hover-bg: #e5f6dd;
+  --bs-dropdown-link-hover-bg: #c5e7b6;
   --bs-dropdown-link-active-color: rgb(18, 18, 18);
   --bs-dropdown-link-active-bg: #dff7d5;
   --bs-dropdown-item-padding-x: 1rem;

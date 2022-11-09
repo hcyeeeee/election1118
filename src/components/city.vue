@@ -5,9 +5,14 @@
             <!-- 區域 -->
             <div class>
                 <select v-model="selected">
-                    <option :value="city.cityNo" v-for="city, idx in citys" :key="idx">{{ city.cityName }}
+                    <option :value="city.cityNo" v-for="city, idx in citys" :key="idx">{{
+                            city.cityName
+                    }}
                     </option>
+
                 </select>
+
+
                 <!-- big -->
                 <div class="layout_up">
                     <div class="" v-for="(item, index) in citys[selected].tickets" :key="index">
@@ -82,6 +87,7 @@ export default {
             })
             this.citys = citys
             console.log('order', this.citys)
+
         },
         getData_vote() {
             document.querySelectorAll('.news').forEach((e) => e.remove())
@@ -93,10 +99,6 @@ export default {
                     // let data = response.data.T1.detail[1].tickets
                     // let data = response.data
                     this.preOrderData(response.data)
-                    // console.log('rraaaa', data)
-                    // data.forEach((item) => {
-                    //     this.taipei.push(item)
-                    // })
                 })
                 .catch((error) => {
                     console.log('error' + error)
@@ -130,6 +132,7 @@ export default {
     border-radius: 30px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     max-width: 1000px;
+    margin: 1rem auto;
 
 }
 
@@ -196,6 +199,7 @@ p {
 .test {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    padding: 3rem;
 }
 
 @media screen and (max-width: 900px) {

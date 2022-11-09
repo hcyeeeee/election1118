@@ -41,9 +41,10 @@
                     <!-- 下拉選單end -->
                     <b-navbar-nav>
                         <b-nav-item-dropdown text="互動專區" right>
+                            <b-dropdown-item class="ddd" href=" https://bit.ly/3fNaR1a">你像哪位<br>候選人？ </b-dropdown-item>
                             <b-dropdown-item class="ddd" href="https://bit.ly/3zwDKp2">公投模擬考</b-dropdown-item>
-                            <b-dropdown-item class="ddd" href="https://bit.ly/3T1xwFt">政治術語<br>大考驗
-                            </b-dropdown-item>
+                            <b-dropdown-item class="ddd" href="https://bit.ly/3T1xwFt">政治術語<br>大考驗</b-dropdown-item>
+
                         </b-nav-item-dropdown>
                     </b-navbar-nav>
                 </b-collapse>

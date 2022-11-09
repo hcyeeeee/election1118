@@ -3,7 +3,6 @@
 <template>
   <div>
     <ContentBanner />
-    <!-- <Marquee/> -->
     <Issue />
     <Share />
     <Footer />
@@ -29,6 +28,6 @@ export default {
     Share,
 
   },
-  
+
 }
 </script>

@@ -17,6 +17,7 @@
                 </router-link>
                 <a href="https://bit.ly/3T1xwFt"> 政治術語大考驗</a>
                 <a href="https://bit.ly/3zwDKp2">公投模擬考</a>
+                <a href=" https://bit.ly/3fNaR1a">你像哪位候選人？</a>
             </div>
         </a>
 
@@ -214,11 +215,6 @@ export default {
     }
 }
 
-
-
-
-
-.ya {}
 
 /* Dropup Button */
 .dropbtn {

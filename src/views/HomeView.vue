@@ -3,7 +3,7 @@
 
     <ContentBanner />
     <!-- <Marquee /> -->
-    <Board />
+    <!-- <Board /> -->
     <ContentProcess />
     <ContentTime />
     <ContentNews />
@@ -21,7 +21,7 @@
 <script>
 
 import ContentBanner from '@/components/Content_banner.vue'
-import Board from '@/components/board.vue'
+// import Board from '@/components/board.vue'
 // import Marquee from '@/components/marquee.vue'
 import ContentProcess from '@/components/Content_process.vue'
 import ContentTime from '@/components/Content_time.vue'
@@ -35,8 +35,9 @@ export default {
   name: 'App',
   components: {
     ContentBanner,
+
     // Marquee,
-    Board,
+    // Board,
     ContentProcess,
     ContentTime,
     ContentNews,
@@ -45,6 +46,7 @@ export default {
     Footer,
     Share,
   },
+
 }
 
 </script>
@@ -56,6 +58,20 @@ export default {
 html,
 body {
   overflow-x: hidden;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+  background: #eee;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
 }
 
 div,
