@@ -5,6 +5,7 @@
     <router-view />
   </div>
 </template>
+
 <script>
 import Header from './components/Header.vue'
 import AdditionButton from './components/Addition_bottom.vue'
@@ -38,6 +39,7 @@ export default {
       document.getElementById("mySidenav").style.width = "0";
     },
   },
+
 }
 </script>
 

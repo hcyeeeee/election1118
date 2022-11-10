@@ -10,14 +10,10 @@
             <li @click="get_ftvNews5">台南市</li>
             <li @click="get_ftvNews6">高雄市</li>
             <li @click="get_ftvNews15">花蓮縣</li>
-
-
-
-
         </ul>
 
         <ul class="mobile" :class="{ fixed: active }">
-            <li @click=" get_ftvNews7">台北市</li>
+            <li @click="get_ftvNews7">台北市</li>
             <li @click="get_ftvNews8">新北市</li>
             <li @click="get_ftvNews9">桃園市</li>
             <li @click="get_ftvNews10">新竹市</li>
@@ -33,8 +29,6 @@
             <img src="../assets/選舉章icon.png" alt="">
             <hr>
             <img src="../assets/選舉章icon.png" alt="">
-
-
         </div>
 
         <div class="section-box">
@@ -52,9 +46,13 @@
                         </div>
                     </a>
                 </div>
+                <div class="gliaplayer-container" data-slot="tw_ftvnews_election_desktop"
+                    data-article="ftvnew.com.tw/election">
+                </div>
             </div>
+
             <div class="news-layout mobile1">
-                <div class="news1" v-for="(item, index) of newsInfo" :key="index">
+                <div class="news1 " v-for="(item, index) of newsInfo" :key="index">
                     <a :href="'https://www.ftvnews.com.tw/news/detail/' + item.ID" target="blank">
                         <div>
                             <img :src="item.Image" alt="新聞封面照" />
@@ -68,12 +66,52 @@
                     </a>
                 </div>
             </div>
+
+            <div class="gliaplayer-container" data-slot="tw_ftvnews_election_mobile"
+                data-article="ftvnew.com.tw/election">
+            </div>
+
+            <div class="news-layout  limit">
+                <div class="news1 ">
+                    <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[4].ID" target="blank">
+                        <div>
+                            <img :src="newsInfo[4].Image" alt="新聞封面照" />
+                        </div>
+                        <div>
+                            <h2 class="title">{{ newsInfo[4].Title }}</h2>
+                        </div>
+                        <div>
+                            <p>{{ newsInfo[4].CreateDate }}</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="news-layout  limit ">
+                <div class="news1 ">
+                    <a :href="'https://www.ftvnews.com.tw/news/detail/' + newsInfo[5].ID" target="blank">
+                        <div>
+                            <img :src="newsInfo[5].Image" alt="新聞封面照" />
+                        </div>
+                        <div>
+                            <h2 class="title">{{ newsInfo[5].Title }}</h2>
+                        </div>
+                        <div>
+                            <p>{{ newsInfo[5].CreateDate }}</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+
+
             <div class="btn_more">
                 <a href="https://www.ftvnews.com.tw/tag/六都選戰/" target="blank">更多新聞</a>
             </div>
         </div>
     </div>
 </template>
+
+
 
 <script>
 export default {
@@ -91,6 +129,8 @@ export default {
     },
     created() {
         window.addEventListener('scroll', this.handleScroll)
+        this.get_ftvNews()
+
     },
     methods: {
 
@@ -98,7 +138,7 @@ export default {
             document.querySelectorAll('.news1').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
             axios
-                .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=台北市選戰&Page=1&sp=9')
+                .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=台北市選戰&Page=1&sp=8')
                 .then((response) => {
                     // console.log(response)
                     let data = response.data.ITEM
@@ -116,7 +156,7 @@ export default {
             document.querySelectorAll('.news1').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
             axios
-                .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=新北市選戰&Page=1&sp=9')
+                .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=新北市選戰&Page=1&sp=8')
                 .then((response) => {
                     // console.log(response)
                     let data = response.data.ITEM
@@ -134,7 +174,7 @@ export default {
             document.querySelectorAll('.news1').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
             axios
-                .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=桃園市選戰&Page=1&sp=9')
+                .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=桃園市選戰&Page=1&sp=8')
                 .then((response) => {
                     // console.log(response)
                     let data = response.data.ITEM
@@ -152,7 +192,7 @@ export default {
             document.querySelectorAll('.news1').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
             axios
-                .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=新竹市選戰&Page=1&sp=9')
+                .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=新竹市選戰&Page=1&sp=8')
                 .then((response) => {
                     // console.log(response)
                     let data = response.data.ITEM
@@ -170,7 +210,7 @@ export default {
             document.querySelectorAll('.news1').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
             axios
-                .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=台中市選戰&Page=1&sp=9')
+                .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=台中市選戰&Page=1&sp=8')
                 .then((response) => {
                     // console.log(response)
                     let data = response.data.ITEM
@@ -188,7 +228,7 @@ export default {
             document.querySelectorAll('.news1').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
             axios
-                .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=台南市選戰&Page=1&sp=9')
+                .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=台南市選戰&Page=1&sp=8')
                 .then((response) => {
                     // console.log(response)
                     let data = response.data.ITEM
@@ -205,7 +245,7 @@ export default {
             document.querySelectorAll('.news1').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
             axios
-                .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=高雄市選戰&Page=1&sp=9')
+                .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=高雄市選戰&Page=1&sp=8')
                 .then((response) => {
                     // console.log(response)
                     let data = response.data.ITEM
@@ -222,7 +262,7 @@ export default {
             document.querySelectorAll('.news1').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
             axios
-                .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=台北市選戰&Page=1&sp=6')
+                .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=台北市選戰&Page=1&sp=5')
                 .then((response) => {
                     // console.log(response)
                     let data = response.data.ITEM
@@ -239,7 +279,7 @@ export default {
             document.querySelectorAll('.news1').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
             axios
-                .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=新北市選戰&Page=1&sp=6')
+                .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=新北市選戰&Page=1&sp=5')
                 .then((response) => {
                     // console.log(response)
                     let data = response.data.ITEM
@@ -256,7 +296,7 @@ export default {
             document.querySelectorAll('.news1').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
             axios
-                .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=桃園市選戰&Page=1&sp=6')
+                .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=桃園市選戰&Page=1&sp=5')
                 .then((response) => {
                     // console.log(response)
                     let data = response.data.ITEM
@@ -273,7 +313,7 @@ export default {
             document.querySelectorAll('.news1').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
             axios
-                .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=新竹市選戰&Page=1&sp=6')
+                .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=新竹市選戰&Page=1&sp=5')
                 .then((response) => {
                     // console.log(response)
                     let data = response.data.ITEM
@@ -290,7 +330,7 @@ export default {
             document.querySelectorAll('.news1').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
             axios
-                .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=台中市選戰&Page=1&sp=6')
+                .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=台中市選戰&Page=1&sp=5')
                 .then((response) => {
                     // console.log(response)
                     let data = response.data.ITEM
@@ -307,7 +347,7 @@ export default {
             document.querySelectorAll('.news1').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
             axios
-                .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=台南市選戰&Page=1&sp=6')
+                .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=台南市選戰&Page=1&sp=5')
                 .then((response) => {
                     // console.log(response)
                     let data = response.data.ITEM
@@ -324,7 +364,7 @@ export default {
             document.querySelectorAll('.news1').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
             axios
-                .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=高雄市選戰&Page=1&sp=6')
+                .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=高雄市選戰&Page=1&sp=5')
                 .then((response) => {
                     // console.log(response)
                     let data = response.data.ITEM
@@ -341,7 +381,7 @@ export default {
             document.querySelectorAll('.news1').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
             axios
-                .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=花蓮縣選戰&Page=1&sp=6')
+                .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=花蓮縣選戰&Page=1&sp=5')
                 .then((response) => {
                     // console.log(response)
                     let data = response.data.ITEM
@@ -358,7 +398,7 @@ export default {
             document.querySelectorAll('.news1').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
             axios
-                .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=花蓮縣選戰&Page=1&sp=9')
+                .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=花蓮縣選戰&Page=1&sp=8')
                 .then((response) => {
                     // console.log(response)
                     let data = response.data.ITEM
@@ -371,16 +411,11 @@ export default {
                     console.log('error' + error)
                 })
         },
-        // handleScroll() {
-        //     this.active = window.scrollY < 4600 && window.scrollY > 2700 ? true : false
 
-        // },
     },
     mounted() {
-        this.get_ftvNews()
-        
-    },
-
+        this.get_ftvNews
+    }
 }
 </script>
 
@@ -406,15 +441,25 @@ export default {
 }
 
 
+.limit {
+    display: none;
+}
+
 @media screen and (max-width: 768px) {
     .news-layout {
         grid-template-columns: 1fr 1fr;
     }
+
+
 }
 
 @media screen and (max-width: 500px) {
     .news-layout {
         grid-template-columns: 1fr;
+    }
+
+    .limit {
+        display: flex;
     }
 
 }
@@ -614,7 +659,8 @@ a {
     .mobile1 {
         display: grid;
         overflow: hidden;
-        height:1720px;
+        /* height: 1720px; */
+        height: 870px;
     }
 
     h3 {

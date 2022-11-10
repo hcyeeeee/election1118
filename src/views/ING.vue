@@ -5,14 +5,7 @@
     <ContentProcess />
     <Marquee />
     <City />
-    <!-- <Board /> -->
-    <!-- <ContentTime />
-    <ContentNews />
-    <ContentNews />
-    <ContentDistrict />
-    <ContentVideo />
-    <Footer />
-    <Share /> -->
+  
 
 
   </div>

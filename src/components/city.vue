@@ -6,10 +6,8 @@
             <div class>
                 <select v-model="selected">
                     <option :value="city.cityNo" v-for="city, idx in citys" :key="idx">{{
-                            city.cityName
-                    }}
+                            city.cityName}}
                     </option>
-
                 </select>
 
 
