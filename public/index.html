@@ -21,7 +21,6 @@
     <meta property="fb:app_id" content="157389381527660" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css  " />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-    
 
 </head>
 
@@ -99,8 +98,6 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"
         integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
-
-
     <script>(function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
                 'gtm.start':
@@ -113,46 +110,21 @@
     <!-- End Google Tag Manager -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script>
-        async function mobile() {
-             try {
-                 document.createEvent("TouchEvent");
-                 return true;
-             } catch (e) {
-                 return false;
-             }
-         }
-         if (mobile()) {
-            
-            (function (src, width) {
-        if (window.screen.width <= width) {
-            const tag = document.createElement('script')
-            tag.onload = function () {
-              this.setAttribute('loaded', '')
+        (function (src, width) {
+            if (window.screen.width > width) {
+                const tag = document.createElement('script')
+                tag.onload = function () {
+                    this.setAttribute('loaded', '')
+                }
+                tag.async = true
+                tag.src = src
+                const s = document.getElementsByTagName('script')[0]
+                s.parentNode.insertBefore(tag, s)
             }
-            tag.async = true
-            tag.src = src
-            const s = document.getElementsByTagName('script')[0]
-            s.parentNode.insertBefore(tag, s)
-        }
-    })("https://player.gliacloud.com/player/tw_ftvnews_election_mobile", 600)
-    console.log("是手機");
-        } else {
-            console.log("是電腦");
-            (function (src, width) {
-        if (window.screen.width > width) {
-            const tag = document.createElement('script')
-            tag.onload = function () {
-              this.setAttribute('loaded', '')
-            }
-            tag.async = true
-            tag.src = src
-            const s = document.getElementsByTagName('script')[0]
-            s.parentNode.insertBefore(tag, s)
-        }
-    })("https://player.gliacloud.com/player/tw_ftvnews_election_desktop", 600)
-        }   
-     </script>
+        })("https://player.gliacloud.com/player/tw_ftvnews_election_desktop", 600)
+    </script>
+    <script src="https://player.gliacloud.com/player/tw_ftvnews_election_mobile" async>
+    </script>
 
 </html>

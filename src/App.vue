@@ -6,6 +6,7 @@
   </div>
 </template>
 
+
 <script>
 import Header from './components/Header.vue'
 import AdditionButton from './components/Addition_bottom.vue'
@@ -32,12 +33,7 @@ export default {
         }
       }, 100);
     },
-    openNav() {
-      document.getElementById("mySidenav").style.width = "200px";
-    },
-    closeNav() {
-      document.getElementById("mySidenav").style.width = "0";
-    },
+
   },
 
 }

@@ -10,15 +10,19 @@
 
                 <b-collapse id="nav-collapse" is-nav>
                     <b-navbar-nav>
-                        <b-nav-item class="ddd" to="/">首頁
+                        <b-nav-item class="ddd" href="https://bit.ly/3towPuO">
+                            首頁
                         </b-nav-item>
                     </b-navbar-nav>
                     <!-- 下拉選單start -->
                     <b-navbar-nav>
                         <b-nav-item-dropdown id="dropdown-1" text="新聞專區">
-                            <b-dropdown-item class="ddd" to="/" @click="jump('news')">新聞專區</b-dropdown-item>
-                            <b-dropdown-item class="ddd" to="/" @click="jump('dis')">地方選戰</b-dropdown-item>
-                            <b-dropdown-item class="ddd" to="/" @click="jump('vid')">影音專區</b-dropdown-item>
+                            <b-dropdown-item class="ddd" to="/" @click="jump('news')">新聞專區
+                            </b-dropdown-item>
+                            <b-dropdown-item class="ddd" to="/" @click="jump('dis')">地方選戰
+                            </b-dropdown-item>
+                            <b-dropdown-item class="ddd" to="/" @click="jump('vid')">影音專區
+                            </b-dropdown-item>
                         </b-nav-item-dropdown>
                     </b-navbar-nav>
                     <!-- 下拉選單end -->
