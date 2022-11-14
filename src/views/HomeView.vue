@@ -4,30 +4,26 @@
     <ContentBanner />
     <!-- <Marquee /> -->
     <!-- <Board /> -->
-    <ContentProcess />
     <ContentTime />
-    <ContentNews />
-    <ContentDistrict />
-    <ContentVideo />
+    <ContentNews2 />
+    <ContentDistrict2 />
+    <ContentVideo2 />
     <Footer />
     <Share />
 
 
   </div>
 </template>
-  <!-- swiper -->
+
 
 
 <script>
 
 import ContentBanner from '@/components/Content_banner.vue'
-// import Board from '@/components/board.vue'
-// import Marquee from '@/components/marquee.vue'
-import ContentProcess from '@/components/Content_process.vue'
 import ContentTime from '@/components/Content_time.vue'
-import ContentVideo from '@/components/Content_video.vue'
-import ContentNews from '@/components/Content_news.vue'
-import ContentDistrict from '@/components/Content_district.vue'
+import ContentVideo2 from '@/components/Content_video2.vue'
+import ContentNews2 from '@/components/Content_news2.vue'
+import ContentDistrict2 from '@/components/Content_district2.vue'
 import Footer from '@/components/Footer.vue'
 import Share from '../components/share.vue'
 
@@ -35,17 +31,14 @@ export default {
   name: 'App',
   components: {
     ContentBanner,
-
-    // Marquee,
-    // Board,
-    ContentProcess,
     ContentTime,
-    ContentNews,
-    ContentDistrict,
-    ContentVideo,
+    ContentNews2,
+    ContentDistrict2,
+    ContentVideo2,
     Footer,
     Share,
   },
+
 
 }
 
@@ -317,13 +310,7 @@ figure {
   padding: 1rem;
 }
 
-@media screen and (max-width: 768px) {
-  .section {
-    margin: 3rem auto;
-    padding: 0 1rem;
-    width: 100%;
-  }
-}
+
 
 
 @media screen and (max-width: 350px) {

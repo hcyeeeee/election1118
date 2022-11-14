@@ -131,7 +131,6 @@ export default {
 
     },
     methods: {
-
         get_ftvNews() {
             document.querySelectorAll('.news1').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
@@ -414,6 +413,7 @@ export default {
     mounted() {
         this.get_ftvNews
     }
+
 }
 </script>
 

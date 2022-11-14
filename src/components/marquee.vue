@@ -1,18 +1,15 @@
 <template>
     <div class="main">
+        <div class="pop">快訊<img src="../assets/pop.png" alt=""></div>
+        <b-carousel id="carousel-1" v-model="slide" :interval="4000" background="#FFF8ED" img-width="1024"
+            img-height="60"
+            style=" box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;">
+            <b-carousel-slide v-for="(item, index) of newsInfo" :key="index" img-blank img-alt="Blank image">
+                <a :href="'https://www.ftvnews.com.tw/news/detail/' + item.ID" target="blank">
+                    {{ item.Title }}</a>
+            </b-carousel-slide>
+        </b-carousel>
 
-        <div id="pSlider" class="sss">
-            <div class="pop">快訊<img src="../assets/pop.png" alt="">
-            </div>
-            <ol id="slider-container" dir="ltr">
-                <li id="slide_1" class="li_slide" v-for="(item, index) of newsInfo" :key="index">
-                    <div class="slide-snapper">
-                        <a :href="'https://www.ftvnews.com.tw/news/detail/' + item.ID" target="blank">
-                            {{ item.Title }}</a>
-                    </div>
-                </li>
-            </ol>
-        </div>
     </div>
 </template>
 
@@ -29,6 +26,7 @@ export default {
         }
     },
     methods: {
+
         getData_ftvNews() {
             document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
@@ -54,88 +52,19 @@ export default {
 </script>
 
 <style scoped>
-.li_slide {
-    background-size: cover;
-    background-position: center;
-}
-
-/* Animations */
-@keyframes tonext {
-    75% {
-        margin-left: 0;
-    }
-
-    95% {
-        margin-left: calc(100% + 150px);
-    }
-
-    98% {
-        margin-left: calc(100% + 150px);
-    }
-
-    99% {
-        margin-left: 0;
-    }
-}
-
-@keyframes snap {
-    96% {
-        scroll-snap-align: start;
-    }
-
-    97% {
-        scroll-snap-align: none;
-    }
-
-    99% {
-        scroll-snap-align: none;
-    }
-
-    100% {
-        scroll-snap-align: start;
-    }
-}
-
-@keyframes tostart {
-    75% {
-        margin-left: 0;
-    }
-
-    95% {
-        margin-left: calc(-300% - 450px);
-    }
-
-    98% {
-        margin-left: calc(-300% - 450px);
-    }
-
-    100% {
-        margin-left: 0;
-    }
-}
-
-/* Reset */
-ol,
-li {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-#pSlider {
-    width: 100%;
-    height: 2.5rem;
-    position: relative;
-    margin: 0 auto;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+.main {
+    display: grid;
+    grid-template-columns: 1fr 9fr;
 }
 
 .pop {
     color: white;
     font-size: 1.3rem;
-    height: 2.5rem;
+    height: 35;
     background: orange;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     text-shadow: rgb(0 0 0 / 50%) 0px 2px 10px;
+
 }
 
 .pop img {
@@ -143,160 +72,8 @@ li {
     padding: .3rem;
 }
 
-.slide-snapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-}
 
-.slide-snapper a {
-    padding: 1rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-/* @media screen and (max-width: 768px) {
-    #pSlider {
-        height: 2rem;
-    }
-
-    .pop {
-        height: 2rem;
-    }
-
-    .pop img {
-        align-items: center;
-        justify-content: center;
-        height: 2rem;
-    }
-
-    .slide-snapper {
-        font-size: 1rem;
-    }
-
-    .slide-snapper a {
-        padding: 1rem;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-
-
-
-} */
-
-#pSlider #slider-container {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-}
-
-#pSlider #slider-container .li_slide {
-    position: relative;
-    width: 100%;
-    border-radius: 0px;
-    background-color: #f9f0e3;
-    flex: none;
-    margin-right: 150px;
-
-}
-
-#pSlider #slider-container .li_slide:last-child {
-    margin-right: 0;
-}
-
-#pSlider #slider-container .li_slide .slide-snapper {
-    /* Auto play */
-    scroll-snap-align: start;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    animation: snap 5s infinite ease, tonext 4s infinite ease;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    #pSlider #slider-container .li_slide .slide-snapper {
-        animation-name: none;
-    }
-}
-
-#pSlider #slider-container .li_slide:last-child .slide-snapper {
-    animation-name: tostart, snap;
-}
-
-#pSlider #slider-container:focus-within .li_slide .slide-snapper {
-    animation-name: none;
-}
-
-#pSlider .next_slide {
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    width: 30px;
-    height: 100%;
-    z-index: 2;
-    cursor: pointer;
-}
-
-#pSlider:before,
-#pSlider:after {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 70%;
-}
-
-#pSlider .next_slide {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    padding: 20px;
-}
-
-
-
-
-/* Scrollbar */
-#pSlider #slider-container::-webkit-scrollbar {
-    display: none;
-    height: 5px;
-}
-
-#pSlider #slider-container::-webkit-scrollbar-thumb {
-    background-color: #000;
-    border-radius: 50px;
-}
-
-#pSlider #slider-container::-webkit-scrollbar-track {
-    background-color: #f9f0e3;
-}
-
-/* Input */
-
-#sliderSettings {
-    text-align: center;
-}
-
-#slider-width,
-#slider-height {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.sss {
-    display: grid;
-    grid-template-columns: 1fr 7fr;
-}
-
-@media screen and (max-width: 900px) {
-    .sss {
-        display: none;
-
-    }
-}
 </style>
+
+
+

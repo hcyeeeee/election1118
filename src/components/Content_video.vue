@@ -72,6 +72,8 @@ export default {
 </script>
 
 <style scoped>
+
+
 .iframe-container {
     overflow: hidden;
     padding-top: 56.25%;

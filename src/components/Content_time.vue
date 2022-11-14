@@ -11,17 +11,16 @@ export default {
 </script>
 
 <style scoped>
-.main {
-
-    margin: auto;
-
-
+* {
+    margin-bottom: -1rem;
 }
 
 img {
+
     display: none;
-    margin: auto;
+    margin: 1rem auto;
     max-height: 300px;
+
 }
 
 @media screen and (min-width: 600px) {
@@ -38,6 +37,8 @@ img {
 
 
 @media screen and (min-width: 768px) {
+
+
     img {
         display: block;
         margin: auto;

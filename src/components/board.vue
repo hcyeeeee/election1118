@@ -2,7 +2,6 @@
     <div>
         <div class="section" id="board">
             <h3>選情儀表板</h3>
-
             <div class="board">
                 <div class="box" :class="item.partyColor" v-for="(item, idx) in all" :key="idx" @click="goCand(item)">
                     <div class="ct">
@@ -14,24 +13,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="section">
-            <div class="yesorno">
-                <h2>18修憲開票公投</h2>
-                <div class="vote">
-                    <p>100,000</p>
-                    <p>110,000</p>
-                </div>
-                <div class="aaa">
-                    <p>同意</p>
-                    <progress class="progress_class" max="100" value="80" />
-                    <p>不同意</p>
-                </div>
-                <p>註：達標門檻為954萬00000票</p>
-                <a>修憲公投Ｑ＆Ａ</a>
-                <a>互動遊戲</a>
-            </div>
+          
         </div>
     </div>
 
@@ -104,8 +86,7 @@ export default {
             document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
             axios
-                .get('https://www.ftvnews.com.tw/topics/test/election.json')
-                .then((response) => {
+                .get('https://melect-api.ftvnews.com.tw/Tickets/ftvelect.json')                .then((response) => {
                     // console.log(response)
                     // let data = response.data.T1.detail[1].tickets
                     // console.log('dataaaaa', data)
@@ -122,8 +103,7 @@ export default {
             // eslint-disable-next-line no-undef
             axios
                 // .get('https://melect-api.ftvnews.com.tw/Tickets/ftvelect.json')
-                .get('https://www.ftvnews.com.tw/topics/test/election.json')
-
+                .get('https://melect-api.ftvnews.com.tw/Tickets/ftvelect.json')
                 .then((response) => {
                     console.log(response)
                     let data = response.data.T1.detail

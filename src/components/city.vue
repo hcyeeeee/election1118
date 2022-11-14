@@ -1,16 +1,16 @@
 <template>
     <div class="aaa" id="profile">
-        <h3>{{ title }}</h3>
+
         <div class="section">
+            <h3>{{ title }}</h3>
             <!-- 區域 -->
             <div class>
                 <select v-model="selected">
                     <option :value="city.cityNo" v-for="city, idx in citys" :key="idx">{{
-                            city.cityName}}
+                            city.cityName
+                    }}
                     </option>
                 </select>
-
-
                 <!-- big -->
                 <div class="layout_up">
                     <div class="" v-for="(item, index) in citys[selected].tickets" :key="index">
@@ -23,7 +23,8 @@
                                     alt="新聞封面照" />
                             </div>
                             <div class="content">
-                                <h4>{{ item.candName }}</h4>
+
+                                <h4>{{ item.candNo }}{{ item.candName }}</h4>
                                 <p class="party_up">{{ item.party }}</p>
                             </div>
 
@@ -36,32 +37,36 @@
                 </div>
                 <!-- small -->
                 <div class="test">
-                    <div class="layout_down" v-for="(item, index) in citys[selected].tickets" :key="index">
-                        <div class="layout">
-                            <img class="person_img"
-                                :src="' https://www.ftvnews.com.tw/topics/test/image/' + item.candName + '.jpg'"
-                                alt="新聞封面照" />
-                            <p>{{ item.candName }}</p>
-                            <p>{{ item.party }}</p>
-                            <p> {{ item.ticket }} </p>
-                            <progress class="progress_small" max="100" value="80" />
+                    <div class="" v-for="(item, index) in citys[selected].tickets" :key="index">
+                        <div class="layout_down" v-if="index >= 4">
+                            <div class="layout">
+                                <img class="person_img"
+                                    :src="' https://www.ftvnews.com.tw/topics/test/image/' + item.candName + '.jpg'"
+                                    alt="新聞封面照" />
+                                <p>{{ item.candNo }}</p>
+                                <p>{{ item.candName }}</p>
+                                <p>{{ item.party }}</p>
+                                <p> {{ item.ticket }} </p>
+                                <progress class="progress_small" max="100" value="80" />
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
+            <a class="backtohome" href="/">返回儀表板</a>
         </div>
         <!-- zone end-->
     </div>
 </template>
 
 <script>
-
 export default {
 
     data() {
         // let citys={};
         return {
-            title: "縣市長候選人",
+            title: "縣市長選舉開票",
             taipei: [],
             citys: null,
             selected: 'A01',
@@ -91,8 +96,7 @@ export default {
             document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
             axios
-                .get('https://www.ftvnews.com.tw/topics/test/election.json')
-                .then((response) => {
+                .get('https://melect-api.ftvnews.com.tw/Tickets/ftvelect.json').then((response) => {
                     console.log(response)
                     // let data = response.data.T1.detail[1].tickets
                     // let data = response.data
@@ -102,7 +106,6 @@ export default {
                     console.log('error' + error)
                 })
         },
-
     },
     created() {
         this.getData_vote()
@@ -123,6 +126,21 @@ export default {
 @media screen and (max-width: 768px) {}
 
 @media screen and (max-width: 500px) {}
+
+.backtohome {
+    background-color: orange;
+    border-radius: 30px;
+    width: fit-content;
+    padding: .5rem 1rem;
+    margin: 1rem;
+    color: #fff;
+    top: -3rem;
+    position: relative;
+    right: -23rem;
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+
 
 .section {
     background: #fff;
@@ -195,15 +213,15 @@ p {
 }
 
 .test {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    padding: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 @media screen and (max-width: 900px) {
     .test {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        display: flex;
+        flex-wrap: wrap;
     }
 }
 
@@ -212,12 +230,22 @@ p {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
+
+    .test {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 @media screen and (max-width: 500px) {
     .test {
         display: grid;
         grid-template-columns: 1fr 1fr;
+    }
+
+    .test {
+        display: flex;
+        flex-wrap: wrap;
     }
 }
 
