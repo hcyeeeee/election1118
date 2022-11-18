@@ -1,11 +1,15 @@
-import "@babel/polyfill";
-import "mutationobserver-shim";
+
 import Vue from "vue";
 import "./plugins/bootstrap-vue";
 import App from "./App.vue";
 import store from "./store";
 import router from "./router";
+import axios from "axios";
+import VueAxios from 'vue-axios'
+
+Vue.prototype.axios = axios;
 Vue.config.productionTip = false;
+Vue.use(VueAxios, axios)
 
 new Vue({
   store,
@@ -47,17 +51,14 @@ function isMobile() {
 }
 
 if (isMobile()) {
-  console.log("isMobile");
-
   mobileAd(
     "https://player.gliacloud.com/player/tw_ftvnews_election_mobile",
     600
   );
-  console.log("settimeout");
 } else {
-  console.log("isDeskTop");
   desktopAd(
     "https://player.gliacloud.com/player/tw_ftvnews_election_desktop",
     600
   );
 }
+

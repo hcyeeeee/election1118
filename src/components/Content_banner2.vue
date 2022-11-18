@@ -13,28 +13,9 @@
         <div class="addition">
             <div class="vote-box">
                 <img class="box" src="../assets/投票箱.png" alt="box">
-                <div class="timebox">
-                    <p>&nbsp;&nbsp;&nbsp;倒數</p>
-                    <i id="show"></i>
-                    <p>天&nbsp;&nbsp;
-                    </p>
-                </div>
+                <p>開票中</p>
             </div>
         </div>
-        <!-- <div class="marqu"></div>
-
-        <div id="pSlider">
-            <ol id="slider-container" dir="ltr">
-                <li id="slide_1" class="li_slide" v-for="(item, index) of newsInfo" :key="index">
-                    <div class="slide-snapper">
-                        <a> {{ item.Title }}</a>
-                    </div>
-
-                </li>
-
-            </ol>
-        </div> -->
-
     </div>
 </template>
 
@@ -46,44 +27,6 @@ export default {
             newsInfo: [],
         }
     },
-
-    mounted() {
-        // timer
-
-        var timer = null;
-        var show = document.getElementById("show");
-        function show_date_time() {
-            var target = new Date("2022/11/26");
-            var today = new Date();
-            var timeold = (target.getTime() - today.getTime());
-            var msPerDay = 24 * 60 * 60 * 1000
-            var e_daysold = timeold / msPerDay
-            var daysold = Math.floor(e_daysold + 1);
-            var e_hrsold = (e_daysold - daysold) * 24;
-            var hrsold = Math.floor(e_hrsold);
-            var e_minsold = (e_hrsold - hrsold) * 60;
-            var minsold = Math.floor((e_hrsold - hrsold) * 60);
-            var seconds = Math.floor((e_minsold - minsold) * 60);
-            if (daysold < 0) {
-                document.getElementById("time").innerHTML = "開票中";
-                clearInterval(timer);
-            }
-            else {
-                if (daysold < 10) { daysold = "0" + daysold }
-                if (hrsold < 10) { hrsold = "0" + hrsold }
-                if (minsold < 10) { minsold = "0" + minsold }
-                if (seconds < 10) { seconds = "0" + seconds }
-                // show.innerHTML = "倒數:" + daysold + "天" + hrsold + "小時" + minsold + "分" + seconds + "秒";
-                // show.innerHTML = "倒數" + daysold + "天";
-                show.innerHTML = daysold;
-
-            }
-        }
-
-        timer = setInterval(show_date_time, 10);
-    },
-
-
 
 
 }

@@ -2,32 +2,21 @@
     <div>
         <div class="section" id="board">
             <h3>選情儀表板</h3>
+            <p>點擊各縣市看更多候選人開票狀況</p>
             <div class="board">
-                <div class="box" :class="item.partyColor" v-for="(item, idx) in all" :key="idx" @click="goCand(item)">
-                    <div class="ct">
+                <div class="box" v-for="(item, idx) in all" :key="idx" @click="goCand(item)">
+                    <div>
                         <P> {{ item.cityName }}</P>
                     </div>
-                    <div>
+                    <div :class="item.partyColor">
                         <p> {{ item.candName }}</p>
                         <p> {{ item.ticket }}</p>
                     </div>
                 </div>
             </div>
-          
         </div>
     </div>
-
-
 </template>
-
-<!-- 功能 -->
-<!-- 票數最高的在上面 -->
-<!-- 票數前三世大的 -->
-<!-- option傳值 -->
-<!-- 儀表板顏色 -->
-<!-- 最高票取代在前面 -->
-
-
 <script>
 
 export default {
@@ -37,6 +26,7 @@ export default {
             taipei: [],
             all: null,
             counter: null
+
         }
     },
     methods: {
@@ -58,7 +48,7 @@ export default {
                             partyColor = 'party-green';
                             break;
                         case "無":
-                            partyColor = 'party-gray';
+                            partyColor = 'party-yellow';
                             break;
                         default:
                             partyColor = 'party-white';
@@ -67,9 +57,10 @@ export default {
                         cityName: city.cityName,
                         candName: city.tickets[0].candName,
                         cityNo: city.cityNo,
-                        ticket: city.tickets[0].ticket,
+                        ticket: city.tickets[0].ticket.toLocaleString(),
                         partyColor: partyColor
                     }
+
                 }
             })
             this.all = all
@@ -78,39 +69,14 @@ export default {
         },
         goCand(city) {
             //  console.log(city)
-            location.href = `/#/ing?city=${city.cityNo}`
-        }
-        ,
-
+            location.href = `/#/test?city=${city.cityNo}`
+        },
         getData_vote() {
             document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
-            axios
-                .get('https://melect-api.ftvnews.com.tw/Tickets/ftvelect.json')                .then((response) => {
-                    // console.log(response)
-                    // let data = response.data.T1.detail[1].tickets
-                    // console.log('dataaaaa', data)
-                    // data.forEach((item) => {
-                    //     this.taipei.push(item)
-                    // })
+            this.axios
+                .get('https://melect-api.ftvnews.com.tw/Tickets/ftvelect.json').then((response) => {
                     this.preOrderData(response.data)
-                })
-                .catch((error) => {
-                    console.log('error' + error)
-                })
-        },
-        getData_vote1() {
-            // eslint-disable-next-line no-undef
-            axios
-                // .get('https://melect-api.ftvnews.com.tw/Tickets/ftvelect.json')
-                .get('https://melect-api.ftvnews.com.tw/Tickets/ftvelect.json')
-                .then((response) => {
-                    console.log(response)
-                    let data = response.data.T1.detail
-                    console.log('dataaaaa', data)
-                    data.forEach((item) => {
-                        this.all.push(item)
-                    })
                 })
                 .catch((error) => {
                     console.log('error' + error)
@@ -118,12 +84,15 @@ export default {
         },
     },
     mounted() {
-        this.getData_vote(),
-            this.getData_vote1()
+        this.getData_vote()
+
         this.counter = setInterval(() => {
             this.getData_vote()
         }, 10000);
+
+
     },
+
 
 }
 </script>
@@ -132,8 +101,39 @@ export default {
 
 <style scoped>
 .party-blue {
-    background: lightblue;
+    background: #bbddfb;
+    border-radius: 0px .8rem .8rem 0px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    color: #3a6cb9;
+    font-weight: bolder;
+
 }
+
+.party-green {
+    border-radius: 0px .8rem .8rem 0px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    background: #c8e6c9;
+    color: #2e7d31;
+    font-weight: bolder;
+}
+
+.party-yellow {
+    border-radius: 0px .8rem .8rem 0px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    background: #fff8c4;
+    color: #f67600;
+    font-weight: bolder;
+}
+
+.party-white {
+    border-radius: 0px .8rem .8rem 0px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    background: #ededed;
+    color: #3e3e3c;
+    font-weight: bolder;
+}
+
+
 
 .section {
     max-width: 1000px;
@@ -141,7 +141,7 @@ export default {
     background-color: rgb(255, 255, 255);
     margin: 1rem auto;
     border-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
 }
 
 .board {
@@ -153,10 +153,11 @@ export default {
 .box {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    border: 3px solid rgb(224, 242, 222);
+
     border-radius: 1rem;
     margin: .4rem;
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 
 }
 
@@ -180,9 +181,6 @@ h3 {
     .section {
         margin: 1rem;
     }
-
-
-
 }
 
 @media screen and (max-width: 768px) {
@@ -199,12 +197,7 @@ h3 {
 
 
 .ct {
-    border-radius: .8rem 0rem 0rem .8rem;
-    background: rgb(227, 242, 180);
-    text-align: center;
-    background-size: cover;
-
-
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
 }
 
 .progress_class {
@@ -232,7 +225,6 @@ h3 {
     background-color: #d7d7d7;
 }
 
-
 .aaa {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
@@ -243,12 +235,6 @@ h3 {
     grid-template-columns: 1fr 1fr;
     margin: auto;
 }
-
-
-
-
-
-
 
 .photo {
     width: 100px;

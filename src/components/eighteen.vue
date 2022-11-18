@@ -4,26 +4,19 @@
             <div class="yesorno">
                 <h2>18修憲開票公投</h2>
                 <div class="vote">
-                    <p>100,000</p>
-                    <p>110,000</p>
+                    <p> 同意{{ data[0].ticket }}</p>
+                    <p>不同意{{ data[1].ticket }}</p>
                 </div>
-
-                <div class="progress" v-for="(item, index) in data" :key="index">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
-                </div>
-                <p>讀取中...</p>
             </div>
-
-            <div class="aaa">
-                <p>同意</p>
-                <progress class="progress_class" max="100" value="80" />
-                <p>不同意</p>
+            <div class="aaa">.
+                <progress class="progress_class" :max=data[1].ticket * 2 :value=data[0].ticket />
             </div>
             <p>註：達標門檻為954萬00000票</p>
+            <div class="allbtn">
+                <a class="backbtn">修憲公投Ｑ＆Ａ</a>
+                <a class="backbtn">互動遊戲</a>
+            </div>
         </div>
-        <a class="backbtn">修憲公投Ｑ＆Ａ</a>
-        <a class="backbtn">互動遊戲</a>
 
     </div>
 </template>
@@ -31,22 +24,47 @@
 export default {
     data() {
         return {
-            title: '最新新聞',
-            newsInfo: [],
-            active: false, // 控制nav高度到達條件就轉成true，並加入class="fixed"
+            data: [],
+            ticket: [],
         }
     },
-
     methods: {
-        getData_ftvNews() {
-           axios.get()
-        },
-    },
+        getVote() {
+            // eslint-disable-next-line no-undef
+            this.axios.get('https://melect-api.ftvnews.com.tw/Tickets/ftvelect.json').then((response) => {
+                console.log('res', response);
+                // 公投
+                // this.data = response.data.T3.typeName
+                // detail 
+                // this.data = response.data.T3.detail
+                this.data = response.data.T3.detail[0].tickets
+                console.log('data', this.data);
 
+
+
+            })
+        }
+
+    },
+    mounted() {
+        this.getVote()
+    },
 }
 </script>
 
 <style scoped>
+.vote {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.allbtn {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+
+}
+
 .backbtn {
     background-color: orange;
     border-radius: 30px;
@@ -64,12 +82,18 @@ export default {
 
 .section {
     background: #fff;
-    margin: 1rem;
     border-radius: 30px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     max-width: 1000px;
     margin: 1rem auto;
+    padding: 3rem auto;
 
+}
+
+@media screen and (max-width: 900px) {
+    .section {
+        margin: 1rem;
+    }
 }
 
 .board {

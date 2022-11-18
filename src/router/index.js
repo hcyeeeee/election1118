@@ -9,6 +9,7 @@ import Typeform2 from "../views/Typeform2.vue";
 import Typeform3 from "../views/Typeform3.vue";
 import HotView from "../views/HotView.vue";
 import ING from "../views/ING.vue";
+import HomeView2 from "../views/HomeView2.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -95,10 +96,15 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     // component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
   },
+  {
+    path: "/home2",
+    name: "home2",
+    component: HomeView2,
+  },
 ];
 
 const router = new VueRouter({
-  // mode: "history",
+  //mode: "history",
   base: process.env.BASE_URL,
   routes,
 });

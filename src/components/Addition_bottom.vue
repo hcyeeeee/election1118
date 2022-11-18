@@ -1,7 +1,7 @@
 <template>
 
     <div class="bottom">
-        <a  href="https://bit.ly/3towPuO" class="bottom2">最新新聞</a>
+        <router-link to="/" class="bottom2">最新新聞</router-link>
         <router-link class="bottom2" to="/about">選將名單</router-link>
         <!-- <router-link class="bottom2 " to="/form">
             政治術語大考驗

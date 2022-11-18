@@ -10,7 +10,7 @@
             <div class="splide__track">
                 <ul class="splide__list">
                     <li class="splide__slide">
-                        <img src="../assets/QA/QA1.jpg" alt="QA" loading="lazy">
+                        <img src="../assets/QA/QA1.jpg" alt="QA">
                         <p class="desktop">
                             2022年九合一選舉將在11月26日（星期六）舉行，除了要選出縣市長等九類地方公職人員外，還將同步舉行「18歲公民權」修憲案複決公投。
                             <br>今年選舉規則與歷次有無差異？確診、居隔與自主管理者是否可以前往投票？
@@ -24,7 +24,7 @@
                         </p>
                     </li>
                     <li class="splide__slide">
-                        <img src="../assets/QA/QA2.jpg" alt="QA" loading="lazy">
+                        <img src="../assets/QA/QA2.jpg" alt="QA">
                         <p class="desktop">九合一選舉是中華民國中央選舉委員將：<br>
                             1. 「直轄市長」<br>
                             2. 「直轄市議員」<br>
@@ -46,7 +46,7 @@
 
                     </li>
                     <li class="splide__slide">
-                        <img src="../assets/QA/QA3.jpg" alt="QA" loading="lazy">
+                        <img src="../assets/QA/QA3.jpg" alt="QA">
                         <p class="desktop">18歲公民權修憲複決是什麼？「18歲公民權」將決定國民年滿18歲是否有依法選舉、罷免、創制、複決，及參加公民投票與被選舉權。<br>
                             18歲公民權修憲案若有效同意票超過選舉人半數，則通過修憲，並由總統令公告。中選會公告，本次預估選舉人數將近1,930萬人，意即修憲案須965萬人投下同意票才會通過。
 
@@ -59,7 +59,7 @@
                         </p>
                     </li>
                     <li class="splide__slide">
-                        <img src="../assets/QA/QA4.jpg" alt="QA" loading="lazy">
+                        <img src="../assets/QA/QA4.jpg" alt="QA">
                         <p class="desktop">
                             今年選舉日是：2022年11月26日，早上8時至下午4時。4時整已在投票所排隊的選民，仍可完成投票。<br>
 
@@ -77,7 +77,7 @@
                         </p>
                     </li>
                     <li class="splide__slide">
-                        <img src="../assets/QA/QA5.jpg" alt="QA" loading="lazy">
+                        <img src="../assets/QA/QA5.jpg" alt="QA">
                         <p class="desktop">
                             指揮中心指揮官王必勝11/2宣布，11月14日起，確診者隔離改採「5+n」，也就是隔離完5天後，快篩陰性就可不用自主健康管理，換句話說，這5天內是無法出門投票的。
                         </p>
@@ -88,7 +88,7 @@
                         </p>
                     </li>
                     <li class="splide__slide">
-                        <img src="../assets/QA/QA6.jpg" alt="QA" loading="lazy">
+                        <img src="../assets/QA/QA6.jpg" alt="QA">
                         <p class="desktop">
                             進入投票所後，領取選舉票、公投票，再進入圈票處。選舉票、公投票都可以選擇不全領，但只能領票一次，不能補領。
                             一旦離開投票所，就不能再進入。
@@ -110,7 +110,7 @@
                         </p>
                     </li>
                     <li class="splide__slide">
-                        <img src="../assets/QA/QA7.jpg" alt="QA" loading="lazy">
+                        <img src="../assets/QA/QA7.jpg" alt="QA">
                         <p class="desktop">
                             此次選舉應選名額共計1萬1023名，包括6名直轄市長、16名縣市長、910名直轄市及縣市議員、204名鄉鎮市長及原住民區長、2139名鄉鎮市民代表及原住民區民代表、7748名村里長，當選人於2022年12月25日就職。<br>
 
@@ -133,7 +133,7 @@
             <div class="splide__track">
                 <ul class="splide__list">
                     <li class="splide__slide">
-                        <img src="../assets/危老/house1.jpg" alt="QA" loading="lazy">
+                        <img src="../assets/危老/house1.jpg" alt="QA">
                         <p class="desktop">
                             花蓮向來遭受地震、颱風襲擊，我們該如何在面對天災的同時，也落實人身安危保護呢？花蓮縣候選人們要如何打造花蓮縣成為具有韌性的行政區呢？
                             <br>
@@ -147,7 +147,7 @@
                         </p>
                     </li>
                     <li class="splide__slide">
-                        <img src="../assets/危老/house2.jpg" alt="QA" loading="lazy">
+                        <img src="../assets/危老/house2.jpg" alt="QA">
                         <p class="desktop">
                             老屋改建發展協會理事長胡偉良表示，很多都是要花費額外成本才能取得容積獎勵，在低房價地區，這些額外的花費，可能不划算，所以也就沒辦法達到1坪換1坪，影響地主都更重建意願。
                             <br>
@@ -169,7 +169,7 @@
 
                     </li>
                     <li class="splide__slide">
-                        <img src="../assets/危老/house3.jpg" alt="QA" loading="lazy">
+                        <img src="../assets/危老/house3.jpg" alt="QA">
                         <p class="desktop">
                             徐榛蔚在2019年就已聽取花蓮縣都市更新協會理事長藍秀琪針對「花蓮縣境內危老條例推動計畫」的簡報後，加速花蓮縣都市危險及老舊建築物重建計畫，截止今年9月底，重建計畫已受理數32案、已核准30案，但完工數卻是「0」。
                         </p>
@@ -180,7 +180,7 @@
                         </p>
                     </li>
                     <li class="splide__slide">
-                        <img src="../assets/危老/house4.jpg" alt="QA" loading="lazy">
+                        <img src="../assets/危老/house4.jpg" alt="QA">
                         <p class="desktop">
                             【 Kolas Yotaka 】
                             除了全面體檢公共設施的耐震度，包含橋梁、道路、鐵路、山體維護等等公共設施，更要評估在現有的工程上增加抗震係數。
@@ -207,7 +207,7 @@
             <div class="splide__track">
                 <ul class="splide__list">
                     <li class="splide__slide">
-                        <img src="../assets/長照/old.jpg" alt="長照" loading="lazy">
+                        <img src="../assets/長照/old.jpg" alt="長照">
                         <p class="desktop">2022年九合一選舉，台北市的三位市長候選人不約而同地端出了有關長照問題的政見牛肉。
                             <br>
                             <br>
@@ -224,7 +224,7 @@
                         </p>
                     </li>
                     <li class="splide__slide">
-                        <img src="../assets/長照/old2.jpg" alt="長照" loading="lazy">
+                        <img src="../assets/長照/old2.jpg" alt="長照">
                         <p class="desktop">2025年老年人口推估成長至468萬佔現人口20%，每5人有1位65歲以上老人，正式晉升超高齡國家。
                             <br> <br> 面對越來越高的長照需求，應該提出怎麼樣的政見，才能切中市民的需求呢?
                         </p>
@@ -237,7 +237,7 @@
 
                     </li>
                     <li class="splide__slide">
-                        <img src="../assets/長照/old3.jpg" alt="長照" loading="lazy">
+                        <img src="../assets/長照/old3.jpg" alt="長照">
                         <p class="desktop">【陳時中】「樂齡台北」
                             增加日照中心據點、發展社區關懷圈、樂齡運動延緩老化、銀髮樂活放心唱、銀髮心理健康促進、活力長青。
                             <br> <br>
@@ -261,7 +261,7 @@
                         </p>
                     </li>
                     <li class="splide__slide">
-                        <img src="../assets/長照/old4.jpg" alt="長照" loading="lazy">
+                        <img src="../assets/長照/old4.jpg" alt="長照">
                         <p class="desktop">
                             9/7【陳時中】
                             根據蔣萬安的長照三箭政見，指出蔣萬安不了解目前現行法規與補助相關內容。
@@ -300,7 +300,7 @@
             <div class="splide__track">
                 <ul class="splide__list">
                     <li class="splide__slide">
-                        <img src="../assets/大巨蛋/egg1.jpg" alt="" loading="lazy">
+                        <img src="../assets/大巨蛋/egg1.jpg" alt="">
                         <p class="desktop"> 「大巨蛋何時完工？」相信是許多人共同的疑問！
                             <br><br>
                             1991年中職總冠軍賽，大雨導致主辦單位宣佈延賽，全場球迷憤慨高喊「我們要巨蛋！」；時任行政院長的郝伯村也在觀眾席上，他隨即回應民意，保證政府會興建不受風雨影響的室內體育場。
@@ -317,7 +317,7 @@
                         </p>
                     </li>
                     <li class="splide__slide">
-                        <img src="../assets/大巨蛋/egg2.jpg" alt="" loading="lazy">
+                        <img src="../assets/大巨蛋/egg2.jpg" alt="">
                         <p class="desktop">台北大巨蛋，全名「臺北文化體育園區-大型室內體育館」，地址坐落於松山菸廠原址，與國父紀念館相望。原功能規劃為舉辦體育賽事、演唱會等活動。
                         </p>
                         <!-- mobile -->
@@ -326,14 +326,14 @@
                         </p>
                     </li>
                     <li class="splide__slide">
-                        <img src="../assets/大巨蛋/egg3.jpg" alt="" loading="lazy">
+                        <img src="../assets/大巨蛋/egg3.jpg" alt="">
                         <p class="desktop">大巨蛋的孵化過程，歷經了5位台北市長，歷經選址、招標、動工、停工、復工，過程中曾產生一些爭議事件，目前大巨蛋營建狀態為建照變更持續審核中。</p>
                         <!-- mobile -->
                         <p class="mobile">
                             大巨蛋的孵化過程，歷經了5位台北市長，歷經選址、招標、動工、停工、復工，過程中曾產生一些爭議事件，目前大巨蛋營建狀態為建照變更持續審核中。</p>
                     </li>
                     <li class="splide__slide">
-                        <img src="../assets/大巨蛋/egg4.jpg" alt="" loading="lazy">
+                        <img src="../assets/大巨蛋/egg4.jpg" alt="">
                         <p class="desktop">大巨蛋孵化過程中，在合約部分引發爭議，柯文哲上任市長後也與遠雄舉辦會議，目前達成共識遠雄將用「超額利潤」彌補市府沒收到權利金的損失。
                             <br>
                             <br>而在建築安全面，大巨蛋的施工圖、營建構造等，曾有數次檢查的不合格而需做調整；捷運板南線也受工程影響，隧道出現裂縫、滲水；蛋殼反射陽光，也遭附近民眾指出刺眼，遠雄則表示會上漆減少反光。
@@ -346,7 +346,7 @@
 
                     </li>
                     <li class="splide__slide">
-                        <img src="../assets/大巨蛋/egg5.jpg" alt="" loading="lazy">
+                        <img src="../assets/大巨蛋/egg5.jpg" alt="">
                         <p class="desktop">柯文哲擔任台北市長期間，歷經了停工與復工期；今年9月在市政總質詢時，他表示「大巨蛋我是沒有經驗，不曉得他（遠雄）不按圖施工，將它（大巨蛋）停工會變這樣。」
                         </p>
                         <!-- mobile -->
@@ -355,7 +355,7 @@
                         </p>
                     </li>
                     <li class="splide__slide">
-                        <img src="../assets/大巨蛋/egg6.jpg" alt="" loading="lazy">
+                        <img src="../assets/大巨蛋/egg6.jpg" alt="">
                         <p class="desktop">台北市長候選人對大巨蛋的願景<br>
                             <br>【陳時中】保證安全、體育優先、公布檔案
 
@@ -385,7 +385,7 @@
             <div class="splide__track">
                 <ul class="splide__list">
                     <li class="splide__slide">
-                        <img src="../assets/內湖交通/traffic1.jpg" alt="" loading="lazy">
+                        <img src="../assets/內湖交通/traffic1.jpg" alt="">
                         <p class="desktop"> 台北內湖交通壅塞，已是多位台北市長上任後必須面對的問題，每逢選舉內湖交通這燙手山芋，也成了各黨候選人展現城市治理能力的舞台。
                             <br><br>
                             近期台北市長柯文哲一句「內湖交通沒救了」，引爆藍綠白三黨參選人隔空交戰，陳時中喊出內湖交通是歷史共業，口水戰沒必要、怎麼解決問題才重要，蔣萬安強調自己有三解方，至於黃珊珊拋出關鍵在於松機遷址，3位候選人互別苗頭！。而到底孰是良方孰是毒藥？也成為眾所熱議的焦點。
@@ -400,7 +400,7 @@
                         </p>
                     </li>
                     <li class="splide__slide">
-                        <img src="../assets/內湖交通/traffic2.jpg" alt="" loading="lazy">
+                        <img src="../assets/內湖交通/traffic2.jpg" alt="">
                         <p class="desktop">內湖科學園區與台北市隔河相望，每逢上下班期間，大量車流進出堤頂大道、環東大道、麥帥二橋、民權大橋、成功橋等等，整個科技園區周邊像是大型停車場。
                         </p>
                         <!-- mobile -->
@@ -409,7 +409,7 @@
                         </p>
                     </li>
                     <li class="splide__slide">
-                        <img src="../assets/內湖交通/traffic3.jpg" alt="" loading="lazy">
+                        <img src="../assets/內湖交通/traffic3.jpg" alt="">
                         <p class="desktop">內湖交通為何成惡夢？
                             <br><br>
                             原因1：對外連接少，公共交通打結
@@ -429,7 +429,7 @@
                         </p>
                     </li>
                     <li class="splide__slide">
-                        <img src="../assets/內湖交通/traffic4.jpg" alt="" loading="lazy">
+                        <img src="../assets/內湖交通/traffic4.jpg" alt="">
                         <p class="desktop">柯文哲任內的發展
                             <br><br>
                             2016年07月文湖線乘客早鳥4折優惠，巡迴內科免費公車
@@ -459,7 +459,7 @@
 
                     </li>
                     <li class="splide__slide">
-                        <img src="../assets/內湖交通/traffic5.jpg" alt="" loading="lazy">
+                        <img src="../assets/內湖交通/traffic5.jpg" alt="">
                         <p class="desktop">台北市長候選人對內湖交通的願景：
                             <br><br>
                             【陳時中】
@@ -495,7 +495,7 @@
             <div class="splide__track">
                 <ul class="splide__list">
                     <li class="splide__slide">
-                        <img src="../assets/社宅/住宅1.jpg" alt="住宅" loading="lazy">
+                        <img src="../assets/社宅/住宅1.jpg" alt="住宅">
                         <p class="desktop">台北生活機能與就業環境，吸引許多外縣市的人才到台北工作，但長期以來的「高房價」讓許多人吃不消。
                             <br>
                             此外，台北老屋比例為6都之冠，屋齡的老化儼然也成為購屋、租屋的一大問題，究竟政府有甚麼對策因應？要如何落實居住正義？台北市長候選人又有哪些願景呢？
@@ -510,7 +510,7 @@
                         </p>
                     </li>
                     <li class="splide__slide">
-                        <img src="../assets/社宅/住宅2.jpg" alt="住宅" loading="lazy">
+                        <img src="../assets/社宅/住宅2.jpg" alt="住宅">
                         <p class="desktop">台北生活機能與就業環境，吸引許多外縣市的人才到台北工作，但長期以來的「高房價」讓許多年輕人吃不消， 甚至出現了「工作在台北、居住在新北」的現象。
                             <br> 而除了房價，台北老屋比例為6都之冠，現在屋齡的老化儼然也成為購屋、租屋的一大問題。
                         </p>
@@ -523,7 +523,7 @@
 
                     </li>
                     <li class="splide__slide">
-                        <img src="../assets/社宅/住宅3.jpg" alt="住宅" loading="lazy">
+                        <img src="../assets/社宅/住宅3.jpg" alt="住宅">
                         <p class="desktop">2014年，柯文哲曾於「市政白皮書」提到將於8年內完成5萬戶社會住宅，並推估大量興建廣設後，未來每坪每月約只需500元租金。
                             <br>
                             而今在市政成果上有未達之處，北市府今年所訂定的進度為20,429戶社宅，目前已完工 6601、施工中&待開工 7510、規劃中
@@ -541,7 +541,7 @@
                         </p>
                     </li>
                     <li class="splide__slide">
-                        <img src="../assets/社宅/住宅4.jpg" alt="住宅" loading="lazy">
+                        <img src="../assets/社宅/住宅4.jpg" alt="住宅">
                         <p class="desktop">台北市長候選人對住宅政策的願景
                             <br>
                             【陳時中】

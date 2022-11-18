@@ -10,7 +10,7 @@
 
                 <b-collapse id="nav-collapse" is-nav>
                     <b-navbar-nav>
-                        <b-nav-item class="ddd" href="https://bit.ly/3towPuO">
+                        <b-nav-item class="ddd" to="/">
                             首頁
                         </b-nav-item>
                     </b-navbar-nav>

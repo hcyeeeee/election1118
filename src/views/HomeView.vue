@@ -2,8 +2,6 @@
   <div>
 
     <ContentBanner />
-    <!-- <Marquee /> -->
-    <!-- <Board /> -->
     <ContentTime />
     <ContentNews2 />
     <ContentDistrict2 />
@@ -18,7 +16,6 @@
 
 
 <script>
-
 import ContentBanner from '@/components/Content_banner.vue'
 import ContentTime from '@/components/Content_time.vue'
 import ContentVideo2 from '@/components/Content_video2.vue'
@@ -37,6 +34,7 @@ export default {
     ContentVideo2,
     Footer,
     Share,
+
   },
 
 
@@ -62,10 +60,7 @@ body {
   height: 100%;
 }
 
-.swiper {
-  width: 100%;
-  height: 100%;
-}
+
 
 div,
 span,

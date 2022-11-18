@@ -16,24 +16,24 @@
                 <div class="timebox">
                     <p>&nbsp;&nbsp;&nbsp;倒數</p>
                     <i id="show"></i>
+
                     <p>天&nbsp;&nbsp;
                     </p>
+                    <!-- <div>
+                        <span class="num" id="hours"></span><span>時</span>
+                    </div>
+                    <div>
+                        <span class="num" id="minutes"></span><span>分</span>
+                    </div>
+                    <div>
+                        <span class="num" id="seconds"></span><span>秒</span>
+                    </div> -->
+
                 </div>
+
             </div>
         </div>
-        <!-- <div class="marqu"></div>
 
-        <div id="pSlider">
-            <ol id="slider-container" dir="ltr">
-                <li id="slide_1" class="li_slide" v-for="(item, index) of newsInfo" :key="index">
-                    <div class="slide-snapper">
-                        <a> {{ item.Title }}</a>
-                    </div>
-
-                </li>
-
-            </ol>
-        </div> -->
 
     </div>
 </template>
@@ -65,7 +65,7 @@ export default {
             var minsold = Math.floor((e_hrsold - hrsold) * 60);
             var seconds = Math.floor((e_minsold - minsold) * 60);
             if (daysold < 0) {
-                document.getElementById("time").innerHTML = "開票中";
+                document.getElementById("show").innerHTML = "開票中";
                 clearInterval(timer);
             }
             else {
@@ -73,14 +73,27 @@ export default {
                 if (hrsold < 10) { hrsold = "0" + hrsold }
                 if (minsold < 10) { minsold = "0" + minsold }
                 if (seconds < 10) { seconds = "0" + seconds }
-                // show.innerHTML = "倒數:" + daysold + "天" + hrsold + "小時" + minsold + "分" + seconds + "秒";
-                // show.innerHTML = "倒數" + daysold + "天";
+                show.innerHTML = "倒數:" + daysold + "天" + hrsold + "小時" + minsold + "分" + seconds + "秒";
+                //show.innerHTML = "倒數" + daysold + "天";
                 show.innerHTML = daysold;
 
             }
         }
+        timer = setInterval(show_date_time, 1000);
+        // var second = 1000, minute = second * 60, hour = minute * 60, day = hour * 24
+        // var countDown = new Date('Nov 18, 2022 08:00:00').getTime()
 
-        timer = setInterval(show_date_time, 10);
+        // setInterval(() => {
+        //     var now = new Date().getTime(), distance = countDown - now;
+        //     document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour)),
+        //         document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
+        //         document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
+
+        //     document.getElementById('hours').innerText;
+        //     document.getElementById('minutes').innerText;
+        //     document.getElementById('seconds').innerText;
+        // }, second);
+
     },
 
 

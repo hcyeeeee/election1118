@@ -73,7 +73,7 @@ export default {
         getData_ftvNews() {
             document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
-            axios
+            this.axios
                 .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=九合一選舉&Page=1&sp=6')
                 .then((response) => {
                     // console.log(response)
@@ -91,7 +91,7 @@ export default {
 
             document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
-            axios
+            this.axios
                 .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=政治&Page=1&sp=6')
                 .then((response) => {
                     // console.log(response)
@@ -109,7 +109,7 @@ export default {
 
             document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
-            axios
+            this.axios
                 .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=18歲公民權&Page=1&sp=6')
                 .then((response) => {
                     // console.log(response)
@@ -127,7 +127,7 @@ export default {
 
             document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
-            axios
+            this.axios
                 .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=桃園市選戰&Page=1&sp=6')
                 .then((response) => {
                     // console.log(response)
@@ -145,7 +145,7 @@ export default {
 
             document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
-            axios
+            this.axios
                 .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=新竹市選戰&Page=1&sp=6')
                 .then((response) => {
                     // console.log(response)
@@ -163,7 +163,7 @@ export default {
         getData_ftvNews5() {
             document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
-            axios
+            this.axios
                 .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=九合一選舉&Page=1&sp=6')
                 .then((response) => {
                     // console.log(response)
@@ -180,7 +180,7 @@ export default {
         getData_ftvNews6() {
             document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
-            axios
+            this.axios
                 .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=政治&Page=1&sp=6')
                 .then((response) => {
                     // console.log(response)
@@ -197,7 +197,7 @@ export default {
         getData_ftvNews7() {
             document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
-            axios
+            this.axios
                 .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=18歲公民權&Page=1&sp=6')
                 .then((response) => {
                     // console.log(response)
@@ -215,7 +215,7 @@ export default {
 
             document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
-            axios
+            this.axios
                 .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=桃園市選戰&Page=1&sp=6')
                 .then((response) => {
                     // console.log(response)
@@ -233,7 +233,7 @@ export default {
 
             document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
-            axios
+            this.axios
                 .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=新竹市選戰&Page=1&sp=6')
                 .then((response) => {
                     // console.log(response)

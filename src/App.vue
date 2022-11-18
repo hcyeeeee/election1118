@@ -34,7 +34,7 @@ export default {
       }, 100);
     },
   },
-  
+
 
 
 }
@@ -130,6 +130,22 @@ export default {
   justify-content: end;
   border: none !important;
   margin-right: 0.1rem;
+
+}
+
+.carousel-caption {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0%;
+  bottom: 0rem;
+  left: 0%;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  color: #fff;
+  text-align: center;
+  font-size: 1.2rem;
 
 }
 </style>

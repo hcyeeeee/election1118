@@ -144,7 +144,7 @@ export default {
         getData_ftvNews() {
             document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
-            axios
+            this.axios
                 .get('https://www.ftvnews.com.tw/topics/test/Yilan.json')
                 .then((response) => {
                     console.log(response)
@@ -162,7 +162,7 @@ export default {
         getData_ftvNews1() {
             document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
-            axios
+            this.axios
                 .get('https://www.ftvnews.com.tw/topics/test/Keelung.json')
                 .then((response) => {
                     // console.log(response)
@@ -179,7 +179,7 @@ export default {
         getData_ftvNews2() {
             document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
-            axios
+            this.axios
                 .get('https://www.ftvnews.com.tw/topics/test/Taipei.json')
                 .then((response) => {
                     let data = response.data.Taipei
@@ -195,7 +195,7 @@ export default {
         getData_ftvNews3() {
             document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
-            axios
+            this.axios
                 .get('https://www.ftvnews.com.tw/topics/test/Newtaipei.json')
                 .then((response) => {
                     // console.log(response)
@@ -214,7 +214,7 @@ export default {
 
             document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
-            axios
+            this.axios
                 .get('https://www.ftvnews.com.tw/topics/test/Taoyuan.json')
                 .then((response) => {
                     // console.log(response)
@@ -232,7 +232,7 @@ export default {
         getData_ftvNews6() {
             document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
-            axios
+            this.axios
                 .get('https://www.ftvnews.com.tw/topics/test/HsinchuCountry.json')
                 .then((response) => {
                     // console.log(response)
@@ -250,7 +250,7 @@ export default {
         getData_ftvNews5() {
             document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
-            axios
+            this.axios
                 .get('https://www.ftvnews.com.tw/topics/test/Hsinchucity.json')
                 .then((response) => {
                     // console.log(response)
@@ -268,7 +268,7 @@ export default {
         getData_ftvNews7() {
             document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
-            axios
+            this.axios
                 .get('https://www.ftvnews.com.tw/topics/test/Miaoli.json')
                 .then((response) => {
                     // console.log(response)
@@ -286,7 +286,7 @@ export default {
         getData_ftvNews8() {
             document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
-            axios
+            this.axios
                 .get('https://www.ftvnews.com.tw/topics/test/Taichung.json')
                 .then((response) => {
                     // console.log(response)
@@ -304,7 +304,7 @@ export default {
         getData_ftvNews9() {
             document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
-            axios
+            this.axios
                 .get('https://www.ftvnews.com.tw/topics/test/Changhua.json')
                 .then((response) => {
                     // console.log(response)
@@ -322,7 +322,7 @@ export default {
         getData_ftvNews10() {
             document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
-            axios
+            this.axios
                 .get('https://www.ftvnews.com.tw/topics/test/Nantou.json')
                 .then((response) => {
                     // console.log(response)
@@ -340,7 +340,7 @@ export default {
         getData_ftvNews11() {
             document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
-            axios
+            this.axios
                 .get('https://www.ftvnews.com.tw/topics/test/Yunlin.json')
                 .then((response) => {
                     // console.log(response)
@@ -358,7 +358,7 @@ export default {
         getData_ftvNews12() {
             document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
-            axios
+            this.axios
                 .get('https://www.ftvnews.com.tw/topics/test/Chiayicity.json')
                 .then((response) => {
                     // console.log(response)
@@ -376,7 +376,7 @@ export default {
         getData_ftvNews13() {
             document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
-            axios
+            this.axios
                 .get('https://www.ftvnews.com.tw/topics/test/ChiayiCountry.json')
                 .then((response) => {
                     // console.log(response)
@@ -394,7 +394,7 @@ export default {
         getData_ftvNews14() {
             document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
-            axios
+            this.axios
                 .get('https://www.ftvnews.com.tw/topics/test/Tainan.json')
                 .then((response) => {
                     // console.log(response)
@@ -412,7 +412,7 @@ export default {
         getData_ftvNews15() {
             document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
-            axios
+            this.axios
                 .get('https://www.ftvnews.com.tw/topics/test/Kao.json')
                 .then((response) => {
                     // console.log(response)
@@ -430,7 +430,7 @@ export default {
         getData_ftvNews16() {
             document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
-            axios
+            this.axios
                 .get('https://www.ftvnews.com.tw/topics/test/Pingtung.json')
                 .then((response) => {
                     // console.log(response)
@@ -448,7 +448,7 @@ export default {
         getData_ftvNews17() {
             document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
-            axios
+            this.axios
                 .get('https://www.ftvnews.com.tw/topics/test/Hualien.json')
                 .then((response) => {
                     // console.log(response)
@@ -466,7 +466,7 @@ export default {
         getData_ftvNews18() {
             document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
-            axios
+            this.axios
                 .get('https://www.ftvnews.com.tw/topics/test/Tai.json')
                 .then((response) => {
                     // console.log(response)
@@ -484,7 +484,7 @@ export default {
         getData_ftvNews19() {
             document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
-            axios
+            this.axios
                 .get('https://www.ftvnews.com.tw/topics/test/Penghu.json')
                 .then((response) => {
                     // console.log(response)
@@ -502,7 +502,7 @@ export default {
         getData_ftvNews20() {
             document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
-            axios
+            this.axios
                 .get('https://www.ftvnews.com.tw/topics/test/Kinmen.json')
                 .then((response) => {
                     // console.log(response)
@@ -520,7 +520,7 @@ export default {
         getData_ftvNews21() {
             document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
-            axios
+            this.axios
                 .get('https://www.ftvnews.com.tw/topics/test/Lienchiang.json')
                 .then((response) => {
                     // console.log(response)

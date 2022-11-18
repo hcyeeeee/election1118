@@ -2,8 +2,7 @@
     <div class="aaa" id="profile">
 
         <div class="section">
-
-            <h3>{{ citys[selected].cityName }}長選舉開票</h3>
+            <h3>{{ title }}</h3>
             <!-- 區域 -->
             <div class>
                 <select v-model="selected">
@@ -12,12 +11,10 @@
                     }}
                     </option>
                 </select>
-
-
                 <!-- big -->
                 <div class="layout_up">
-                    <div class="layout_card_height" v-for="(item, index) in citys[selected].tickets" :key="index">
-                        <div class="layout_card" v-if="index < 3">
+                    <div class="" v-for="(item, index) in citys[selected].tickets" :key="index">
+                        <div class="layout_card">
                             <div>
                                 <img class="person_img"
                                     :src="' https://www.ftvnews.com.tw/topics/test/image/' + item.candName + '.jpg'"
@@ -30,16 +27,16 @@
                             </div>
 
                             <div class="ticket">
-                                <p class="ticket_up"> {{ item.ticket.toLocaleString() }}</p>
+                                <p class="ticket_up"> {{ item.ticket }}</p>
                             </div>
                         </div>
-                        <progress v-if="index < 3" class="progress_class" max=100 :value=item.ticket />
+                        <progress class="progress_class" max=100 :value=item.ticket />
                     </div>
                 </div>
                 <!-- small -->
                 <div class="test">
                     <div class="" v-for="(item, index) in citys[selected].tickets" :key="index">
-                        <div class="layout_down" v-if="index >= 3">
+                        <div class="layout_down" v-if="index >= 4">
                             <div class="layout">
                                 <img class="person_img"
                                     :src="' https://www.ftvnews.com.tw/topics/test/image/' + item.candName + '.jpg'"
@@ -47,16 +44,14 @@
                                 <p>{{ item.candNo }}</p>
                                 <p>{{ item.candName }}</p>
                                 <p>{{ item.party }}</p>
-                                <p> {{ item.ticket.toLocaleString() }} </p>
+                                <p> {{ item.ticket }} </p>
                                 <progress class="progress_small" max=100 :value=item.ticket />
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="btn">
-                <a class="backtohome" href="/">返回儀表板</a>
-            </div>
+            <a class="backtohome" href="/">返回儀表板</a>
         </div>
         <!-- zone end-->
     </div>
@@ -66,33 +61,28 @@
 export default {
 
     data() {
+        // let citys={};
         return {
             title: "縣市長選舉開票",
             taipei: [],
             citys: null,
-            selected: 'A01',
+            // selected: 'A01',
             selCity: null,
             counter: null,
         }
     },
     methods: {
-        replaceText() {
-            let p = document.querySelectorAll('p').innerHTML
-            switch (p) {
-                case "國民":
-                    p.replace(p, '中國國民黨');
-                    break;
-                default:
-                    p = 1;
-            }
-        },
         getData_vote() {
             document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
-            this.axios
+            axios
                 .get('https://melect-api.ftvnews.com.tw/Tickets/ftvelect.json').then((response) => {
 
+                    // let data = response.data.T1.detail[1].tickets
+                    // let data = response.data
                     this.preOrderData(response.data)
+
+
                 })
                 .catch((error) => {
                     console.log('error' + error)
@@ -101,6 +91,7 @@ export default {
 
         preOrderData(data) {
             let t1 = data.T1.detail
+
             let citys = {}
             t1.forEach(function (city) {
                 if (city !== null) {
@@ -108,28 +99,32 @@ export default {
                         return b.ticket - a.ticket
                     })
                     citys[city.cityNo] = city
+
                 }
             })
+
             this.citys = citys
+            console.log(typeof this.citys);
+
             this.insertData_vote()
         },
+
         insertData_vote() {
             //判斷選取哪個縣市的總票數
             switch (this.selected) {
                 case 'A01': {
                     let nodeList = document.querySelectorAll('progress')
                     for (let i = 0; i < nodeList.length; i++) {
-                        nodeList[i].max = 300000;
-                        console.log('nodeList', nodeList[i].max)
+                        nodeList[i].max = 3000000;
                     }
                     break;
-
                 }
                 case 'A02': {
                     let nodeList = document.querySelectorAll('progress')
                     for (let i = 0; i < nodeList.length; i++) {
                         nodeList[i].max = 10014202;
                     }
+                    console.log(this.selected)
                     break;
                 }
                 case 'A03': {
@@ -276,16 +271,14 @@ export default {
     },
     created() {
         this.getData_vote()
-
     },
     mounted() {
         let selCity = document.location.href.split("?")[1].split("=")[1]
         this.selected = selCity
+
         this.counter = setInterval(() => {
             this.getData_vote()
         }, 1000);
-
-
     },
 }
 </script>
@@ -297,16 +290,6 @@ export default {
 
 @media screen and (max-width: 500px) {}
 
-select {
-    font-weight: bolder;
-    padding: 0.1rem 0.5rem;
-    border-radius: 10px;
-    font-size: 1.2rem;
-    border: 3px solid #ffc464;
-    color: #f5922f;
-    background: #faf3e6;
-}
-
 .backtohome {
     background-color: orange;
     border-radius: 30px;
@@ -314,16 +297,13 @@ select {
     padding: .5rem 1rem;
     margin: 1rem;
     color: #fff;
+    top: -3rem;
+    position: relative;
+    right: -23rem;
     font-weight: bolder;
     font-size: 1.2rem;
-    display: flex;
-
 }
 
-.btn {
-    display: flex;
-    justify-content: end;
-}
 
 .section {
     background: #fff;
@@ -350,18 +330,13 @@ select {
 
 .layout_card {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    margin: 1rem auto;
-
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 1rem auto
 }
 
 .layout_up {
     margin: auto;
 
-}
-
-.layout_card_height {
-    max-height: 10rem;
 }
 
 .content {
@@ -391,6 +366,10 @@ p {
     margin-top: 1rem;
 }
 
+.layout_up {
+    height: 650px;
+    overflow: hidden;
+}
 
 .layout_down {
     display: grid;
@@ -399,22 +378,52 @@ p {
 .test {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-    margin: auto;
-    max-width: 810px;
+    justify-content: center;
+}
+
+@media screen and (max-width: 900px) {
+    .test {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .test {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .test {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .test {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .test {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 
+
 .progress_class {
-    width: 70%;
+    width: 60%;
     overflow: hidden;
-    -moz-appearance: none;
+    /*设置iOS下清除灰色背景*/
     appearance: none;
     border-radius: .5rem;
     -webkit-appearance: none;
     bottom: 4rem;
-    right: -6rem;
-    height: 1.5rem;
+    left: 8rem;
+    height: 2rem;
 }
 
 progress {
@@ -454,142 +463,6 @@ progress {
 .progress_small::-webkit-progress-bar {
     background-color: #d7d7d7;
 }
-
-
-
-
-@media screen and (max-width: 900px) {
-    .section {
-        background: #fff;
-        margin: 1rem;
-        border-radius: 30px;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-        max-width: 1000px;
-        margin: 1rem;
-
-    }
-
-    .test {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .layout_card {
-        margin: 1rem;
-        grid-template-columns: 1fr 2fr 1fr;
-    }
-
-    .content {
-        text-align: left;
-        font-size: 30px;
-    }
-
-    h4 {
-        font-size: 2.5rem
-    }
-
-}
-
-@media screen and (max-width: 768px) {
-
-    .content {
-        text-align: left;
-        font-size: 1.4rem;
-    }
-
-    h4 {
-        font-size: 1.4rem
-    }
-
-    .ticket_up {
-        font-size: 1.4rem;
-        margin-top: 0rem;
-    }
-
-    .party_up {
-        font-size: 1.4rem;
-
-
-    }
-
-    p {
-        font-size: 1.4rem;
-    }
-
-    .progress_class {
-        height: 1.rem;
-    }
-
-
-    .person_img {
-        border-radius: 100px;
-        width: 100px;
-        height: 100px;
-        margin: 0rem 1rem;
-    }
-
-    .progress_class {
-        width: 50%;
-        bottom: 3rem;
-        right: -4rem;
-
-    }
-
-    .layout_card {
-        margin: 1rem;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    .layout_card_height {
-        max-height: 7rem;
-    }
-
-
-
-
-}
-
-@media screen and (max-width: 500px) {
-
-    .content {
-        text-align: left;
-        font-size: 1.3rem;
-    }
-
-    h4 {
-        font-size: 1.3rem
-    }
-
-    .ticket_up {
-        font-size: 1.3rem;
-        margin-top: 0rem;
-    }
-
-    .party_up {
-        font-size: 1.3rem;
-
-
-    }
-
-    p {
-        font-size: 1.3rem;
-    }
-
-    .progress_class {
-        height: 1.3rem;
-    }
-
-
-    .person_img {
-        border-radius: 100px;
-        width: 100px;
-        height: 100px;
-        margin: 0rem 1rem;
-    }
-
-}
-
 
 
 .layout {

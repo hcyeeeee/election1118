@@ -10,10 +10,8 @@
                             <b-tab title="基隆市" class="tabsize">
                                 <div class="layout" v-for="(item, index) of getProfile1" :key="index">
                                     <div class="layout_card">
-                                        <img class="person_img" :src="getProfile1[index].photo" alt="personal"
-                                            loading="lazy">
-                                        <img class="party_img" :src="getProfile1[index].party_photo" alt="party"
-                                            loading="lazy">
+                                        <img class="person_img" :src="getProfile1[index].photo" alt="personal">
+                                        <img class="party_img" :src="getProfile1[index].party_photo" alt="party">
                                         <!-- person -->
                                         <div class="text">
                                             <h4 class="num">{{ item.no }}</h4>
@@ -38,10 +36,8 @@
                             <b-tab title="台北市">
                                 <div class="layout" v-for="(item, index) of getProfile2" :key="index">
                                     <div class="layout_card">
-                                        <img class="person_img" :src="getProfile2[index].photo" alt="personal"
-                                            loading="lazy">
-                                        <img class="party_img" :src="getProfile2[index].party_photo" alt="party"
-                                            loading="lazy">
+                                        <img class="person_img" :src="getProfile2[index].photo" alt="personal">
+                                        <img class="party_img" :src="getProfile2[index].party_photo" alt="party">
                                         <!-- person -->
                                         <div class="text">
                                             <h4 class="num">{{ item.no }}</h4>
@@ -66,10 +62,8 @@
                             <b-tab title="新北市">
                                 <div class="layout" v-for="(item, index) of getProfile3" :key="index">
                                     <div class="layout_card">
-                                        <img class="person_img" :src="getProfile3[index].photo" alt="personal"
-                                            loading="lazy">
-                                        <img class="party_img" :src="getProfile3[index].party_photo" alt="party"
-                                            loading="lazy">
+                                        <img class="person_img" :src="getProfile3[index].photo" alt="personal">
+                                        <img class="party_img" :src="getProfile3[index].party_photo" alt="party">
                                         <!-- person -->
                                         <div class="text">
                                             <h4 class="num">{{ item.no }}</h4>
@@ -94,10 +88,8 @@
                             <b-tab title="桃園市">
                                 <div class="layout" v-for="(item, index) of getProfile4" :key="index">
                                     <div class="layout_card">
-                                        <img class="person_img" :src="getProfile4[index].photo" alt="personal"
-                                            loading="lazy">
-                                        <img class="party_img" :src="getProfile4[index].party_photo" alt="party"
-                                            loading="lazy">
+                                        <img class="person_img" :src="getProfile4[index].photo" alt="personal">
+                                        <img class="party_img" :src="getProfile4[index].party_photo" alt="party">
                                         <!-- person -->
                                         <div class="text">
                                             <h4 class="num">{{ item.no }}</h4>
@@ -125,10 +117,8 @@
                             <b-tab title="新竹縣">
                                 <div class="layout" v-for="(item, index) of getProfile6" :key="index">
                                     <div class="layout_card">
-                                        <img class="person_img" :src="getProfile6[index].photo" alt="personal"
-                                            loading="lazy">
-                                        <img class="party_img" :src="getProfile6[index].party_photo" alt="party"
-                                            loading="lazy">
+                                        <img class="person_img" :src="getProfile6[index].photo" alt="personal">
+                                        <img class="party_img" :src="getProfile6[index].party_photo" alt="party">
                                         <!-- person -->
                                         <div class="text">
                                             <h4 class="num">{{ item.no }}</h4>
@@ -153,10 +143,8 @@
                             <b-tab title="新竹市">
                                 <div class="layout" v-for="(item, index) of getProfile5" :key="index">
                                     <div class="layout_card">
-                                        <img class="person_img" :src="getProfile5[index].photo" alt="personal"
-                                            loading="lazy">
-                                        <img class="party_img" :src="getProfile5[index].party_photo" alt="party"
-                                            loading="lazy">
+                                        <img class="person_img" :src="getProfile5[index].photo" alt="personal">
+                                        <img class="party_img" :src="getProfile5[index].party_photo" alt="party">
                                         <!-- person -->
                                         <div class="text">
                                             <h4 class="num">{{ item.no }}</h4>
@@ -181,10 +169,8 @@
                             <b-tab title="宜蘭縣">
                                 <div class="layout" v-for="(item, index) of getProfile" :key="index">
                                     <div class="layout_card">
-                                        <img class="person_img" :src="getProfile[index].photo" alt="personal"
-                                            loading="lazy">
-                                        <img class="party_img" :src="getProfile[index].party_photo" alt="party"
-                                            loading="lazy">
+                                        <img class="person_img" :src="getProfile[index].photo" alt="personal">
+                                        <img class="party_img" :src="getProfile[index].party_photo" alt="party">
                                         <!-- person -->
                                         <div class="text">
                                             <h4 class="num">{{ item.no }}</h4>
@@ -213,10 +199,8 @@
                             <b-tab title="苗栗縣">
                                 <div class="layout" v-for="(item, index) of getProfile7" :key="index">
                                     <div class="layout_card">
-                                        <img class="person_img" :src="getProfile7[index].photo" alt="personal"
-                                            loading="lazy">
-                                        <img class="party_img" :src="getProfile7[index].party_photo" alt="party"
-                                            loading="lazy">
+                                        <img class="person_img" :src="getProfile7[index].photo" alt="personal">
+                                        <img class="party_img" :src="getProfile7[index].party_photo" alt="party">
                                         <!-- person -->
                                         <div class="text">
                                             <h4 class="num">{{ item.no }}</h4>
@@ -241,10 +225,8 @@
                             <b-tab title="台中市">
                                 <div class="layout" v-for="(item, index) of getProfile8" :key="index">
                                     <div class="layout_card">
-                                        <img class="person_img" :src="getProfile8[index].photo" alt="personal"
-                                            loading="lazy">
-                                        <img class="party_img" :src="getProfile8[index].party_photo" alt="party"
-                                            loading="lazy">
+                                        <img class="person_img" :src="getProfile8[index].photo" alt="personal">
+                                        <img class="party_img" :src="getProfile8[index].party_photo" alt="party">
                                         <!-- person -->
                                         <div class="text">
                                             <h4 class="num">{{ item.no }}</h4>
@@ -269,10 +251,8 @@
                             <b-tab title="彰化縣">
                                 <div class="layout" v-for="(item, index) of getProfile9" :key="index">
                                     <div class="layout_card">
-                                        <img class="person_img" :src="getProfile9[index].photo" alt="personal"
-                                            loading="lazy">
-                                        <img class="party_img" :src="getProfile9[index].party_photo" alt="party"
-                                            loading="lazy">
+                                        <img class="person_img" :src="getProfile9[index].photo" alt="personal">
+                                        <img class="party_img" :src="getProfile9[index].party_photo" alt="party">
                                         <!-- person -->
                                         <div class="text">
                                             <h4 class="num">{{ item.no }}</h4>
@@ -297,10 +277,8 @@
                             <b-tab title="南投縣">
                                 <div class="layout" v-for="(item, index) of getProfile10" :key="index">
                                     <div class="layout_card">
-                                        <img class="person_img" :src="getProfile10[index].photo" alt="personal"
-                                            loading="lazy">
-                                        <img class="party_img" :src="getProfile10[index].party_photo" alt="party"
-                                            loading="lazy">
+                                        <img class="person_img" :src="getProfile10[index].photo" alt="personal">
+                                        <img class="party_img" :src="getProfile10[index].party_photo" alt="party">
                                         <!-- person -->
                                         <div class="text">
                                             <h4 class="num">{{ item.no }}</h4>
@@ -327,10 +305,8 @@
                             <b-tab title="雲林縣">
                                 <div class="layout" v-for="(item, index) of getProfile11" :key="index">
                                     <div class="layout_card">
-                                        <img class="person_img" :src="getProfile11[index].photo" alt="personal"
-                                            loading="lazy">
-                                        <img class="party_img" :src="getProfile11[index].party_photo" alt="party"
-                                            loading="lazy">
+                                        <img class="person_img" :src="getProfile11[index].photo" alt="personal">
+                                        <img class="party_img" :src="getProfile11[index].party_photo" alt="party">
                                         <!-- person -->
                                         <div class="text">
                                             <h4 class="num">{{ item.no }}</h4>
@@ -368,10 +344,8 @@
 
                                 <div class=" layout" v-for="(item, index) of getProfile12" :key="index">
                                     <div class="layout_card">
-                                        <img class="person_img" :src="getProfile12[index].photo" alt="personal"
-                                            loading="lazy">
-                                        <img class="party_img" :src="getProfile12[index].party_photo" alt="party"
-                                            loading="lazy">
+                                        <img class="person_img" :src="getProfile12[index].photo" alt="personal">
+                                        <img class="party_img" :src="getProfile12[index].party_photo" alt="party">
                                         <!-- person -->
                                         <div class="text">
                                             <h4 class="num">{{ item.no }}</h4>
@@ -399,10 +373,8 @@
 
                                 <div class="layout" v-for="(item, index) of getProfile13" :key="index">
                                     <div class="layout_card">
-                                        <img class="person_img" :src="getProfile13[index].photo" alt="personal"
-                                            loading="lazy">
-                                        <img class="party_img" :src="getProfile13[index].party_photo" alt="party"
-                                            loading="lazy">
+                                        <img class="person_img" :src="getProfile13[index].photo" alt="personal">
+                                        <img class="party_img" :src="getProfile13[index].party_photo" alt="party">
                                         <!-- person -->
                                         <div class="text">
                                             <h4 class="num">{{ item.no }}</h4>
@@ -429,10 +401,8 @@
                             <b-tab title="台南市">
                                 <div class="layout" v-for="(item, index) of getProfile14" :key="index">
                                     <div class="layout_card">
-                                        <img class="person_img" :src="getProfile14[index].photo" alt="personal"
-                                            loading="lazy">
-                                        <img class="party_img" :src="getProfile14[index].party_photo" alt="party"
-                                            loading="lazy">
+                                        <img class="person_img" :src="getProfile14[index].photo" alt="personal">
+                                        <img class="party_img" :src="getProfile14[index].party_photo" alt="party">
                                         <!-- person -->
                                         <div class="text">
                                             <h4 class="num">{{ item.no }}</h4>
@@ -459,10 +429,8 @@
                             <b-tab title="高雄市">
                                 <div class="layout" v-for="(item, index) of getProfile15" :key="index">
                                     <div class="layout_card">
-                                        <img class="person_img" :src="getProfile15[index].photo" alt="personal"
-                                            loading="lazy">
-                                        <img class="party_img" :src="getProfile15[index].party_photo" alt="party"
-                                            loading="lazy">
+                                        <img class="person_img" :src="getProfile15[index].photo" alt="personal">
+                                        <img class="party_img" :src="getProfile15[index].party_photo" alt="party">
                                         <!-- person -->
                                         <div class="text">
                                             <h4 class="num">{{ item.no }}</h4>
@@ -489,10 +457,8 @@
                             <b-tab title="屏東縣">
                                 <div class="layout" v-for="(item, index) of getProfile16" :key="index">
                                     <div class="layout_card">
-                                        <img class="person_img" :src="getProfile16[index].photo" alt="personal"
-                                            loading="lazy">
-                                        <img class="party_img" :src="getProfile16[index].party_photo" alt="party"
-                                            loading="lazy">
+                                        <img class="person_img" :src="getProfile16[index].photo" alt="personal">
+                                        <img class="party_img" :src="getProfile16[index].party_photo" alt="party">
                                         <!-- person -->
                                         <div class="text">
                                             <h4 class="num">{{ item.no }}</h4>
@@ -524,10 +490,8 @@
                             <b-tab title="花蓮縣">
                                 <div class="layout" v-for="(item, index) of getProfile17" :key="index">
                                     <div class="layout_card">
-                                        <img class="person_img" :src="getProfile17[index].photo" alt="personal"
-                                            loading="lazy">
-                                        <img class="party_img" :src="getProfile17[index].party_photo" alt="party"
-                                            loading="lazy">
+                                        <img class="person_img" :src="getProfile17[index].photo" alt="personal">
+                                        <img class="party_img" :src="getProfile17[index].party_photo" alt="party">
                                         <!-- person -->
                                         <div class="text">
                                             <h4 class="num">{{ item.no }}</h4>
@@ -554,10 +518,8 @@
                             <b-tab title="台東縣">
                                 <div class="layout" v-for="(item, index) of getProfile18" :key="index">
                                     <div class="layout_card">
-                                        <img class="person_img" :src="getProfile18[index].photo" alt="personal"
-                                            loading="lazy">
-                                        <img class="party_img" :src="getProfile18[index].party_photo" alt="party"
-                                            loading="lazy">
+                                        <img class="person_img" :src="getProfile18[index].photo" alt="personal">
+                                        <img class="party_img" :src="getProfile18[index].party_photo" alt="party">
                                         <!-- person -->
                                         <div class="text">
                                             <h4 class="num">{{ item.no }}</h4>
@@ -588,10 +550,8 @@
                             <b-tab title="澎湖縣">
                                 <div class="layout" v-for="(item, index) of getProfile19" :key="index">
                                     <div class="layout_card">
-                                        <img class="person_img" :src="getProfile19[index].photo" alt="personal"
-                                            loading="lazy">
-                                        <img class="party_img" :src="getProfile19[index].party_photo" alt="party"
-                                            loading="lazy">
+                                        <img class="person_img" :src="getProfile19[index].photo" alt="personal">
+                                        <img class="party_img" :src="getProfile19[index].party_photo" alt="party">
                                         <!-- person -->
                                         <div class="text">
                                             <h4 class="num">{{ item.no }}</h4>
@@ -618,10 +578,8 @@
                             <b-tab title="金門縣">
                                 <div class="layout" v-for="(item, index) of getProfile20" :key="index">
                                     <div class="layout_card">
-                                        <img class="person_img" :src="getProfile20[index].photo" alt="personal"
-                                            loading="lazy">
-                                        <img class="party_img" :src="getProfile20[index].party_photo" alt="party"
-                                            loading="lazy">
+                                        <img class="person_img" :src="getProfile20[index].photo" alt="personal">
+                                        <img class="party_img" :src="getProfile20[index].party_photo" alt="party">
                                         <!-- person -->
                                         <div class="text">
                                             <h4 class="num">{{ item.no }}</h4>
@@ -648,10 +606,8 @@
                             <b-tab title="連江縣">
                                 <div class="layout" v-for="(item, index) of getProfile21" :key="index">
                                     <div class="layout_card">
-                                        <img class="person_img" :src="getProfile21[index].photo" alt="personal"
-                                            loading="lazy">
-                                        <img class="party_img" :src="getProfile21[index].party_photo" alt="party"
-                                            loading="lazy">
+                                        <img class="person_img" :src="getProfile21[index].photo" alt="personal">
+                                        <img class="party_img" :src="getProfile21[index].party_photo" alt="party">
                                         <!-- person -->
                                         <div class="text">
                                             <h4 class="num">{{ item.no }}</h4>
