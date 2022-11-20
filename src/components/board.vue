@@ -148,6 +148,7 @@ export default {
     margin: .1rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-content: center;
 }
 
 .box {
@@ -171,6 +172,10 @@ p {
 h3 {
     margin: auto;
     padding: .5rem;
+}
+
+.section {
+    box-shadow: rgb(50 50 93 / 25%) 0px 6px 12px -2px, rgb(0 0 0 / 30%) 0px 3px 7px -3px;
 }
 
 @media screen and (max-width: 900px) {

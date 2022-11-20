@@ -3,9 +3,9 @@
         <h1>{{ title }}</h1>
         <a href="#">
             <picture>
-                <source srcset="../assets/mobile.png" media="(max-width: 500px)" />
+                <!-- <source srcset="../assets/mobile.jpg" media="(max-width: 500px)" /> -->
                 <source srcset="../assets/tablet_horizontal.jpg" media="(max-width: 768px)" />
-                <source srcset="../assets/tablet_vertical.jpg" media="(max-width: 1024px)" />
+                <!-- <source srcset="../assets/tablet_vertical.jpg" media="(max-width: 1024px)" /> -->
                 <img class="banner" src="../assets/desktop.png" alt="">
             </picture>
         </a>
@@ -291,23 +291,22 @@ img.banner {
     .addition {
         background: white;
         position: absolute;
-        bottom: 20px;
         right: 20%;
         padding: .1rem 1rem 0.1rem 0.1rem;
-        border-radius: 25px 0 0 25px;
+
     }
 
     .addition .vote-box img {
-        width: 100px;
-        height: 110px;
+        width: 80px;
+        height: 80px;
         position: absolute;
-        right: -4.5rem;
-        top: -3rem;
+        right: -4rem;
+        top: -2rem;
     }
 
     .addition .vote-box p {
         margin: 0;
-        padding: .5rem .5rem 1rem;
+        padding: .5rem .5rem;
     }
 
     #show {

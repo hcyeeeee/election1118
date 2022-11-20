@@ -1,11 +1,10 @@
 <template>
     <div class="aaa" id="profile">
 
-        <div class="section">
-
+        <div class="section" v-if="citys !== null">
             <h3>{{ citys[selected].cityName }}長選舉開票</h3>
             <!-- 區域 -->
-            <div class>
+            <div>
                 <select v-model="selected">
                     <option :value="city.cityNo" v-for="city, idx in citys" :key="idx">{{
                             city.cityName
@@ -71,7 +70,6 @@ export default {
             taipei: [],
             citys: null,
             selected: 'A01',
-            selCity: null,
             counter: null,
         }
     },
@@ -276,13 +274,17 @@ export default {
     },
     created() {
         this.getData_vote()
-
+        console.log(document.location.href.split("?"))
+        if (document.location.href.split("?").length > 1) {
+            this.selected = document.location.href.split("?")[1].split("=")[1]
+        }
+       // console.log('catch city' + this.selected)
     },
     mounted() {
-        let selCity = document.location.href.split("?")[1].split("=")[1]
-        this.selected = selCity
+
         this.counter = setInterval(() => {
             this.getData_vote()
+
         }, 1000);
 
 

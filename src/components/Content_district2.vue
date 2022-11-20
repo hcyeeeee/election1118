@@ -597,7 +597,7 @@ a {
         display: grid;
         overflow: hidden;
         /* height: 1720px; */
-        height: 870px;
+        height: 860px;
     }
 
 

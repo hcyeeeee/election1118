@@ -146,7 +146,29 @@ export default {
   color: #fff;
   text-align: center;
   font-size: 1.2rem;
+}
 
+
+@media screen and (max-width: 768px) {
+
+  .carousel-caption {
+    font-size: 1.2rem;
+    justify-content: start;
+    display: -webkit-box;
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .carousel-caption {
+    font-size: 1.2rem;
+    justify-content: start;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+  }
 }
 </style>
 

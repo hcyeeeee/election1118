@@ -9,13 +9,7 @@
                 <img class="banner" src="../assets/banner2.png" alt="">
             </picture>
         </a>
-        <!-- 倒數 -->
-        <div class="addition">
-            <div class="vote-box">
-                <img class="box" src="../assets/投票箱.png" alt="box">
-                <p>開票中</p>
-            </div>
-        </div>
+
     </div>
 </template>
 

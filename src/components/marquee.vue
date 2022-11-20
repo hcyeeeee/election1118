@@ -1,10 +1,11 @@
 <template>
     <div class="main">
-        <div class="pop">快訊<img src="../assets/pop.png" alt=""></div>
-        <b-carousel id="carousel-1" v-model="slide" :interval="4000" background="#FFF8ED" img-width="1024"
-            img-height="30"
-            style=" box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;">
-            <b-carousel-slide v-for="(item, index) of newsInfo" :key="index" img-blank img-alt="Blank image">
+        <div class="pop">
+            <h4 class="desktop">快訊</h4><img src="../assets/pop.png" alt="">
+        </div>
+        <b-carousel id="carousel-1" v-model="slide" :interval="4000" background="#FFF8ED"
+            style=" background=#FFF8ED, box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;">
+            <b-carousel-slide v-for="(item, index) of newsInfo" :key="index">
                 <a :href="'https://www.ftvnews.com.tw/news/detail/' + item.ID" target="blank">
                     {{ item.Title }}</a>
             </b-carousel-slide>
@@ -52,6 +53,17 @@ export default {
 </script>
 
 <style scoped>
+#carousel-1 {
+    padding: .5rem .8rem;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+
 .main {
     display: grid;
     grid-template-columns: 1fr 9fr;
@@ -62,7 +74,7 @@ export default {
     font-size: 1.3rem;
     height: 35;
     background: orange;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
     text-shadow: rgb(0 0 0 / 50%) 0px 2px 10px;
 
 }
@@ -70,6 +82,38 @@ export default {
 .pop img {
     height: 2.5rem;
     padding: .3rem;
+}
+
+.desktop {
+    display: inline-block;
+}
+
+@media screen and (max-width: 900px) {
+    .desktop {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .pop {
+        color: white;
+        font-size: 1.2rem;
+        height: 35;
+        background: orange;
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+        text-shadow: rgb(0 0 0 / 50%) 0px 2px 10px;
+
+    }
+
+    .pop img {
+        height: 2.5rem;
+        padding: .3rem;
+    }
+
+ 
+
+
+
 }
 </style>
 

@@ -2,6 +2,7 @@
   <div>
 
     <ContentBanner />
+     <Marquee /> 
     <ContentTime />
     <ContentNews2 />
     <ContentDistrict2 />
@@ -17,6 +18,7 @@
 
 <script>
 import ContentBanner from '@/components/Content_banner.vue'
+ import Marquee from '@/components/marquee.vue'
 import ContentTime from '@/components/Content_time.vue'
 import ContentVideo2 from '@/components/Content_video2.vue'
 import ContentNews2 from '@/components/Content_news2.vue'
@@ -28,16 +30,14 @@ export default {
   name: 'App',
   components: {
     ContentBanner,
+     Marquee,
     ContentTime,
     ContentNews2,
     ContentDistrict2,
     ContentVideo2,
     Footer,
     Share,
-
   },
-
-
 }
 
 </script>

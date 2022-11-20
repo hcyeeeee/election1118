@@ -8,7 +8,7 @@
     <ContentDistrict2 />
     <ContentVideo2 />
     <Footer />
-    <Share />
+    <Share2 />
 
 
   </div>
@@ -24,7 +24,7 @@ import ContentVideo2 from '@/components/Content_video2.vue'
 import ContentNews2 from '@/components/Content_news2.vue'
 import ContentDistrict2 from '@/components/Content_district2.vue'
 import Footer from '@/components/Footer.vue'
-import Share from '../components/share.vue'
+import Share2 from '../components/share2.vue'
 
 export default {
   name: 'App',
@@ -36,7 +36,7 @@ export default {
     ContentDistrict2,
     ContentVideo2,
     Footer,
-    Share,
+    Share2,
 
   },
 
