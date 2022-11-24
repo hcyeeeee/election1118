@@ -72,7 +72,7 @@ export default {
     },
     methods: {
         getData_ftvNews() {
-            document.querySelectorAll('.news3').forEach((e) => e.remove())
+            document.querySelectorAll('.news2').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
             this.axios
                 .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=九合一選舉&Page=1&sp=6')
@@ -90,7 +90,7 @@ export default {
         },
         getData_ftvNews1() {
 
-            document.querySelectorAll('.news3').forEach((e) => e.remove())
+            document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
             this.axios
                 .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=政治&Page=1&sp=6')
@@ -108,7 +108,7 @@ export default {
         },
         getData_ftvNews2() {
 
-            document.querySelectorAll('.news3').forEach((e) => e.remove())
+            document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
             this.axios
                 .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=18歲公民權&Page=1&sp=6')
@@ -126,7 +126,7 @@ export default {
         },
         getData_ftvNews3() {
 
-            document.querySelectorAll('.news3').forEach((e) => e.remove())
+            document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
             this.axios
                 .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=桃園市選戰&Page=1&sp=6')
@@ -144,7 +144,7 @@ export default {
         },
         getData_ftvNews4() {
 
-            document.querySelectorAll('.news3').forEach((e) => e.remove())
+            document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
             this.axios
                 .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=新竹市選戰&Page=1&sp=6')
@@ -162,7 +162,7 @@ export default {
         },
 
         getData_ftvNews5() {
-            document.querySelectorAll('.news3').forEach((e) => e.remove())
+            document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
             this.axios
                 .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=九合一選舉&Page=1&sp=6')
@@ -179,7 +179,7 @@ export default {
                 })
         },
         getData_ftvNews6() {
-            document.querySelectorAll('.news3').forEach((e) => e.remove())
+            document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
             this.axios
                 .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=政治&Page=1&sp=6')
@@ -196,7 +196,7 @@ export default {
                 })
         },
         getData_ftvNews7() {
-            document.querySelectorAll('.news3').forEach((e) => e.remove())
+            document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
             this.axios
                 .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=18歲公民權&Page=1&sp=6')
@@ -214,7 +214,7 @@ export default {
         },
         getData_ftvNews8() {
 
-            document.querySelectorAll('.news3').forEach((e) => e.remove())
+            document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
             this.axios
                 .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=桃園市選戰&Page=1&sp=6')
@@ -232,7 +232,7 @@ export default {
         },
         getData_ftvNews9() {
 
-            document.querySelectorAll('.news3').forEach((e) => e.remove())
+            document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
             this.axios
                 .get('https://ftvnews-api2.azurewebsites.net/API/FtvGetNewsWeb.aspx?Cate=新竹市選戰&Page=1&sp=6')

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="section" >
+        <div class="section">
             <img class="eighteentitle" src="../assets/eighteentitle.png" alt="18歲公民權修憲開票公投">
             <div class="yesorno">
                 <div class="vote">
@@ -20,9 +20,9 @@
                 <progress class="progress_class  desktop" :max=this.allticket :value=data[0].ticket />
                 <p class="disagree_vote  desktop">不同意</p>
             </div>
-            <p>註：達標門檻為954萬00000票</p>
+            <p>註：達標門檻為:961萬9697票</p>
             <div class="allbtn">
-                <a class="backbtn" href="/#/qa">修憲公投Ｑ＆Ａ</a>
+                <a class="backbtn" href="">修憲公投Ｑ＆Ａ</a>
             </div>
         </div>
 
@@ -43,7 +43,7 @@ export default {
             allticket: {},
             value: 45,
             max: 100,
-            
+
 
 
         }
@@ -51,7 +51,7 @@ export default {
     methods: {
         getVote() {
             // eslint-disable-next-line no-undef
-            this.axios.get('https://melect-api.ftvnews.com.tw/Tickets/ftvelect.json').then((response) => {
+            this.axios.get('https://www.ftvnews.com.tw/topics/test/election.json').then((response) => {
                 this.data = response.data.T3.detail[0].tickets
 
                 // 同意

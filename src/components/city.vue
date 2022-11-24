@@ -21,10 +21,11 @@
                         <!-- 單一候選人的顯示隱藏使用候選人資料中的show屬性，綁定style中的opacity 透明度屬性-->
                         <div class="layout_card" v-if="index < 3">
                             <div>
-                                <img class="person_img"
-                                    :src="'https://www.ftvnews.com.tw/topics/test/image/' + item.candName + '.jpg'"
+
+                                <img class="person_img" :src="require('@/assets/' + item.candName + '.jpg')"
                                     alt="personal" />
                             </div>
+
                             <div class="content">
                                 <h4>{{ item.candNo }}{{ item.candName }}</h4>
                                 <p class="party_up">{{ item.party }}</p>
@@ -49,8 +50,7 @@
                         <!-- 單一候選人的顯示隱藏使用候選人資料中的show屬性，綁定style中的opacity 透明度屬性 ，增加一個class small-wrap 用來控制淡入淡出動畫用的-->
                         <div class="layout_down" v-if="index >= 3">
                             <div class="layout">
-                                <img class="person_img"
-                                    :src="'https://www.ftvnews.com.tw/topics/test/image/' + item.candName + '.jpg'"
+                                <img class="person_img" :src="require('@/assets/' + item.candName + '.jpg')"
                                     alt="新聞封面照" />
 
                                 <p>{{ item.candNo }}{{ item.candName }}</p>
@@ -117,7 +117,7 @@ export default {
             document.querySelectorAll(".news").forEach((e) => e.remove());
             // eslint-disable-next-line no-undef
             this.axios
-                .get("https://melect-api.ftvnews.com.tw/Tickets/ftvelect.json")
+                .get("https://www.ftvnews.com.tw/topics/test/election.json")
                 // .get("./election.json")
                 .then((response) => {
                     this.preOrderData(response.data);
@@ -125,8 +125,29 @@ export default {
                 .catch((error) => {
                     console.log("error" + error);
                 });
-
         },
+
+        replaceParty() {
+            let nn = document.querySelectorAll(".party_up,.party_down");
+            console.log('nn', nn.length);
+            for (let i = 0; i < nn.length; i++) {
+                nn[i].innerHTML = nn[i].innerHTML
+                    .replace(/國民/g, "中國國民黨")
+                    .replace(/中國中國國民黨黨/g, "中國國民黨")
+                    .replace(/民進/g, "民主進步黨")
+                    .replace(/時代/g, "時代力量")
+                    .replace(/民眾/g, "台灣民眾黨")
+                    .replace(/無/g, "無黨籍")
+                    .replace(/無黨籍黨籍/g, "無黨籍")
+                    .replace(/維新/g, "台灣維新黨")
+                    .replace(/動保/g, "台灣動物保護黨")
+                    .replace(/台澎/g, "台澎國際法法理建國黨")
+                    .replace(/共和/g, "共和黨")
+                    .replace(/天一/g, "天一黨")
+
+            }
+        },
+
         /**
          * ajax抓取資料後都丟到這來處理，包括排序、改資料結構、過濾資料、事件觸發等等
          */
@@ -143,18 +164,13 @@ export default {
                     city.tickets.sort(function (a, b) {
                         return b.ticket - a.ticket;
                     });
-
-
                     //在每位候選人資料中加上show這個屬性，用來控制候選人資料的透明度
                     city.tickets.map((cand) => {
                         cand["show"] = 0; //預設為全不顯示
                         cand['lastTicket'] = cand.ticket  //建立lastTicket變數預設為當前票數
                         return cand;
                     });
-
                     citys[city.cityNo] = city;
-
-
                 }
 
             });
@@ -167,12 +183,10 @@ export default {
 
                     //把新抓進來的資料citys依照迴圈輪到的code進行每個候選人資料重新整理
                     citys[code].tickets.map((cand) => {
-
                         //利用find函式在this.citys中找到對應的候選人資料
                         let user = this.citys[code].tickets.find((u) => {
                             return u.candNo == cand.candNo
                         })
-
                         //把舊的票數指定到新的資料中
                         return cand['lastTicket'] = user.ticket
                         /* console.log(cand.candNo,user.candNo) */
@@ -290,6 +304,9 @@ export default {
     watch: {
         //監控選單變數selected,改變表示縣市要做切換
         selected: function (newSelected, oldSelected) {
+            setTimeout(() => {
+                this.replaceParty()
+            }, 300);
             //改變地區時,也同時改變網址
             history.pushState("", "", "#/voting?city=" + newSelected);
 
@@ -323,6 +340,9 @@ export default {
         if (document.location.href.split("?").length > 1) {
             this.selected = document.location.href.split("?")[1].split("=")[1];
         }
+        setTimeout(() => {
+            this.replaceParty()
+        }, 1000);
 
     },
     mounted() {
@@ -335,25 +355,6 @@ export default {
             this.getData_vote();
 
         }, 20000);
-
-
-        setTimeout(() => {
-
-            let nn = document.querySelectorAll(".party_up,.party_down");
-            console.log('nn', nn.length);
-            for (let i = 0; i < nn.length; i++) {
-                nn[i].innerHTML.replace("國民", "666")
-                nn[i].innerHTML = nn[i].innerHTML
-                    .replace(/國民/g, "中國國民黨")
-                    .replace(/民進/g, "民主進步黨")
-                    .replace(/時代/g, "時代力量")
-                    .replace(/民眾/g, "民眾黨")
-                    .replace(/無/g, "無黨")
-                    .replace(/維新/g, "台灣維新黨")
-                    .replace(/動保/g, "動物保護黨")
-            }
-        }, 1000);
-
     }
 };
 </script>

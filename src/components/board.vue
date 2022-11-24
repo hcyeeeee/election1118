@@ -93,7 +93,7 @@ export default {
         getData_vote() {
             // eslint-disable-next-line no-undef
             this.axios
-                .get('https://melect-api.ftvnews.com.tw/Tickets/ftvelect.json').then((response) => {
+                .get('https://www.ftvnews.com.tw/topics/test/election.json').then((response) => {
                     this.preOrderData(response.data)
                 })
                 .catch((error) => {
