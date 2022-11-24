@@ -186,6 +186,7 @@ body {
   transition: 0.3s;
   width: 100%;
   overflow-x: hidden;
+  overflow-y:scroll ;
 }
 
 h1,

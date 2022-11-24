@@ -1,4 +1,5 @@
 <template>
+
     <div class="main">
         <div class="pop">
             <h4 class="desktop">快訊</h4><img src="../assets/pop.png" alt="">
@@ -10,6 +11,15 @@
                     {{ item.Title }}</a>
             </b-carousel-slide>
         </b-carousel>
+
+        <div class="mumu">
+            開票倒數：
+            <span class="num" id="hours"></span><span>時</span>
+
+            <span class="num" id="minutes"></span><span>分</span>
+
+            <span class="num" id="seconds"></span><span>秒</span>
+        </div>
 
     </div>
 </template>
@@ -48,13 +58,36 @@ export default {
     },
     mounted() {
         this.getData_ftvNews()
+        var second = 1000, minute = second * 60, hour = minute * 60, day = hour * 24
+        var countDown = new Date('Nov 26, 2022 16:00:00').getTime()
+
+        setInterval(() => {
+            var now = new Date().getTime(), distance = countDown - now;
+            document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour)),
+                document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
+                document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
+
+            document.getElementById('hours').innerText;
+            document.getElementById('minutes').innerText;
+            document.getElementById('seconds').innerText;
+        }, second);
     },
 }
 </script>
 
 <style scoped>
+.mumu {
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    font-weight: blod;
+    align-items: center;
+    background: #f7e1e1;
+    box-shadow: rgb(17 17 26 / 10%) 0px 1px 0px;
+}
+
 #carousel-1 {
-    padding: .5rem .8rem;
+    padding: 1rem .8rem;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
     text-overflow: ellipsis;
     -webkit-line-clamp: 1;
@@ -66,12 +99,15 @@ export default {
 
 .main {
     display: grid;
-    grid-template-columns: 1fr 9fr;
+    grid-template-columns: 1fr 9fr 3fr;
 }
 
 .pop {
     color: white;
-    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
     height: 35;
     background: orange;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
@@ -79,9 +115,13 @@ export default {
 
 }
 
+.pop h4 {
+    margin: auto
+}
+
 .pop img {
-    height: 2.5rem;
-    padding: .3rem;
+    height: 2rem;
+    margin: .5rem 0rem;
 }
 
 .desktop {
@@ -110,9 +150,14 @@ export default {
         padding: .3rem;
     }
 
- 
+    .main {
+        display: grid;
+        grid-template-columns: 1fr 9fr;
+    }
 
-
+    .mumu {
+        display: none;
+    }
 
 }
 </style>

@@ -2,6 +2,7 @@
   <div id="app">
     <Header />
     <AdditionButton />
+
     <router-view />
   </div>
 </template>
@@ -15,28 +16,8 @@ export default {
   components: {
     AdditionButton,
     Header,
-  },
-  methods: {
-    jump(tag) {
-      setTimeout(() => {
-
-        if (tag === 'news') {
-          window.location.hash = '#news'
-        } else if (tag === 'dis') {
-          window.location.hash = '#district'
-        } else if (tag === 'pm') {
-          window.location.hash = '#pm'
-        } else if (tag === 'profile') {
-          window.location.hash = '#profile'
-        } else {
-          window.location.hash = '#video'
-        }
-      }, 100);
-    },
-  },
-
-
-
+  }
+  
 }
 </script>
 

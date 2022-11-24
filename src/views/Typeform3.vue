@@ -1,31 +1,83 @@
 <template>
-  <div>
+  <div id="top">
+    <a href="#">
+      <picture>
+        <!-- <source srcset="../assets/mobile.jpg" media="(max-width: 500px)" /> -->
+        <source srcset="../assets/quizdesktop.png" media="(max-width: 768px)" />
+        <!-- <source srcset="../assets/tablet_vertical.jpg" media="(max-width: 1024px)" /> -->
+        <img class="banner" src="../assets/quizmobile.png" alt="">
+      </picture>
+    </a>
     <Share />
-    <Typeform3 />
 
+    <iframe
+      src="https://docs.google.com/forms/d/e/1FAIpQLSffm-Hsvly86uAuAHeujo2wwTCU8ThfDtrRyhw_gaoI1784mA/viewform?embedded=true"
+      width="1000" height="1500" frameborder="0" marginheight="1" marginwidth="1">載入中…</iframe>
+    <Footer />
   </div>
 </template>
 
 <script>
 
-import Typeform3 from '@/components/Typeform3.vue'
-import Share from '../components/share.vue'
 
+import Share from '../components/share.vue'
+import Footer from '@/components/Footer.vue'
 
 
 export default {
   name: 'App',
   components: {
-    Typeform3,
+
     Share,
+    Footer,
   },
-  // mounted() {
-  //   if (location.href.indexOf('#form') == -1) {
-  //     // console.log(1);
-  //     location.href = location.href + '#form'
-  //     location.reload()
-  //   }
-  // }
+  method() {
+  }
+
 }
 </script>
 
+<style scoped>
+* {
+
+  background: #f1ece3;
+}
+
+iframe {
+  margin: auto 1rem;
+  margin-top: 1rem;
+  height: 1800px;
+
+}
+
+
+@media screen and (max-width: 768px) {
+  iframe {
+    margin: auto;
+    margin-top: 0rem;
+    width: 500px;
+    left: 0%;
+    height: 1800px;
+    overflow-y: visible;
+
+  }
+}
+
+@media screen and (max-width: 500px) {
+  iframe {
+    margin: auto;
+    margin-top: 0rem;
+    width: 380px;
+    left: 0%;
+    height: 2100px;
+    overflow-y: visible;
+
+  }
+}
+
+
+img {
+  width: 100%;
+  margin-top: 4rem;
+}
+</style>

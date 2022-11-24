@@ -1,22 +1,24 @@
 <template>
-    <div>
-        <div class="section" id="board">
-            <h3>選情儀表板</h3>
-            <p>點擊各縣市看更多候選人開票狀況</p>
+    <div id="board">
+        <div class="section">
+            <!-- <h3>即時開票儀表板</h3> -->
+            <img class="boardtitle" src="../assets/boardtitle.png" alt="title">
+            <p class="notice"> 這些候選人票數領先中！點擊查看查各縣市長戰況</p>
             <div class="board">
                 <div class="box" v-for="(item, idx) in all" :key="idx" @click="goCand(item)">
-                    <div>
+                    <div :class="item.partyColor" style="background:white ;border-radius: 0.5rem 0rem 0rem 0.5rem;">
                         <P> {{ item.cityName }}</P>
                     </div>
-                    <div :class="item.partyColor">
-                        <p> {{ item.candName }}</p>
-                        <p> {{ item.ticket }}</p>
+                    <div :class="item.partyColor" style="border-radius:0rem  0.5rem 0.5rem 0rem ;">
+                        <p v-show="show"> {{ item.candName }}</p>
+                        <p v-show="show"> {{ item.ticket }}</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </template>
+
 <script>
 
 export default {
@@ -25,6 +27,7 @@ export default {
             title: '縣市議員候選人',
             taipei: [],
             all: null,
+            show: true,
             counter: null
 
         }
@@ -33,6 +36,7 @@ export default {
         preOrderData(data) {
             let t1 = data.T1.detail
             let all = {}
+            this.show = false
             t1.forEach(function (city) {
                 // console.log('source', citys)
                 if (city !== null) {
@@ -48,31 +52,45 @@ export default {
                             partyColor = 'party-green';
                             break;
                         case "無":
+                            partyColor = 'party-white';
+                            break;
+                        case "基進":
+                            partyColor = 'party-red';
+                            break;
+                        case "民眾":
+                            partyColor = 'party-info';
+                            break;
+                        case "親民":
+                            partyColor = 'party-orange';
+                            break;
+                        case "時代":
                             partyColor = 'party-yellow';
                             break;
                         default:
-                            partyColor = 'party-white';
+                            partyColor = 'party-grey';
                     }
                     all[city.cityName] = {
                         cityName: city.cityName,
                         candName: city.tickets[0].candName,
                         cityNo: city.cityNo,
-                        ticket: city.tickets[0].ticket.toLocaleString(),
+                        ticket: city.tickets[0].ticket.toString().replace(/\B(?=(\d{4})+(?!\d))/g, '萬'),
                         partyColor: partyColor
                     }
 
                 }
             })
             this.all = all
+            setTimeout(() => {
+                this.show = true
+            }, 300);
             //  console.log('all', this.all)
             // console.log('order',this.citys)
         },
         goCand(city) {
             //  console.log(city)
-            location.href = `/#/test?city=${city.cityNo}`
+            location.href = `#/voting?city=${city.cityNo}`
         },
         getData_vote() {
-            document.querySelectorAll('.news').forEach((e) => e.remove())
             // eslint-disable-next-line no-undef
             this.axios
                 .get('https://melect-api.ftvnews.com.tw/Tickets/ftvelect.json').then((response) => {
@@ -83,10 +101,16 @@ export default {
                 })
         },
     },
-    mounted() {
+    created() {
         this.getData_vote()
+    },
+    mounted() {
+        setTimeout(() => {
+            this.getData_vote()
 
-        this.counter = setInterval(() => {
+        }, 1000);
+
+        setInterval(() => {
             this.getData_vote()
         }, 10000);
 
@@ -97,40 +121,108 @@ export default {
 }
 </script>
 
-
-
 <style scoped>
+.boardtitle {
+    width: 500px;
+    margin: auto;
+}
+
+@media screen and (max-width: 900px) {
+    .boardtitle {
+        width: 400px;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .boardtitle {
+        width: 280px;
+        margin: auto;
+    }
+}
+
+
+
+/* 國民 */
 .party-blue {
-    background: #bbddfb;
-    border-radius: 0px .8rem .8rem 0px;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    color: #3a6cb9;
+    background: #bbdefb;
+    color: #1565c0;
     font-weight: bolder;
-
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    display: flex;
+    flex-direction: column;
 }
 
+/* 民進 */
 .party-green {
-    border-radius: 0px .8rem .8rem 0px;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     background: #c8e6c9;
-    color: #2e7d31;
+    color: #2e7d32;
     font-weight: bolder;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    display: flex;
+    flex-direction: column;
 }
 
+/* 時代力量 */
 .party-yellow {
-    border-radius: 0px .8rem .8rem 0px;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    background: #fff8c4;
-    color: #f67600;
+    background: #fff9c4;
+    color: #f57f17;
     font-weight: bolder;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    display: flex;
+    flex-direction: column;
 }
 
+/* 無 */
 .party-white {
-    border-radius: 0px .8rem .8rem 0px;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    background: #ededed;
+    background: #eeeeee;
     color: #3e3e3c;
     font-weight: bolder;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* 小黨 */
+.party-grey {
+    background: #cfd8dc;
+    color: #37474f;
+    font-weight: bolder;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 親民 */
+.party-orange {
+    background: #ffcc80;
+    color: #e65100;
+    font-weight: bolder;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 基進 */
+.party-red {
+    background: #ffcdd2;
+    color: #b71c1c;
+    font-weight: bolder;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 民眾 */
+.party-info {
+    background: #b2ebf2;
+    color: #00838f;
+    font-weight: bolder;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -153,12 +245,12 @@ export default {
 
 .box {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-
+    grid-template-columns: 1fr 3fr;
     border-radius: 1rem;
     margin: .4rem;
     cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+
 
 }
 
@@ -189,9 +281,31 @@ h3 {
 }
 
 @media screen and (max-width: 768px) {
+    p {
+        padding: .3rem;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
     .board {
         grid-template-columns: 1fr 1fr 1fr;
-        margin: .5rem auto;
+    }
+
+    p {
+        padding: .3rem;
+    }
+
+    .notice {
+        font-size: .8rem;
+    }
+
+
+}
+
+@media screen and (max-width: 350px) {
+    .board {
+        grid-template-columns: 1fr 1fr;
     }
 
     p {
@@ -199,7 +313,6 @@ h3 {
     }
 
 }
-
 
 .ct {
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
@@ -249,5 +362,20 @@ h3 {
 .layout_voting {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.big-enter,
+.big-leave-to,
+.small-enter,
+.small-leave-to {
+    opacity: .8;
+
+}
+
+.big-enter-active,
+.big-leave-active,
+.small-enter-active,
+.small-leave-active {
+    transition: opacity 1.2s;
 }
 </style>

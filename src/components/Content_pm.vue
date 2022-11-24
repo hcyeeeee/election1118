@@ -5,10 +5,10 @@
         <b-tabs class="desktop" content-class="mt-3" fill>
             <b-tab title="北部" class="tabsize">
                 <b-tabs content-class="mt-3" fill>
-                    <b-tab class="tabsize" fill title=宜蘭市 @click="getData_ftvNews" active></b-tab>
-                    <b-tab class="tabsize" fill title=基隆市 @click="getData_ftvNews1"></b-tab>
-                    <b-tab class="tabsize" fill title=台北市 @click="getData_ftvNews2"></b-tab>
-                    <b-tab class="tabsize" fill title=新北市 @click="getData_ftvNews3"></b-tab>
+                    <b-tab class="tabsize" title=宜蘭市 @click="getData_ftvNews" active></b-tab>
+                    <b-tab class="tabsize" title=基隆市 @click="getData_ftvNews1"></b-tab>
+                    <b-tab class="tabsize" title=台北市 @click="getData_ftvNews2"></b-tab>
+                    <b-tab class="tabsize" title=新北市 @click="getData_ftvNews3"></b-tab>
                     <b-tab class="tabsize" title=桃園市 @click="getData_ftvNews4"></b-tab>
                     <b-tab class="tabsize" title=新竹市 @click="getData_ftvNews5"></b-tab>
                     <b-tab class="tabsize" title=新竹縣 @click="getData_ftvNews6"></b-tab>
@@ -543,23 +543,38 @@ export default {
 </script>
 
 <style scoped>
+::-webkit-scrollbar {
+  width: 0;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
+}
+
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
 .news-layout {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 1.5rem;
     padding: 1rem;
 }
 
 @media screen and (max-width: 768px) {
     .news-layout {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
 @media screen and (max-width: 500px) {
     .news-layout {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 0rem;
+        grid-gap: 1rem;
     }
+
 
 }
 
@@ -701,11 +716,11 @@ a {
     color: #2e2e2e;
 }
 
-.section-box {
+/* .section-box {
     max-height: 800px;
     overflow-y: scroll;
     overflow-x: hidden;
-}
+} */
 
 
 
@@ -780,7 +795,7 @@ p {
 
     .section-box {
         margin: 0rem auto 0rem;
-        overflow-y: scroll;
+
         overflow-x: hidden;
 
     }

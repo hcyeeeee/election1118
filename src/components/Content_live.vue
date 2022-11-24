@@ -1,39 +1,14 @@
 <template>
     <div class="section" id="video">
         <!-- live直播 -->
+        <img class="livetitle" src="../assets/livetitle.png" alt="livebanner">
         <div class="section-box">
-            <h3>台灣最前線</h3>
-            <br>
             <div class="iframe-container">
-
-                <iframe width="560" height="315"
-                    src="https://www.youtube.com/embed/videoseries?list=PLf2VRok0uRO0BrUIa70CS1_PoeAghdM3K"
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ylYJSBUgaMA"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
             </div>
-            <br>
-            <h3>辣新聞152</h3>
-            <br>
-
-            <div class="iframe-container">
-                <iframe width="560" height="315"
-                    src="https://www.youtube.com/embed/videoseries?list=PLf2VRok0uRO2IzwPDbwG0K8TXleBbl4oN"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            </div>
-            <br>
-            <h3>台灣向前行</h3>
-            <br>
-            <div class="iframe-container">
-                <iframe width="560" height="315"
-                    src="https://www.youtube.com/embed/videoseries?list=PLf2VRok0uRO0px2iZrtznovVe10LfcfJO"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            </div>
-
         </div>
 
         <a class="backbtn" href="https://www.ftvnews.com.tw/" target="_blank">更多新聞</a>
@@ -52,6 +27,25 @@ export default {
 </script>
 
 <style scoped>
+.livetitle {
+    width: 280px;
+    margin: auto;
+}
+
+@media screen and (max-width: 900px) {
+    .livetitle {
+        width: 28px;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .livetitle {
+        width: 200px;
+        margin: auto;
+    }
+}
+
 h3 {
     margin: 2rem 0 0rem;
     font-size: 2rem;
@@ -123,3 +117,4 @@ img {
     }
 }
 </style>
+

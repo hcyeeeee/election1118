@@ -9,7 +9,7 @@ import Typeform2 from "../views/Typeform2.vue";
 import Typeform3 from "../views/Typeform3.vue";
 import HotView from "../views/HotView.vue";
 import ING from "../views/ING.vue";
-import HomeView2 from "../views/HomeView2.vue";
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -88,18 +88,13 @@ const routes = [
     // component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
   },
   {
-    path: "/test",
-    name: "ing",
+    path: "/voting",
+    name: "voting",
     component: ING,
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     // component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  },
-  {
-    path: "/home2",
-    name: "home2",
-    component: HomeView2,
   },
 ];
 

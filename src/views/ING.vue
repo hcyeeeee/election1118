@@ -1,44 +1,47 @@
 <template>
   <div>
 
-    <ContentBanner2 />
+    <ContentBanner />
     <Marquee />
     <City />
-    <!-- <Eighteen />
+    <Eighteen />
+    <ContentLive />
+    <ContentNews />
+    <ContentDistrict />
     <ContentVideo2 />
-    <ContentNews2 />
-    <ContentDistrict2 />
     <Footer />
-    <Share /> -->
+    <Share />
 
   </div>
 </template>
 
 <script>
-import ContentBanner2 from '@/components/Content_banner2.vue'
+import ContentBanner from '@/components/Content_banner.vue'
 import Marquee from '@/components/marquee.vue'
 import City from '@/components/city.vue'
-// import Eighteen from '@/components/eighteen.vue'
-// import ContentVideo2 from '@/components/Content_video2.vue'
-// import ContentNews2 from '@/components/Content_news2.vue'
-// import ContentDistrict2 from '@/components/Content_district2.vue'
-// import Footer from '@/components/Footer.vue'
-// import Share from '../components/share.vue'
+import Eighteen from '@/components/eighteen.vue'
+import ContentLive from '@/components/Content_live.vue'
+import ContentVideo2 from '@/components/Content_video2.vue'
+import ContentNews from '@/components/Content_news.vue'
+import ContentDistrict from '@/components/Content_district.vue'
+import Footer from '@/components/Footer.vue'
+import Share from '../components/share.vue'
 
 
 
 export default {
   name: 'App',
   components: {
-    ContentBanner2,
+    ContentBanner,
     Marquee,
     City,
-    // Eighteen,
-    // ContentVideo2,
-    // ContentNews2,
-    // ContentDistrict2,
-    // Footer,
-    // Share,
+    Eighteen,
+    ContentLive,
+    ContentVideo2,
+    ContentNews,
+    ContentDistrict,
+    Footer,
+    Share,
   },
 }
 </script>

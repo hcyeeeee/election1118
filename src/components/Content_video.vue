@@ -1,7 +1,16 @@
 <template>
     <div class="section" id="video">
         <!-- live直播 -->
+
+        <h3> <img src="../assets/livebanner.png" alt="livebanner">直播專區</h3>
         <div class="section-box">
+            <div class="iframe-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ylYJSBUgaMA"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+
             <h3>台灣最前線</h3>
             <br>
             <div class="iframe-container">

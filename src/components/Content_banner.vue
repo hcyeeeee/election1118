@@ -1,40 +1,24 @@
 <template>
     <div class="main">
         <h1>{{ title }}</h1>
-        <a href="#">
+        <a href="#board">
             <picture>
-                <!-- <source srcset="../assets/mobile.jpg" media="(max-width: 500px)" /> -->
-                <source srcset="../assets/tablet_horizontal.jpg" media="(max-width: 768px)" />
-                <!-- <source srcset="../assets/tablet_vertical.jpg" media="(max-width: 1024px)" /> -->
-                <img class="banner" src="../assets/desktop.png" alt="">
+                <source srcset="../assets/banner3.png" media="(max-width: 500px)" />
+                <source srcset="../assets/banner3.png" media="(max-width: 768px)" />
+                <source srcset="../assets/banner3.png" media="(max-width: 1024px)" />
+                <img class="banner" src="../assets/banner2.png" alt="">
             </picture>
         </a>
-        <!-- 倒數 -->
-        <div class="addition">
-            <div class="vote-box">
-                <img class="box" src="../assets/投票箱.png" alt="box">
-                <div class="timebox">
-                    <p>&nbsp;&nbsp;&nbsp;倒數</p>
-                    <i id="show"></i>
+        <!-- <div class="addition">
+            開票倒數:
+            <div class="mumu">
+                <span class="num" id="hours"></span><span>時</span>
 
-                    <p>天&nbsp;&nbsp;
-                    </p>
-                    <!-- <div>
-                        <span class="num" id="hours"></span><span>時</span>
-                    </div>
-                    <div>
-                        <span class="num" id="minutes"></span><span>分</span>
-                    </div>
-                    <div>
-                        <span class="num" id="seconds"></span><span>秒</span>
-                    </div> -->
+                <span class="num" id="minutes"></span><span>分</span>
 
-                </div>
-
+                <span class="num" id="seconds"></span><span>秒</span>
             </div>
-        </div>
-
-
+        </div> -->
     </div>
 </template>
 
@@ -46,64 +30,40 @@ export default {
             newsInfo: [],
         }
     },
-
     mounted() {
-        // timer
+        var second = 1000, minute = second * 60, hour = minute * 60, day = hour * 24
+        var countDown = new Date('Nov 26, 2022 16:00:00').getTime()
 
-        var timer = null;
-        var show = document.getElementById("show");
-        function show_date_time() {
-            var target = new Date("2022/11/26");
-            var today = new Date();
-            var timeold = (target.getTime() - today.getTime());
-            var msPerDay = 24 * 60 * 60 * 1000
-            var e_daysold = timeold / msPerDay
-            var daysold = Math.floor(e_daysold + 1);
-            var e_hrsold = (e_daysold - daysold) * 24;
-            var hrsold = Math.floor(e_hrsold);
-            var e_minsold = (e_hrsold - hrsold) * 60;
-            var minsold = Math.floor((e_hrsold - hrsold) * 60);
-            var seconds = Math.floor((e_minsold - minsold) * 60);
-            if (daysold < 0) {
-                document.getElementById("show").innerHTML = "開票中";
-                clearInterval(timer);
-            }
-            else {
-                if (daysold < 10) { daysold = "0" + daysold }
-                if (hrsold < 10) { hrsold = "0" + hrsold }
-                if (minsold < 10) { minsold = "0" + minsold }
-                if (seconds < 10) { seconds = "0" + seconds }
-                show.innerHTML = "倒數:" + daysold + "天" + hrsold + "小時" + minsold + "分" + seconds + "秒";
-                //show.innerHTML = "倒數" + daysold + "天";
-                show.innerHTML = daysold;
+        setInterval(() => {
+            var now = new Date().getTime(), distance = countDown - now;
+            document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour)),
+                document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
+                document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
 
-            }
-        }
-        timer = setInterval(show_date_time, 1000);
-        // var second = 1000, minute = second * 60, hour = minute * 60, day = hour * 24
-        // var countDown = new Date('Nov 18, 2022 08:00:00').getTime()
-
-        // setInterval(() => {
-        //     var now = new Date().getTime(), distance = countDown - now;
-        //     document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour)),
-        //         document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
-        //         document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
-
-        //     document.getElementById('hours').innerText;
-        //     document.getElementById('minutes').innerText;
-        //     document.getElementById('seconds').innerText;
-        // }, second);
-
+            document.getElementById('hours').innerText;
+            document.getElementById('minutes').innerText;
+            document.getElementById('seconds').innerText;
+        }, second);
     },
-
-
 
 
 }
 </script>
 
 <style scoped>
+.mumu {
+    display: flex;
+    justify-content: center;
+}
+
 /* 漢堡選單 */
+
+.imgbtn {}
+
+.imgbtn img {
+    width: 80px;
+    height: 80px
+}
 
 #navbarBtn {
     display: none;
@@ -218,8 +178,8 @@ img.banner {
     background: white;
     position: absolute;
     bottom: 0;
-    right: 15%;
-    padding: .5rem 4rem 0.5rem 0.5rem;
+    right: 10%;
+    padding: 1rem 3rem;
     border-radius: 30px 30px 0 0;
 
 }
@@ -288,25 +248,31 @@ img.banner {
 
 
 @media screen and (max-width: 500px) {
-    .addition {
+
+    /* .addition {
         background: white;
         position: absolute;
+        bottom: 20px;
         right: 20%;
         padding: .1rem 1rem 0.1rem 0.1rem;
-
+        border-radius: 25px 0 0 25px;
+    } */
+    .addition {
+        right: 5%;
+        padding: .2rem 1rem;
     }
 
     .addition .vote-box img {
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 110px;
         position: absolute;
-        right: -4rem;
-        top: -2rem;
+        right: -4.5rem;
+        top: -3rem;
     }
 
     .addition .vote-box p {
         margin: 0;
-        padding: .5rem .5rem;
+        padding: .5rem .5rem 1rem;
     }
 
     #show {

@@ -2,10 +2,12 @@
   <div>
 
     <ContentBanner />
-     <Marquee /> 
-    <ContentTime />
-    <ContentNews2 />
-    <ContentDistrict2 />
+    <Marquee />
+    <Board />
+    <Eighteen />
+    <ContentLive />
+    <ContentNews />
+    <ContentDistrict />
     <ContentVideo2 />
     <Footer />
     <Share />
@@ -17,27 +19,34 @@
 
 
 <script>
+import Board from '@/components/board.vue'
 import ContentBanner from '@/components/Content_banner.vue'
- import Marquee from '@/components/marquee.vue'
-import ContentTime from '@/components/Content_time.vue'
+import Marquee from '@/components/marquee.vue'
+import ContentLive from '@/components/Content_live.vue'
 import ContentVideo2 from '@/components/Content_video2.vue'
-import ContentNews2 from '@/components/Content_news2.vue'
-import ContentDistrict2 from '@/components/Content_district2.vue'
+import ContentNews from '@/components/Content_news.vue'
+import ContentDistrict from '@/components/Content_district.vue'
 import Footer from '@/components/Footer.vue'
 import Share from '../components/share.vue'
+import Eighteen from '@/components/eighteen.vue'
 
 export default {
   name: 'App',
   components: {
     ContentBanner,
-     Marquee,
-    ContentTime,
-    ContentNews2,
-    ContentDistrict2,
+    Marquee,
+    Board,
+    ContentNews,
+    ContentDistrict,
     ContentVideo2,
+    ContentLive,
     Footer,
     Share,
+    Eighteen,
+
   },
+
+
 }
 
 </script>
@@ -53,13 +62,12 @@ body {
 
 html,
 body {
-  position: relative;
-  height: 100%;
-  background: #eee;
+  margin: 0;
   width: 100%;
-  height: 100%;
+  overflow-x: hidden;
+  background-color: #F3FFF5;
+  font-family: 'Noto Sans TC'
 }
-
 
 
 div,
@@ -202,13 +210,7 @@ table {
   font-family: 'Noto Sans TC'
 }
 
-body {
-  margin: 0;
-  width: 100%;
-  overflow-x: hidden;
-  background-color: #F3FFF5;
-  font-family: 'Noto Sans TC'
-}
+
 
 #app {
   font-family: 'Noto Sans TC', sans-serif, '微軟正黑體', '蘋果儷中黑', Arial, sans-serif;

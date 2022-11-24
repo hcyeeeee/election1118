@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <ContentBanner />
-    <!-- <Marquee /> -->
+     <Marquee /> 
     <ContentProfile />
     <ContentPm />
     <Footer />
@@ -12,7 +12,7 @@
 
 
 <script>
-// import Marquee from '@/components/marquee.vue'
+ import Marquee from '@/components/marquee.vue'
 import ContentBanner from '@/components/Content_banner.vue'
 import ContentProfile from '@/components/Content_profile.vue'
 import ContentPm from '@/components/Content_pm.vue'
@@ -23,7 +23,7 @@ export default {
   name: 'App',
   components: {
     ContentBanner,
-    // Marquee,
+     Marquee,
     ContentProfile,
     ContentPm,
     Footer,
@@ -48,17 +48,6 @@ p {
 
 }
 
-::-webkit-scrollbar {
-  width: 0;
-  /* Remove scrollbar space */
-  background: transparent;
-  /* Optional: just make scrollbar invisible */
-}
-
-/* Optional: show position indicator in red */
-::-webkit-scrollbar-thumb {
-  background: transparent;
-}
 
 
 @media screen and (max-width: 500px) {
