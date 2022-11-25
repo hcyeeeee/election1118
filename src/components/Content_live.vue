@@ -1,5 +1,5 @@
 <template>
-    <div class="section" id="video">
+    <div class="section" >
         <!-- live直播 -->
         <img class="livetitle" src="../assets/livetitle.png" alt="livebanner">
         <div class="section-box">

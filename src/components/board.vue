@@ -1,19 +1,22 @@
-<template>
-    <div id="board">
+<template >
+    <div>
         <div class="section">
             <!-- <h3>即時開票儀表板</h3> -->
             <img class="boardtitle" src="../assets/boardtitle.png" alt="title">
-            <p class="notice"> 這些候選人票數領先中！點擊查看查各縣市長戰況</p>
+
+            <p class="notice"> <img class="star" src="../assets/star.png">這些候選人票數領先中！點擊查看查各縣市長戰況</p>
+
             <div class="board">
                 <div class="box" v-for="(item, idx) in all" :key="idx" @click="goCand(item)">
                     <div :class="item.partyColor" style="background:white ;border-radius: 0.5rem 0rem 0rem 0.5rem;">
                         <P> {{ item.cityName }}</P>
                     </div>
                     <div :class="item.partyColor" style="border-radius:0rem  0.5rem 0.5rem 0rem ;">
-                        <p v-show="show"> {{ item.candName }}</p>
-                        <p v-show="show"> {{ item.ticket }}</p>
+                        <p class="candstyle"> {{ item.candName }}</p>
+                        <p class="ticketstyle"> {{ item.ticket }}</p>
                     </div>
                 </div>
+                <div id="eighteen"></div>
             </div>
         </div>
     </div>
@@ -73,7 +76,7 @@ export default {
                         cityName: city.cityName,
                         candName: city.tickets[0].candName,
                         cityNo: city.cityNo,
-                        ticket: city.tickets[0].ticket.toString().replace(/\B(?=(\d{4})+(?!\d))/g, '萬'),
+                        ticket: city.tickets[0].ticket.toLocaleString(),
                         partyColor: partyColor
                     }
 
@@ -93,7 +96,7 @@ export default {
         getData_vote() {
             // eslint-disable-next-line no-undef
             this.axios
-                .get('https://www.ftvnews.com.tw/topics/test/election.json').then((response) => {
+                .get('https://melect-api.ftvnews.com.tw/Tickets/ftvelect.json').then((response) => {
                     this.preOrderData(response.data)
                 })
                 .catch((error) => {
@@ -122,6 +125,27 @@ export default {
 </script>
 
 <style scoped>
+.star {
+    padding: 0.5rem;
+}
+
+.candstyle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: .8rem .8rem 0rem;
+}
+
+.ticketstyle {
+    font-weight: 500;
+    padding: 0rem .8rem 0.5rem;
+}
+
+
+
+#eighteen {
+    height: 50px;
+}
+
 .boardtitle {
     width: 500px;
     margin: auto;
@@ -147,7 +171,6 @@ export default {
 .party-blue {
     background: #bbdefb;
     color: #1565c0;
-    font-weight: bolder;
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
     display: flex;
     flex-direction: column;
@@ -157,7 +180,6 @@ export default {
 .party-green {
     background: #c8e6c9;
     color: #2e7d32;
-    font-weight: bolder;
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
     display: flex;
     flex-direction: column;
@@ -167,7 +189,6 @@ export default {
 .party-yellow {
     background: #fff9c4;
     color: #f57f17;
-    font-weight: bolder;
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
     display: flex;
     flex-direction: column;
@@ -177,7 +198,6 @@ export default {
 .party-white {
     background: #eeeeee;
     color: #3e3e3c;
-    font-weight: bolder;
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
     display: flex;
     flex-direction: column;
@@ -189,7 +209,6 @@ export default {
 .party-grey {
     background: #cfd8dc;
     color: #37474f;
-    font-weight: bolder;
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
     display: flex;
     flex-direction: column;
@@ -199,7 +218,6 @@ export default {
 .party-orange {
     background: #ffcc80;
     color: #e65100;
-    font-weight: bolder;
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
     display: flex;
     flex-direction: column;
@@ -209,7 +227,6 @@ export default {
 .party-red {
     background: #ffcdd2;
     color: #b71c1c;
-    font-weight: bolder;
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
     display: flex;
     flex-direction: column;
@@ -219,7 +236,6 @@ export default {
 .party-info {
     background: #b2ebf2;
     color: #00838f;
-    font-weight: bolder;
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
     display: flex;
     flex-direction: column;
@@ -252,6 +268,7 @@ export default {
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 
 
+
 }
 
 p {
@@ -272,7 +289,7 @@ h3 {
 
 @media screen and (max-width: 900px) {
     .board {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
 
     .section {
@@ -283,6 +300,22 @@ h3 {
 @media screen and (max-width: 768px) {
     p {
         padding: .3rem;
+    }
+
+    .board {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .candstyle {
+        font-size: 1.3rem;
+        font-weight: 600;
+        padding: .8rem .3rem 0rem;
+    }
+
+    .star {
+        width: 40px;
+        padding: 0.5rem;
+
     }
 }
 
@@ -297,13 +330,22 @@ h3 {
     }
 
     .notice {
-        font-size: .8rem;
+        font-size: .9rem;
     }
+
+    .notice:before {
+
+        content: '';
+        width: .5rem;
+    }
+
+
+
 
 
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 400px) {
     .board {
         grid-template-columns: 1fr 1fr;
     }

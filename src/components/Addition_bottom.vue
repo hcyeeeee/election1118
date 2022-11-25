@@ -1,25 +1,11 @@
 <template>
 
     <div class="bottom">
-        <router-link to="/" class="bottom2">最新新聞</router-link>
-        <router-link class="bottom2" to="/about">選將名單</router-link>
-        <!-- <router-link class="bottom2 " to="/form">
-            政治術語大考驗
-        </router-link> -->
-        <a class="bottom2" v-bind:class="{ 'dropup': button_active_state }"
-            v-on:click="button_active_state = !button_active_state">
-            更多選舉資訊
-            <div class="dropup-content " id="myDIV">
-                <a href="https://bit.ly/3CFJQFt">歷年版圖</a>
-                <a href="https://bit.ly/3erX5R7">議題懶人包</a>
-                <router-link to="/qa">
-                    修憲公投
-                </router-link>
-                <a href="https://bit.ly/3T1xwFt"> 政治術語大考驗</a>
-                <a href="https://bit.ly/3zwDKp2">公投模擬考</a>
-                <a href=" https://bit.ly/3fNaR1a">你像哪位候選人？</a>
-            </div>
-        </a>
+        <a href="https://www.ftvnews.com.tw/topics/test/#/"  class="bottom2">各地選情</a>
+        <a href="#video" class="bottom2">開票直播</a>
+        <a href="#eighteen" class="bottom2" to="/about">公投開票</a>
+
+
 
     </div>
 </template>
@@ -36,33 +22,9 @@ export default {
             button_active_state: false,
             active: false,
             menu: false,
-            list: [
-                {
-                    title: '首頁',
-                    anchor: '#voting',
-                },
-                {
-                    title: '最新新聞',
-                    anchor: '#profile',
-                },
-                {
-                    title: '影音專區',
-                    anchor: '#porcess',
-                },
-                {
-                    title: 'LIVE新聞',
-                    anchor: '#news',
-                },
-            ],
         }
     },
-    created() {
-        window.addEventListener('scroll', this.handleScroll)
-    },
     methods: {
-        handleScroll() {
-            this.active = window.scrollY < 700 ? true : false
-        },
         toggle() {
             if (!this.isActive) {
                 this.isActive = true;

@@ -33,10 +33,7 @@
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
             </div>
-
         </div>
-
-        <a class="backbtn" href="https://www.ftvnews.com.tw/" target="_blank">更多新聞</a>
     </div>
 </template>
 

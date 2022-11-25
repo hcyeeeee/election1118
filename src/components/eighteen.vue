@@ -12,21 +12,18 @@
                     <p class="disagree_vote">{{ this.vote_disagree }}</p>
                 </div>
 
-                <progress show-progress animated class="progress_class  mobile" :max=this.allticket
-                    :value=data[0].ticket />
+                <progress show-progress animated class="progress_class  mobile" :max="allticket" :value="current" />
             </div>
             <div class="pro">
                 <p class="agree_vote desktop">同意</p>
-                <progress class="progress_class  desktop" :max=this.allticket :value=data[0].ticket />
+                <progress class="progress_class  desktop" :max="allticket" :value="current" />
                 <p class="disagree_vote  desktop">不同意</p>
             </div>
             <p>註：達標門檻為:961萬9697票</p>
-            <div class="allbtn">
-                <a class="backbtn" href="">修憲公投Ｑ＆Ａ</a>
+            <div class="allbtn" id="video">
+                <a class="backbtn" href="https://www.ftvnews.com.tw/topics/test/#/qa">修憲公投Ｑ＆Ａ</a>
             </div>
         </div>
-
-
     </div>
 </template>
 
@@ -36,45 +33,38 @@
 export default {
     data() {
         return {
-            data: [],
             vote_agree: 0,
             vote_disagree: 0,
             odometer: '',
-            allticket: {},
-            value: 45,
-            max: 100,
-
-
-
+            allticket: Number,
+            current: Number,
         }
     },
     methods: {
         getVote() {
             // eslint-disable-next-line no-undef
             this.axios.get('https://www.ftvnews.com.tw/topics/test/election.json').then((response) => {
-                this.data = response.data.T3.detail[0].tickets
-
-                // 同意
-                let agree = response.data.T3.detail[0].tickets[0].ticket
-                this.vote_agree = agree.toString().replace(/\B(?=(\d{4})+(?!\d))/g, '萬') + ' 票'
-                // 不同意
-                let disagree = response.data.T3.detail[0].tickets[1].ticket
-                this.vote_disagree = disagree.toString().replace(/\B(?=(\d{4})+(?!\d))/g, '萬') + ' 票'
-                this.allticket = this.data[1].ticket + this.data[0].ticket
-                setInterval(() => {
-                    this.allticket = this.data[1].ticket + this.data[0].ticket
-                    let aaa = document.querySelector(".progress_class")
-                    aaa.max = this.allticket
-                }, 100);
-
+                let res = response.data.T3.detail[0].tickets
+                let agree, disagree;
+                res.forEach((element, index) => {
+                    let { eighteentickets } = { 'eighteentickets': element.ticket }
+                    if (index === 0) {
+                        agree = eighteentickets
+                        this.vote_agree = eighteentickets.toString().replace(/\B(?=(\d{4})+(?!\d))/g, '萬') + ' 票'
+                    } else {
+                        disagree = eighteentickets
+                        this.vote_disagree = eighteentickets.toString().replace(/\B(?=(\d{4})+(?!\d))/g, '萬') + ' 票'
+                    }
+                })
+                this.allticket = agree + disagree
+                this.current = agree
             })
         },
     },
+    created() {
+        this.getVote()
+    },
     mounted() {
-        setTimeout(() => {
-            this.getVote()
-        }, 100);
-
 
         setInterval(() => {
             this.getVote()
@@ -224,7 +214,7 @@ h3 {
     overflow: hidden;
     /*设置iOS下清除灰色背景*/
     appearance: none;
-    border-radius: .8rem;
+    border-radius: 1rem;
     -webkit-appearance: none;
     margin: 1rem auto
 }
@@ -234,6 +224,7 @@ h3 {
     .progress_class {
         width: 80%;
         margin: auto;
+        height: 1.5rem;
     }
 }
 
@@ -256,7 +247,7 @@ h3 {
     background: linear-gradient(90deg, rgb(210, 210, 210) 0%, rgb(176, 176, 176) 100%);
 }
 
-.aaa {
+.agree {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
 }

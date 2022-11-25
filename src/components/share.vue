@@ -11,21 +11,24 @@
                         <span id="social_line" data-href="https://www.ftvnews.com.tw/topics/election2022/">
                             <img src="../assets/line.png" alt="line" width="60px" /></span>
                     </a>
-                    <br />
                     <!-- facebook -->
                     <a target="_blank"
                         href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.ftvnews.com.tw%2Ftopics%2Felection2022%2F&amp;src=sdkpreparse"
                         class="fb-xfbml-parse-ignore">
                         <img src="../assets/fb.png" alt="facebook" width="60px" /></a>
-                    <br />
+
                     <!-- localUrl -->
                     <a target="_blank" @click="getLocalUrl" class="fb-xfbml-parse-ignore">
                         <img src="../assets/share.png" alt="share" width="60px" /></a>
-                    <br />
+
 
                 </div>
             </div>
         </div>
+        <a href="#video"> <img class="live" src="../assets/livebanner.png" alt=""></a>
+        <a href="#eighteen"> <img class="eighteen" src="../assets/voteing.png" alt=""></a>
+
+
         <div class="layout_addition mobile" @scroll="scroll">
             <!--  AR-->
             <div class="layout_grid">
@@ -37,17 +40,16 @@
                         <span id="social_line" data-href="https://www.ftvnews.com.tw/topics/election2022/">
                             <img src="../assets/line.png" alt="line" width="60px" /></span>
                     </a>
-                    <br />
                     <!-- facebook -->
                     <a target="_blank"
                         href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.ftvnews.com.tw%2Ftopics%2Felection2022%2F&amp;src=sdkpreparse"
                         class="fb-xfbml-parse-ignore">
                         <img src="../assets/fb.png" alt="facebook" width="60px" /></a>
-                    <br />
+
                     <!-- localUrl -->
                     <a target="_blank" @click="getLocalUrl" class="fb-xfbml-parse-ignore">
                         <img src="../assets/share.png" alt="share" width="60px" /></a>
-                    <br />
+
                 </div>
             </div>
 
@@ -105,14 +107,32 @@ export default {
 </script>
 
 <style scoped>
+.live {
+    width: 80px;
+    position: absolute;
+    top: 5rem;
+    left: 0rem;
+}
+
+.eighteen {
+    width: 80px;
+    position: absolute;
+    top: 9rem;
+    left: 0rem;
+}
+
+
 .layout_addition {
     position: fixed;
     right: 0;
     top: 0;
     width: 70px;
     top: 5rem;
+    z-index: 99;
 
 }
+
+
 
 .layout_addition img {
     padding: 0.5rem
@@ -133,20 +153,34 @@ export default {
     display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
+
+    .live {
+        display: none
+    }
+
+    .eighteen {
+        display: none
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+
+
     .layout_addition {
         position: absolute;
-        right: -2.6rem;
-        width: 90px;
-        top: 5rem;
+        right: 5.5rem;
+        width: 85px;
+        top: .7rem;
         align-items: center;
         z-index: 999;
 
     }
 
     .layout_addition img {
-        padding: 0.4rem;
-        width: 2.5rem;
+
+        width: 2.7rem;
 
     }
 
@@ -159,7 +193,10 @@ export default {
         display: none;
     }
 
-    .icon {}
+    .icon {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 
 }
 

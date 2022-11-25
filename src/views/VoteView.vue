@@ -28,6 +28,17 @@ export default {
 </script>
 
 <style scoped>
+::-webkit-scrollbar {
+  width: 0;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
+}
+
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
 html,
 body {
   overflow-x: hidden;
@@ -166,98 +177,3 @@ table {
 }
 </style>
 
-<style>
-/* 全局自訂 */
-
-body {
-  margin: 0;
-  width: 100%;
-  overflow-x: hidden;
-  background-color: #F3FFF5;
-  font-family: 'Noto Sans TC'
-}
-
-#app {
-  font-family: 'Noto Sans TC', sans-serif, '微軟正黑體', '蘋果儷中黑', Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #595757;
-  transition: 0.3s;
-  width: 100%;
-  overflow-x: hidden;
-  overflow-y:scroll ;
-}
-
-h1,
-h2 {
-  font-family: 'Noto Sans TC';
-  font-size: 1.8rem;
-}
-
-h3 {
-  font-family: 'Noto Sans TC';
-  text-align: center;
-  font-size: 1.6rem;
-  padding: 1rem 0;
-  margin: 2rem 0 0.1rem 0;
-  color: rgb(59, 59, 59);
-
-}
-
-h4 {
-  font-family: 'Noto Sans TC';
-  font-size: 1.3rem;
-}
-
-
-p {
-  font-family: 'Noto Sans TC';
-  text-align: left;
-  /* margin: 0.5rem 0 2rem 0; */
-  line-height: 1.4rem;
-  font-size: 1.3rem;
-}
-
-@media screen and (max-width: 768px) {
-
-  p,
-  ul li {
-    font-size: 1rem;
-  }
-}
-
-a {
-  font-family: 'Noto Sans TC';
-  color: #595757;
-  text-decoration: none !important;
-}
-
-a:hover {
-  font-family: 'Noto Sans TC';
-  color: black;
-}
-
-figure {
-  font-family: 'Noto Sans TC';
-  margin: 0;
-}
-
-.layout {
-  font-family: 'Noto Sans TC';
-  max-width: 1000px;
-}
-
-.section {
-  font-family: 'Noto Sans TC';
-  margin: 2rem auto;
-  max-width: 1000px;
-
-}
-
-.section-box {
-  font-family: 'Noto Sans TC';
-  margin: 1rem auto;
-  padding: 1rem;
-}
-</style>

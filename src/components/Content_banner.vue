@@ -9,16 +9,14 @@
                 <img class="banner" src="../assets/banner2.png" alt="">
             </picture>
         </a>
-        <!-- <div class="addition">
-            開票倒數:
+        <div class="addition">
             <div class="mumu">
-                <span class="num" id="hours"></span><span>時</span>
-
-                <span class="num" id="minutes"></span><span>分</span>
-
-                <span class="num" id="seconds"></span><span>秒</span>
+                <div>開票倒數:</div>
+                <span class="num" id="hours1"></span><span>時</span>
+                <span class="num" id="minutes1"></span><span>分</span>
+                <span class="num" id="seconds1"></span><span>秒</span>
             </div>
-        </div> -->
+        </div>
     </div>
 </template>
 
@@ -36,13 +34,13 @@ export default {
 
         setInterval(() => {
             var now = new Date().getTime(), distance = countDown - now;
-            document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour)),
-                document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
-                document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
+            document.getElementById('hours1').innerText = Math.floor((distance % (day)) / (hour)),
+                document.getElementById('minutes1').innerText = Math.floor((distance % (hour)) / (minute)),
+                document.getElementById('seconds1').innerText = Math.floor((distance % (minute)) / second);
 
-            document.getElementById('hours').innerText;
-            document.getElementById('minutes').innerText;
-            document.getElementById('seconds').innerText;
+            document.getElementById('hours1').innerText;
+            document.getElementById('minutes1').innerText;
+            document.getElementById('seconds1').innerText;
         }, second);
     },
 
@@ -51,6 +49,10 @@ export default {
 </script>
 
 <style scoped>
+.addition {
+    display: none;
+}
+
 .mumu {
     display: flex;
     justify-content: center;
@@ -148,6 +150,10 @@ p.layout {
 }
 
 @media screen and (max-width: 768px) {
+    .addition {
+        display: block;
+    }
+
     .layout {
         margin: 5%;
     }
@@ -178,8 +184,9 @@ img.banner {
     background: white;
     position: absolute;
     bottom: 0;
-    right: 10%;
-    padding: 1rem 3rem;
+    right: 8%;
+    padding: .5rem 1rem;
+    font-size: 1.2rem;
     border-radius: 30px 30px 0 0;
 
 }
@@ -220,9 +227,7 @@ img.banner {
     .addition {
         background: white;
         position: absolute;
-
-        right: 15%;
-        padding: .2rem 1rem 0.1rem 0.1rem;
+        right: 10%;
         border-radius: 25px 25px 0 0px;
     }
 
@@ -259,7 +264,7 @@ img.banner {
     } */
     .addition {
         right: 5%;
-        padding: .2rem 1rem;
+        font-size: 1rem;
     }
 
     .addition .vote-box img {

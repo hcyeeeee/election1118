@@ -1,6 +1,6 @@
 <template>
 
-    <div class="main">
+    <div class="main" id="board">
         <div class="pop">
             <h4 class="desktop">快訊</h4><img src="../assets/pop.png" alt="">
         </div>
@@ -19,6 +19,8 @@
             <span class="num" id="minutes"></span><span>分</span>
 
             <span class="num" id="seconds"></span><span>秒</span>
+            <!-- 開票中
+            開票完成 -->
         </div>
 
     </div>
@@ -80,9 +82,9 @@ export default {
     font-size: 1.2rem;
     display: flex;
     justify-content: center;
-    font-weight: blod;
     align-items: center;
-    background: #f7e1e1;
+    color: #ffffff;
+    background: rgb(240, 138, 90);
     box-shadow: rgb(17 17 26 / 10%) 0px 1px 0px;
 }
 
@@ -95,6 +97,7 @@ export default {
     text-overflow: ellipsis;
     white-space: nowrap;
 
+
 }
 
 .main {
@@ -104,6 +107,7 @@ export default {
 
 .pop {
     color: white;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -138,7 +142,7 @@ export default {
     .pop {
         color: white;
         font-size: 1.2rem;
-        height: 35;
+
         background: orange;
         box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
         text-shadow: rgb(0 0 0 / 50%) 0px 2px 10px;
@@ -146,8 +150,8 @@ export default {
     }
 
     .pop img {
-        height: 2.5rem;
-        padding: .3rem;
+        height: 2rem;
+        padding: .1rem;
     }
 
     .main {

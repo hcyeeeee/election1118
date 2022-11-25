@@ -15,6 +15,18 @@
                         </b-nav-item>
                     </b-navbar-nav>
                     <!-- 下拉選單start -->
+
+                    <!-- 下拉選單end -->
+                    <b-navbar-nav>
+                        <b-nav-item class="ddd" to="/voting">
+                            即時開票
+                        </b-nav-item>
+                        <!-- <b-nav-item-dropdown text="選將名單" right>
+                            <b-dropdown-item class="ddd" to="/about" >選將名單
+                            </b-dropdown-item>
+                            <b-dropdown-item class="ddd" to="/about" @click="jump('pm')">議員候選人</b-dropdown-item>
+                        </b-nav-item-dropdown> -->
+                    </b-navbar-nav>
                     <b-navbar-nav>
                         <b-nav-item-dropdown id="dropdown-1" text="新聞專區">
                             <b-dropdown-item class="ddd" to="/" @click="jump('news')">新聞專區
@@ -25,15 +37,6 @@
                             </b-dropdown-item>
                         </b-nav-item-dropdown>
                     </b-navbar-nav>
-                    <!-- 下拉選單end -->
-                    <b-navbar-nav>
-                        <b-nav-item-dropdown text="選將名單" right>
-                            <b-dropdown-item class="ddd" to="/about" @click="jump('profile')">縣市長候選人
-                            </b-dropdown-item>
-                            <b-dropdown-item class="ddd" to="/about" @click="jump('pm')">議員候選人</b-dropdown-item>
-                        </b-nav-item-dropdown>
-                    </b-navbar-nav>
-
                     <!-- 下拉選單start -->
                     <b-navbar-nav>
                         <b-nav-item-dropdown text="熱門議題" right>
@@ -240,7 +243,7 @@ span {
     }
 
     .logo img {
-        width: 160px;
+        width: 170px;
     }
 }
 

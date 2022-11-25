@@ -70,6 +70,7 @@ body {
 }
 
 
+
 div,
 span,
 applet,
@@ -210,7 +211,17 @@ table {
   font-family: 'Noto Sans TC'
 }
 
+::-webkit-scrollbar {
+  width: 0;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
+}
 
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
 
 #app {
   font-family: 'Noto Sans TC', sans-serif, '微軟正黑體', '蘋果儷中黑', Arial, sans-serif;

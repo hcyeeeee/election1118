@@ -64,7 +64,7 @@
                     <!-- </div>  使用vue的transition-group來取代-->
                 </transition-group>
             </div>
-            <div class="btn">
+            <div class="btnn" id="eighteen">
                 <a class="backtohome" href="https://www.ftvnews.com.tw/topics/test/">返回儀表板</a>
             </div>
         </div>
@@ -137,6 +137,7 @@ export default {
                     .replace(/民進/g, "民主進步黨")
                     .replace(/時代/g, "時代力量")
                     .replace(/民眾/g, "台灣民眾黨")
+                    .replace(/台灣台灣民眾黨黨/g, "台灣民眾黨")
                     .replace(/無/g, "無黨籍")
                     .replace(/無黨籍黨籍/g, "無黨籍")
                     .replace(/維新/g, "台灣維新黨")
@@ -347,9 +348,7 @@ export default {
     },
     mounted() {
         //./assets/logo.svg
-
         //網頁載入時先從server抓第一次資料
-
         //在頁面載後開始每隔10秒或更長的時間..再抓一次資料
         this.counter = setInterval(() => {
             this.getData_vote();
@@ -402,9 +401,10 @@ select {
 
 }
 
-.btn {
+.btnn {
     display: flex;
     justify-content: end;
+
 }
 
 .section {
@@ -450,7 +450,11 @@ select {
 .content {
     text-align: left;
     font-size: 60px;
+    white-space: nowrap;
 }
+
+
+
 
 h4 {
     font-size: 3rem;
@@ -500,7 +504,7 @@ p {
     overflow: hidden;
     -moz-appearance: none;
     appearance: none;
-    border-radius: .5rem;
+    border-radius: 1rem;
     -webkit-appearance: none;
     bottom: 2.5rem;
     right: -6rem;
@@ -569,6 +573,7 @@ progress {
     .content {
         text-align: left;
         font-size: 30px;
+        white-space: normal;
     }
 
     h4 {
@@ -627,7 +632,11 @@ progress {
         max-height: 7rem;
     }
 
+    .btnn {
+        display: flex;
+        justify-content: center;
 
+    }
 
 
 }
@@ -640,7 +649,7 @@ progress {
     }
 
     h4 {
-        font-size: 1.4rem
+        font-size: 1.3rem
     }
 
     .ticket_up {
